@@ -1,0 +1,297 @@
+.footer{
+	color: $white;
+	background-color: $purple;
+	padding-top: 4em;
+	position: relative;
+    .global{
+    	@media only screen and (min-width: 980px) {
+    		max-width: 2000px;
+    		margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+    	}
+    	@media only screen and (min-width: 980px) {
+			.presentation{
+	    		width: 30%;
+	    		margin: 0 3rem 0 auto;
+	    		&__heading4{
+					letter-spacing: 2px;
+	    		}
+	    		&__content{
+					line-height: 1.5rem;
+					margin-bottom: 2em;
+					// padding: 0 3rem;
+	    		}
+	    	}
+    	}
+    	@media only screen and (max-width: 979px) {
+			.presentation{
+	    		display: none;
+	    	}
+    	}
+    	@media only screen and (min-width: 980px) {
+	    	.infos{
+	    		width: 18%;
+	    		margin: 0 3rem;
+				&__heading4{
+					letter-spacing: 2px;
+				}
+				&__content{
+					// padding: 0 3rem;
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 2em;
+					&--txt{
+						margin-bottom: 1em;
+					}
+					&--link{
+						transition: all 0.5s ease-in-out;
+						color: $white;
+						margin-bottom: 1em;
+						text-decoration: none;
+						&:hover,
+						&:focus{
+							color: $yellow;
+						}
+					}
+				}
+	    	}	
+    	}
+    	@media only screen and (max-width: 979px) {
+			.infos{
+				&__heading4{
+					padding: 1em 1.2rem 0;
+				}
+				&__content{
+					padding: 1.2rem;
+					display: flex;
+					flex-direction: column;
+					margin-bottom: 2em;
+					&--txt{
+						margin-bottom: 1em;
+					}
+					&--link{
+						transition: all 0.5s ease-in-out;
+						color: $white;
+						margin-bottom: 1em;
+						text-decoration: none;
+						&:hover,
+						&:focus{
+							color: $yellow;
+						}
+					}
+				}
+    		}
+    		@media only screen and (min-width: 768px){
+				&__cta{
+					margin: 1.2rem 0rem;
+				}
+			}
+			@media only screen and (max-width: 767px) {
+				&__cta{
+					margin: 1.2rem;
+				}
+			}
+    	}
+    	@media only screen and (min-width: 980px) {
+    		.footer-nav{
+    			margin: 0 auto 0 3rem;
+    			.last-nav{
+					width: 100%;
+					margin: 0 3rem;
+					&__heading4{
+						letter-spacing: 2px;
+		    		}
+					&__list{
+						&--elt a {
+							color: $white;
+							line-height: 2rem;
+							text-decoration: none;
+			                position: relative;
+			                transition: all 0.5s ease-in-out;
+			            }
+			            &--elt a:hover,
+			            &--elt a:focus{
+			                color: $yellow;
+			            }
+						&--elt a{
+			                &.active{
+			                    color: $yellow;
+			                    &::before{
+			                        content: "";
+			                        font-size: $heading2;
+			                        font-weight: 100;
+			                        position: absolute;
+			                        top: 50%;
+			                        transform: translateY(-50%);
+			                        left: -2rem;
+			                        display: block;
+			                        width: 10px;
+			                        height: 10px;
+			                        border-radius: 50%;
+			                        background-color: $yellow;
+			                    }
+			                }
+			            }
+					}
+    			}
+	    	}
+    	}
+    	@media only screen and (max-width: 979px) {
+			.footer-nav{
+				.last-nav{
+					display: none;
+		    	}
+		    }
+    	}
+    	.cta{
+			@media only screen and (min-width: 2001px){
+				max-width: 2000px;
+				margin: 0 auto;
+			}
+			@media only screen and (max-width: 2000px) and (min-width: 980px){
+				// margin-left: 1.2rem;
+			}
+			@media only screen and (max-width: 979px) {
+				margin: 1.2rem;
+			}
+			&__button{
+				background-color: $yellow;
+				color: $purple;
+			}
+			&__masque{
+				border: 1px solid $yellow;
+				color: $yellow;
+			}
+		}
+    }
+    @media only screen and (min-width: 980px) {
+		.partenaire{
+			width: 100%;
+    		color: $black;
+			background-color: $white;
+			margin-top: 2rem;
+    		padding: 3rem;
+			&__heading4{
+				max-width: 2000px;
+				margin: 0 auto;
+				padding-top: 1em;
+			}
+			&__bloc{
+				max-width: 2000px;
+    			margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				&--link{
+					padding: 2em 4em;
+					img{
+
+					}
+				}
+			}
+			.cta{
+				max-width: 2000px;
+				margin: 0 auto;
+			}
+    	}
+	}
+	@media only screen and (max-width: 979px) {
+		.partenaire{
+    		color: $black;
+			background-color: $white;
+			padding: 1.2rem;
+			&__heading4{
+				padding: 1em 1.2rem;
+			}
+			&__bloc{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				align-items: center;
+				&--link{
+					padding: 1em 1.2rem 0;
+					img{
+
+					}
+				}
+			}
+			@media only screen and (min-width: 768px){
+				&__cta{
+					margin: 1.2rem;
+				}
+			}
+			@media only screen and (max-width: 767px) {
+				&__cta{
+					margin: 1.2rem;
+				}
+			}
+    	}
+	}
+	.reseaux{
+		background-color: $yellow;
+		position: relative;
+		height: 6rem;
+		&__social{
+			@media only screen and (min-width: 2001px) {
+				max-width: 2000px;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				// display: flex;
+				// justify-content: space-between;
+				padding: 2em 1.2rem;
+				// text-align: center;
+    		}
+    		@media only screen and (max-width: 2000px) {
+				max-width: 520px;
+				margin: 0 auto;
+				// position: absolute;
+				// right: 0;
+				display: flex;
+				justify-content: space-between;
+				padding: 2em 1.2rem;
+				text-align: center;
+    		}
+			&--link{
+				width: 50px;
+				margin: 0 2em;
+				fill: $white;
+				text-decoration: none;
+				transition: all 0.5s ease-in-out;
+				&:hover,
+				&:focus{
+					fill: $purple;
+				}
+			}
+		}
+	}
+	.cpr{
+		background-color: $black;
+		&__txt{
+			@media only screen and (min-width: 980px){
+				max-width: 2000px;
+				padding: 1rem 3rem;
+			}
+			@media only screen and (max-width: 979px) {
+				padding: 1rem 1.2rem;
+			}
+			line-height: 1.35em;
+			font-size: $cpr;
+		}
+	}
+    &:before{
+    	content: "";
+		width: 80px;
+		height: 80px;
+		background-image: url('#{ $imgPath }logotxt.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+    }
+}

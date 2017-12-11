@@ -1,0 +1,94 @@
+/* Képhren SIMONIS
+ *
+ * /sass/styles.scss - Main stylesheet
+ *
+ * coded by Képhren SIMONIS
+ * started at 19/09/2017
+ */
+
+// Variables
+
+// Good_vibes
+@font-face {
+    font-family: 'Good_vibes';
+    src: url('#{ $fontPath }Good_Vibes/Good_Vibes.eot');
+    src: url('#{ $fontPath }Good_Vibes/Good_Vibes.eot?#iefix') format('embedded-opentype'),
+		 url('#{ $fontPath }Good_Vibes/Good_Vibes.otf') format('otf'),
+         url('#{ $fontPath }Good_Vibes/Good_Vibes.woff') format('woff'),
+         url('#{ $fontPath }Good_Vibes/Good_Vibes.ttf') format('truetype'),
+         url('#{ $fontPath }Good_Vibes/Good_Vibes.svg#regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{ $fontPath }Raleway-Bold/Raleway-Bold.eot');
+    src: url('#{ $fontPath }Raleway-Bold/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Raleway-Bold/Raleway-Bold.otf') format('otf'),
+         url('#{ $fontPath }Raleway-Bold/Raleway-Bold.woff') format('woff'),
+         url('#{ $fontPath }Raleway-Bold/Raleway-Bold.ttf') format('truetype'),
+         url('#{ $fontPath }Raleway-Bold/Raleway-Bold.svg#regular') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.eot');
+    src: url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.otf') format('otf'),
+         url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.woff') format('woff'),
+         url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.ttf') format('truetype'),
+         url('#{ $fontPath }Raleway-SemiBold/Raleway-SemiBold.svg#regular') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{ $fontPath }Raleway-Regular/Raleway-Regular.eot');
+    src: url('#{ $fontPath }Raleway-Regular/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Raleway-Regular/Raleway-Regular.otf') format('otf'),
+         url('#{ $fontPath }Raleway-Regular/Raleway-Regular.woff') format('woff'),
+         url('#{ $fontPath }Raleway-Regular/Raleway-Regular.ttf') format('truetype'),
+         url('#{ $fontPath }Raleway-Regular/Raleway-Regular.svg#regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{ $fontPath }Raleway-Light/Raleway-Light.eot');
+    src: url('#{ $fontPath }Raleway-Light/Raleway-Light.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Raleway-Light/Raleway-Light.otf') format('otf'),
+         url('#{ $fontPath }Raleway-Light/Raleway-Light.woff') format('woff'),
+         url('#{ $fontPath }Raleway-Light/Raleway-Light.ttf') format('truetype'),
+         url('#{ $fontPath }Raleway-Light/Raleway-Light.svg#regular') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('#{ $fontPath }Raleway-Italic/Raleway-Italic.eot');
+    src: url('#{ $fontPath }Raleway-Italic/Raleway-Italic.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Raleway-Italic/Raleway-Italic.otf') format('otf'),
+         url('#{ $fontPath }Raleway-Italic/Raleway-Italic.woff') format('woff'),
+         url('#{ $fontPath }Raleway-Italic/Raleway-Italic.ttf') format('truetype'),
+         url('#{ $fontPath }Raleway-Italic/Raleway-Italic.svg#regular') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Whoopass';
+    src: url('#{ $fontPath }Whoopass/Whoopass.eot');
+    src: url('#{ $fontPath }Whoopass/Whoopass.eot?#iefix') format('embedded-opentype'),
+    	 url('#{ $fontPath }Whoopass/Whoopass.otf') format('otf'),
+         url('#{ $fontPath }Whoopass/Whoopass.woff') format('woff'),
+         url('#{ $fontPath }Whoopass/Whoopass.ttf') format('truetype'),
+         url('#{ $fontPath }Whoopass/Whoopass.svg#regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

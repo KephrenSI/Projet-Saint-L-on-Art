@@ -1,0 +1,192 @@
+/* Képhren SIMONIS
+*
+* /sass/styles.scss - Main stylesheet
+*
+* coded by Képhren SIMONIS
+* started at 19/09/2017
+*/
+html{
+	font-family: "Raleway";
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.35em;
+	background-color: $white;
+}
+:focus{
+	outline: none;
+}
+em{
+	font-weight: 800;
+}
+.title{
+	padding-top: 8em;
+	text-align: center;
+}
+// .cta,
+// .ctay{
+// 	letter-spacing: 2px;
+// 	width: 90%;
+// 	margin: 0 auto;
+// 	text-align: center;
+// }
+// .cta a,
+// .ctay a{
+// 	text-decoration: none;
+// 	font-family: "Good_Vibes";
+// 	color: $white;
+// 	font-size: 1.2em;
+// 	position: relative;
+// 	display: inline-block;
+// 	width: 100%;
+// 	padding: 1em 2em;
+// 	margin-top: 2em;
+// 	z-index: 2;
+// }
+// .cta a::before{
+// 	content: "";
+// 	background-image: url('#{ $imgPath }brushp.png');
+// 	background-size: cover;
+// 	background-position: center center;
+//     display: block;
+//     width: 220px;
+//     height: 60px;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: rotate(5deg) translateX(-50%) translateY(-25%);
+//     position: absolute;
+//     z-index: -1;
+// }
+// .ctay a::before{
+// 	content: "";
+// 	background-image: url('#{ $imgPath }brushy.png');
+// 	background-size: cover;
+// 	background-position: center center;
+//     display: block;
+//     width: 220px;
+//     height: 60px;
+// 	top: 50%;
+// 	left: 50%;
+// 	transform: rotate(5deg) translateX(-50%) translateY(-25%);
+//     position: absolute;
+//     z-index: -1;
+// }
+@keyframes dessiner {
+  from {
+    mask-position: 0 0;
+  }
+  to {
+    mask-position: 100% 0;
+  }
+}
+@keyframes effacer {
+  from {
+    mask-position: 100% 0;
+  }
+  to {
+    mask-position: 0 0;
+  }
+}
+
+.cta {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	margin: 1em 0em 1em;
+	padding: 0.6rem 2rem;
+	&__button {
+		text-decoration: none;
+		position: relative;
+		top: 0rem;
+		left: -2rem;
+		border: none;
+		border-radius: 5px;
+		padding: 0;
+		font-size: 1.2em;
+		padding: 0.4em 1rem;
+		background-color: $purple;
+		mask: url("../img/urban-sprite.png");
+		mask-size: 3000% 100%;
+		color: $white;
+		transition: all 0.5s ease-in-out;
+		animation: dessiner 0.5s steps(29) forwards;
+		border: 1px solid transparent;
+		&:hover,
+		&:focus{
+			animation: effacer 0.5s steps(29) forwards;
+		}
+	}
+	&__submit{
+		position: relative;
+		top: -0.6rem;
+		left: -2rem;
+		border: none;
+		border-radius: 5px;
+		font-size: 1.2em;
+		padding: 0.4em 1rem;
+		background-color: $purple;
+		mask: url("../img/urban-sprite.png");
+		mask-size: 3000% 100%;
+		color: $white;
+		cursor: pointer;
+		transition: all 0.5s ease-in-out;
+		animation: dessiner 0.5s steps(29) forwards;
+		border: 1px solid transparent;
+		&:hover,
+		&:focus{
+			animation: effacer 0.5s steps(29) forwards;
+		}
+	}
+	&__masque {
+		color: $purple;
+		text-align: center;
+		border: 1px solid $purple;
+		border-radius: 5px; 
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		font-size: 1.2em;
+		padding: 0.5rem 1rem;
+	}
+}
+.hidden{
+	display: none;
+}
+.heading1{
+	line-height: 1.2em;
+	font-size: $subHeading1/1.6;
+	margin-bottom: 1em;
+}
+.heading2{
+	line-height: 1.2em;
+	font-family: "Good_Vibes";
+	@media only screen and (min-width: 980px) {
+		margin-bottom:1.5em;
+		font-size: $subHeading2;
+	}
+	@media only screen and (max-width: 979px) {
+		margin: 1em 0 1.5em;
+		font-size: $subHeading2/1.4;
+	}
+}
+.heading3{
+	line-height: 1.2em;
+	@media only screen and (min-width: 980px) {
+		font-size: $subHeading3;
+	}
+	@media only screen and (max-width: 979px) {
+		font-size: $subHeading3/1.2;
+	}
+	font-family: "Good_Vibes";
+	margin-bottom: 1em;
+}
+.heading4{
+	line-height: 1.2em;
+	@media only screen and (min-width: 980px) {
+		font-size: $subHeading4;
+	}
+	@media only screen and (max-width: 979px) {
+		font-size: $subHeading4/1.05;
+	}
+	font-family: "Good_Vibes";
+	margin-bottom: 1em;
+}

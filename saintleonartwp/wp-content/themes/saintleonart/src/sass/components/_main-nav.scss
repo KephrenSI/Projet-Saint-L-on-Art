@@ -1,0 +1,231 @@
+@media only screen and (min-width: 980px) {
+    .main-nav{
+        background-color: $purple;
+        position: relative;
+        z-index: 2;
+        .burger-check {
+            display: none;
+        }
+        .nav {
+            position: relative;
+            max-width: 1440px;
+            margin: 0 auto;
+            .logo-txt{
+                transition: all 0.5s ease-in-out;
+                position: absolute;
+                left: 3rem;
+                z-index: 2;
+                fill: $white;
+                &:hover,
+                &:focus{
+                    fill: $yellow;
+                }
+            }
+            svg{
+                width: 145px;
+            }
+        }
+        &__list{
+            margin: 0 2rem;
+            background-color: $purple;
+            font-size: $subHeading4;
+            text-align: right;
+            position: relative;
+            right: 0;
+            &--elt {
+                display: inline-block;
+            }
+            &--link {
+                padding: 3em 1rem;
+                color: $white;
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                text-align: right;
+                &:hover,
+                &:focus{
+                    color: $yellow;
+                    background-color: darken($purple, 2);
+                }
+            }
+            .submenu{
+                color: $white;
+                padding: 3em 1rem;
+                position: relative;
+                &__list{
+                    z-index: -1;
+                    cursor: normal;
+                    text-align: left;
+                    transition: all 0.5s ease-in-out;
+                    position: absolute;
+                    top: -200px;
+                    background-color: $yellow;
+                    &--elt{
+
+                    }
+                    &--link{
+                        padding: 1em 2em;
+                        color: $black;
+                        display: inline-block;
+                        width: 100%;
+                        text-decoration: none;
+                        display: inline-block;
+                        &:hover,
+                        &:focus{
+                            background-color: darken($yellow, 10);
+                        }
+                    }
+                    &:hover{
+                        top: 6.9em;
+
+                    }
+                }
+                &:hover ~ ul{
+                    top: 6.9em;
+                }
+                &:hover,
+                &:focus{
+                    color: $yellow;
+                    background-color: darken($purple, 2);
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 979px) {
+    .main-nav{
+        .burger {
+            border: 0;
+            background: none;
+            border-bottom: 4px solid $white;
+            display: block;
+            outline: 0;
+            padding: 0;
+            cursor: pointer;
+            width: 2em;
+            transition: border-bottom 1s ease-in-out;
+            padding-top: 1.5em;
+            right: 1.2rem;
+            top: 12.5px;
+            position: absolute;
+            z-index: 5;
+        }
+        .burger::-moz-focus-inner {
+            border: 0;
+            padding: 0;
+        }
+        .burger:before {
+            content: "";
+            border-bottom: 4px solid $white;
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .burger:after {
+            content: "";
+            border-bottom: 4px solid $white;
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .burger-check {
+            display: none;
+        }
+        .burger-check:checked ~ .burger {
+            border-bottom: 4px solid transparent;
+            transition: border-bottom 0.5s ease-in-out;
+        }
+        .burger-check:checked ~ .burger:before {
+            transform: rotate(-405deg) translateY(1px) translateX(-3px);
+            transition: transform 0.5s ease-in-out;
+        }
+        .burger-check:checked ~ .burger:after {
+            transform: rotate(405deg) translateY(-4px) translateX(-5px);
+            transition: transform 0.5s ease-in-out;
+        }
+        .nav {
+            position: absolute;
+            z-index: 4;
+            background-color: $purple;
+            color: $white;
+            overflow: hidden;
+            max-height: 94px;
+            transition: all 0.5s ease-in-out;
+            text-align: center;
+            font-size: 1em;
+            width: 100%;
+            .logo-txt{
+                transition: all 0.5s ease-in-out;
+                position: absolute;
+                left: 1.2rem;
+                fill: $white;
+                &:hover,
+                &:focus{
+                    fill: $yellow;
+                }
+            }
+            svg{
+                width: 100px;
+            }
+        }
+        .burger-check:checked ~ .nav {
+            max-height: 100vh;
+            background-color: $yellow;
+            svg:hover,
+            svg:focus{
+                .cls-1{
+                    fill: $purple;
+                }
+            }
+        }
+        &__list{
+            height: 88vh;
+            margin-top: 5rem;
+            &--elt {
+                color: $purple;
+                list-style: none;
+                font-size: $subHeading4;
+                font-weight: 800;
+            }
+            &--elt a {
+                color: $purple;
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+                padding: 0.7em 4.5rem;
+                text-align: right;
+                position: relative;
+                transition: all 0.5s ease-in-out;
+            }
+            &--elt a:hover,
+            &--elt a:focus{
+                color: $white;
+            }
+            &--elt a{
+                &.active{
+                    color: $white;
+                    &::before{
+                        content: "";
+                        font-size: $heading2;
+                        font-weight: 100;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 2rem;
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background-color: $white;
+                    }
+                }
+            }
+            &--elt p{
+                display: none;
+            }
+        }
+    }
+}

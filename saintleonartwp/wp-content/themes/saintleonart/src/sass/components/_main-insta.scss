@@ -1,0 +1,69 @@
+@media only screen and (min-width: 980px) {
+	.insta{
+		@media only screen and (min-width: 2001px) {
+			max-width: 2000px;
+			margin: 5rem auto 0;
+		}
+		@media only screen and (max-width: 2000px) {
+			margin: 5rem 3rem 0;
+		}
+		&__heading2{
+			text-align: center;
+		}
+		&__bloc{
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&--pix{
+				overflow: hidden;
+				width: 200px;
+				height: 200px;
+				background-color: $red;
+				margin-bottom: 1.2rem;
+				position: relative;
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 979px) {
+	.insta{
+		margin: 5rem 1.2rem;
+		&__heading2{
+			text-align: center;
+		}
+		&__bloc{
+			@media only screen and (min-width: 470px){
+				max-width: 425px;
+			}
+			@media only screen and (max-width: 469px){
+				max-width: 200px;
+			}
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			&--pix{
+				overflow: hidden;
+				width: 200px;
+				height: 200px;
+				background-color: $red;
+				margin-bottom: 1.2rem;
+				position: relative;
+				img{
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translateX(-50%) translateY(-50%);
+				}
+			}
+		}
+	}
+}

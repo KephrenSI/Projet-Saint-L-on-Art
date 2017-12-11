@@ -1,0 +1,211 @@
+@media only screen and (min-width: 980px) {
+	.stat{
+		@media only screen and (min-width: 2001px) {
+			margin: 5rem auto 0;
+			padding-bottom: 2em;
+			background-color: $purple;
+			color: $white;
+		}
+		@media only screen and (max-width: 2000px) {
+			margin-top: 5rem;
+			padding-bottom: 2em;
+			background-color: $purple;
+			color: $white;
+		}
+		&__heading2{
+			text-align: center;
+			padding-top: 1em;
+		}
+		&__list{
+				max-width: 2000px;
+				margin: 5rem auto 0;
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: center;
+				position: relative;
+				z-index: 3;
+				width: 50%;
+			&--elt{
+				width: 100%;
+				text-align: center;
+				background-color: $yellow;
+				transition: all 0.5s ease-in-out;
+				margin-left: 5px;
+				&:hover,
+				&:focus{
+					background-color: darken($yellow, 10);
+				}
+			}
+			&--elt:last-child{
+				margin-left: 0px;
+			}
+			&--link{
+				padding: 2em 1.6em;
+				display: block;
+				color: $white;
+				text-decoration: none;
+				font-weight: 100;
+			}
+			.active{
+				background-color: darken($yellow, 10);
+			}
+		}
+		&__list2{
+			height: 17em;
+			&--elt{
+				left: 50%;
+				transform: translateX(-50%);
+				max-width: 2000px;
+				background-color: $purple;
+				width: 100%;
+			    padding: 3.5em 0;
+			    position: absolute;
+			}
+			&--elt+&--elt{
+				opacity: 0;
+			}
+			&--elt:target{
+				opacity: 1;
+				z-index: 2;
+			}
+			&--global{
+				display: flex;
+				flex-wrap: wrap;
+				margin: 2em 3rem 0;
+				justify-content: space-between;
+			}
+			&--bloc{
+				width: 20%;
+				text-align: center;
+				margin: 0 0 3em 5px;
+			}
+			&--bloc:nth-of-type(1){
+				margin-left: 0;
+			}
+			&--logo{
+				display: none;
+			}
+			&--number{
+				padding-bottom: 1rem;
+				margin-bottom: 1rem;
+				border-bottom: 1px solid $white;
+				font-size: $heading4;
+				font-weight: 800;
+			}
+			&--about{
+				width: 80%;
+				margin: 0 auto;
+				line-height: 1.35em;
+				font-weight: 600;
+			}
+		}
+		.cta{
+			@media only screen and (min-width: 2001px){
+				max-width: 2000px;
+				margin: 0 auto;
+			}
+			@media only screen and (max-width: 2000px) {
+				margin-left: 3rem;
+			}
+			&__button{
+				background-color: $yellow;
+				color: $purple;
+			}
+			&__masque{
+				border: 1px solid $yellow;
+				color: $yellow;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 979px) {
+	.stat{
+		margin-top: 5rem;
+		padding-bottom: 2em;
+		background-color: $purple;
+		color: $white;
+		&__heading2{
+			text-align: center;
+			padding-top: 1em;
+		}
+		&__list{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: center;
+			position: relative;
+			z-index: 3;
+			&--elt{
+				width: 100%;
+				text-align: center;
+				background-color: $yellow;
+				transition: all 0.5s ease-in-out;
+				&:hover,
+				&:focus{
+					background-color: darken($yellow, 10);
+				}
+			}
+			&--link{
+				padding: 2em 1.6em;
+				display: block;
+				color: $white;
+				text-decoration: none;
+				font-weight: 100;
+			}
+			.active{
+				background-color: darken($yellow, 10);
+			}
+		}
+		&__list2{
+			height: 17em;
+			&--elt{
+				background-color: $purple;
+				width: 100%;
+			    padding: 3.5em 0;
+			    position: absolute;
+			}
+			&--elt+&--elt{
+				opacity: 0;
+			}
+			&--elt:target{
+				opacity: 1;
+				z-index: 2;
+			}
+			&--global{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			&--bloc{
+				width: 40%;
+				text-align: center;
+				margin: 0 auto 3em;
+			}
+			&--logo{
+				display: none;
+			}
+			&--number{
+				padding-bottom: 1rem;
+				margin-bottom: 1rem;
+				border-bottom: 1px solid $white;
+				font-size: $heading4;
+				font-weight: 800;
+			}
+			&--about{
+				width: 80%;
+				margin: 0 auto;
+				line-height: 1.35em;
+				font-weight: 600;
+			}
+		}
+		.cta{
+			margin: 1.2rem;
+			&__button{
+				background-color: $yellow;
+				color: $purple;
+			}
+			&__masque{
+				border: 1px solid $yellow;
+				color: $yellow;
+			}
+		}
+	}
+}

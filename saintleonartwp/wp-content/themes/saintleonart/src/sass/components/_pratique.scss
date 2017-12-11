@@ -1,0 +1,177 @@
+@media only screen and (min-width: 751px) {
+	.pratique{
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 2000px;
+		@media only screen and (min-width: 2001px) {
+			margin: 0 auto;
+		}
+		@media only screen and (max-width: 2000px) and (min-width: 981px) {
+			margin: 0 3rem;
+		}
+		@media only screen and (min-width: 768px) and (max-width: 979px) {
+			margin: 0 1.2rem;
+		}
+		&__heading3{
+			background-color: $purple;
+			color: $white;
+			padding: 1em 3rem;
+			margin-bottom: 5px;
+		}
+		&__heading4{
+			margin-top: 2em;
+			font-family: 'Raleway';
+			width: 100%;
+			font-weight: 600;
+		}
+		&__list{
+			@media only screen and (min-width: 1201px) {
+				overflow: hidden;
+				position: relative;
+				background-color: $red;
+				height: 380px;
+				margin-right: 3rem;
+				width: 30%;
+				position: fixed;
+				right: 0;
+			}
+			@media only screen and (max-width: 1200px) {
+				overflow: hidden;
+				position: relative;
+				background-color: $red;
+				margin-bottom: 5em;
+				width: 100%;
+			}
+			&--link{
+				z-index: 1;
+				position: relative;
+				letter-spacing: 1px;
+				text-decoration: none;
+				color: $white;
+				font-family: 'goodvibes';
+				font-size: $heading4;
+				padding: 1.2rem;
+				display: inline-block;
+				width: 100%;
+				transition: all 0.5s ease-in-out;
+				&:hover,
+				&:focus{
+					background-color: rgba($darkRed, 0.8);
+				}
+			}
+			.active{
+				background-color: $purple;
+			}
+		}
+		&__list:before{
+			content: "";
+			position: absolute;
+			top: 50px;
+			right: 50px;
+			width: 250px;
+			height: 250px;
+			opacity: 0.4;
+			background:  url(../img/infos.png) no-repeat center right;
+			background-size: contain;
+
+		}
+		&__list2{
+			@media only screen and (min-width: 1201px) {
+				width: 65%;
+			}
+			@media only screen and (max-width: 1200px) {
+				width: 100%;
+			}
+			line-height: 1.35em;
+			background-color: $extraLightGrey;
+			&--elt{
+				margin-bottom: 3em;
+			}
+		}
+		&__bloc{
+			padding: 0 3rem;
+			&--txt{
+				max-width: 460px;
+				margin-bottom: 1em;
+			}
+			.list{
+				padding: 1.2rem;
+				&__elt{
+					list-style: disc;
+					margin-bottom: 1em;
+					&--link{
+						text-decoration: none;
+						color: $purple;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 750px) {
+	.pratique{
+		&__heading3{
+			background-color: $purple;
+			color: $white;
+			padding: 1em 1.2rem;
+			margin-bottom: 5px;
+		}
+		&__heading4{
+			margin-top: 2em;
+			font-family: 'Raleway';
+			width: 100%;
+			font-weight: 600;
+		}
+		&__list{
+			position: relative;
+			background-color: $red;
+			margin-bottom: 5em;
+			&--elt{
+
+			}
+			&--link{
+				letter-spacing: 1px;
+				text-decoration: none;
+				color: $white;
+				font-family: 'goodvibes';
+				font-size: $heading4;
+				padding: 1.2rem;
+				display: inline-block;
+				width: 100%;
+				transition: all 0.5s ease-in-out;
+				&:hover,
+				&:focus{
+					background-color: rgba($darkRed, 0.8);
+				}
+			}
+			.active{
+				background-color: $purple;
+			}
+		}
+		&__list2{
+			line-height: 1.35em;
+			background-color: $extraLightGrey;
+			&--elt{
+				margin-bottom: 3em;
+			}
+		}
+		&__bloc{
+			padding: 0 3rem;
+			&--txt{
+				max-width: 460px;
+				margin-bottom: 1em;
+			}
+			.list{
+				padding: 1.2rem;
+				&__elt{
+					list-style: disc;
+					margin-bottom: 1em;
+					&--link{
+						text-decoration: none;
+						color: $purple;
+					}
+				}
+			}
+		}
+	}
+}

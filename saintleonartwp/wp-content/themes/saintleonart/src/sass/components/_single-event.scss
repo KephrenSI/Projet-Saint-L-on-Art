@@ -1,0 +1,250 @@
+@media only screen and (min-width: 980px) {
+    .single-event{
+        line-height: 1.35em;
+        @media only screen and (min-width: 1601px) {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 1600px) {
+            margin: 0 3rem;
+        }
+        &__img{
+            position: relative;
+            float: left;
+            margin: 0 2em 1em 0;
+            width: 50%;
+            max-width: 666px;
+        }
+        &__taxonomy{
+            position: absolute;
+            &--txt{
+                color: white;
+                font-size: $subHeading4;
+                background-color: $purple;
+                padding: 1em 1.6em; 
+                margin-bottom: 1em;
+            }
+        }
+        &__date{
+            font-weight: 800;
+            font-size: $heading4;
+            margin-bottom: 2em;
+            &--txt{
+                margin-bottom: 1em;
+            }
+        }
+        &__bloc{
+            margin-bottom: 2em;
+            &--txt{
+                margin-bottom: 1em;
+            }
+        }
+        &__find{
+            width: 50%;
+            margin-bottom: 2em;
+            &--link{
+                transition: all 0.5s ease-in-out;
+                fill: $black;
+                padding: 1rem 0.5rem;
+                margin-right: 1em;
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+                z-index: 100000;
+                top: 8px;
+                &:hover,
+                &:focus{
+                    transition: all 0.5s ease-in-out;
+                    fill: $purple;
+                }
+            }
+        }
+        .horaire{
+            display: flex;
+            flex-wrap: wrap;
+            .heading3{
+                width: 100%;
+            }
+            &__bloc{
+                background-color: $yellow;
+                position: relative;
+                width: 49.7%;
+                padding: 1.2rem;
+                margin-bottom: 5px;
+                &:nth-child(2n+2){
+                    margin-right: 5px;
+                }
+                &--date{
+                    background-color: $purple;
+                    color: white;
+                    width: 4rem;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    right: 0;
+                    font-family: "Good_Vibes";
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                }
+                &--month{
+                    font-size: 1.5em;
+                }
+                &--day{
+                    font-size: 2em;
+                }
+            }
+        }
+        &__cta{
+            margin: 4em 0;
+        }
+    }
+}
+@media only screen and (max-width: 979px) {
+    .single-event{
+        line-height: 1.35em;
+        @media only screen and (min-width: 768px) and (max-width: 979px) {
+            margin: 0 1.2rem;
+        }
+        &__img{
+            position: relative;
+            float: left;
+            margin: 0 2em 1em 0;
+            max-width: 666px;
+            @media only screen and (min-width: 580px) {
+                width: 50%;
+            }
+            @media only screen and (max-width: 579px) {
+                width: 100%;
+            }
+        }
+        &__taxonomy{
+            position: absolute;
+            &--txt{
+                color: white;
+                font-size: $subHeading4;
+                background-color: $purple;
+                padding: 1em 1.6em; 
+                margin-bottom: 1em;
+            }
+        }
+        &__date{
+            @media only screen and (min-width: 768px) {
+                
+            }
+            @media only screen and (max-width: 767px) {
+                margin: 1.2rem;
+            }
+            font-weight: 800;
+            font-size: $heading4;
+            margin-bottom: 2em;
+            &--txt{
+                margin-bottom: 1em;
+            }
+        }
+        &__bloc{
+            @media only screen and (min-width: 768px) {
+                
+            }
+            @media only screen and (max-width: 767px) {
+                margin: 1.2rem;
+            }
+            margin-bottom: 2em;
+            &--txt{
+                margin-bottom: 1em;
+            }
+        }
+        &__find{
+            @media only screen and (min-width: 768px) {
+                
+            }
+            @media only screen and (max-width: 767px) {
+               h3{
+                    margin: 1.2rem;
+                }
+            }
+            margin-bottom: 2em;
+            &--link{
+                transition: all 0.5s ease-in-out;
+                fill: $black;
+                padding: 1rem 0.5rem;
+                margin-right: 1em;
+                text-decoration: none;
+                color: inherit;
+                position: relative;
+                z-index: 100000;
+                top: 8px;
+                &:hover,
+                &:focus{
+                    transition: all 0.5s ease-in-out;
+                    fill: $purple;
+                }
+            }
+        }
+        .horaire{
+            @media only screen and (min-width: 768px) {
+                
+            }
+            @media only screen and (max-width: 767px) {
+               h3{
+                    margin: 1.2rem;
+                }
+            }
+            display: flex;
+            flex-wrap: wrap;
+            .heading3{
+                width: 100%;
+            }
+            &__bloc{
+                background-color: $yellow;
+                position: relative;
+                @media only screen and (min-width: 768px) {
+                    width: 49.7%;
+                    &:nth-child(2n+2){
+                        margin-right: 5px;
+                    }
+                }
+                @media only screen and (max-width: 767px) {
+                    width: 100%;
+                }
+                padding: 1.2rem;
+                margin-bottom: 5px;
+                &--date{
+                    background-color: $purple;
+                    color: white;
+                    width: 4rem;
+                    height: 100%;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    right: 0;
+                    font-family: "Good_Vibes";
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                }
+                &--month{
+                    font-size: 1.5em;
+                }
+                &--day{
+                    font-size: 2em;
+                }
+            }
+        }
+        @media only screen and (min-width: 768px){
+            &__cta{
+                margin: 4rem 0rem;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            &__cta{
+                margin: 4rem 1.2rem;
+            }
+        }
+    }
+}

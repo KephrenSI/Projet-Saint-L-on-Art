@@ -1,0 +1,42 @@
+.sec-nav{
+	margin: 1rem 0;
+	position: absolute;
+	@media only screen and (min-width: 980px) {
+		top: 150px;
+		font-size: $heading4;
+	}
+	@media only screen and (max-width: 979px) {
+		top: 100px;
+	}
+	width: 100%;
+	text-align: center;
+	&__list{
+		&--elt{
+			display: inline-block;
+			.active{
+				color: $purple;
+				fill: $purple;
+				font-weight: 800;
+			}
+		}
+		&--txt{
+			transition: all 0.5s ease-in-out;
+			text-decoration: none;
+			color: $lightGrey;
+			fill: $lightGrey;
+			span{
+				position: relative;
+				top: 5px;
+			}
+			&:hover,
+			&:focus{
+				color: darken($lightGrey,50);
+				fill: darken($lightGrey,50);
+			}
+		}
+		&--space{
+			color: $purple;
+			font-weight: 800;
+		}
+	}
+}

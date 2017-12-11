@@ -1,0 +1,339 @@
+@media only screen and (min-width: 751px) {
+	.about{
+		max-width: 2000px;
+		@media only screen and (min-width: 2001px) {
+			margin: 0 auto;
+		}
+		@media only screen and (max-width: 2000px) and (min-width: 981px) {
+			margin: 0 3rem;
+		}
+		@media only screen and (min-width: 768px) and (max-width: 979px) {
+			margin: 0 1.2rem;
+		}
+		.presentation{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 3rem;
+			}
+			&__content{
+				max-width: 640px;
+				padding: 0 3rem 2em;
+				&--txt{
+					margin-bottom: 1em;
+					line-height: 1.35em;
+				}
+			}
+		}
+		.historique{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 3rem;
+			}
+			&__content{
+				max-width: 640px;
+				padding: 0 3rem 2em;
+				&--txt{
+					margin-bottom: 1em;
+					line-height: 1.35em;
+				}
+			}
+			.list{
+				margin-left: 1em;
+				&__elt{
+					list-style: disc;
+					&--txt{
+						margin-bottom: 1em;
+						line-height: 1.35em;
+						span{
+							font-weight: 800;
+						}
+					}
+				}
+			}
+		}
+		.organisateur{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 3rem;
+			}
+			&__role{
+				display: flex;
+				flex-wrap: wrap;
+				// max-width: 640px;
+				padding: 0 3rem 2em;
+				&--bloc{
+					margin-bottom: 2em;
+					margin-left: 5%;
+					&:nth-of-type(1){
+						margin-left: 0px;
+					}
+				}
+				&--perso{
+					margin-bottom: 2em;
+					.list{
+						&__elt{
+							margin-bottom: 0.5em;
+							&--txt{
+								font-weight: 600;
+							}
+							&--link{
+								text-decoration: none;
+								color: $purple;
+
+							}
+						}
+					}
+				}
+			}
+		}
+		.presse{
+			// margin-bottom: 3em;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+				margin-bottom: 5px;
+			}
+			&__heading4{
+				font-family: 'Raleway';
+				width: 100%;
+				font-weight: 600;
+			}
+			&__docs{
+				position: relative;
+				background-color: $yellow;
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 5px;
+				&--infos{
+					padding: 1.2rem;
+					width: 85%;
+				}
+				&--date{
+					width: 100%;
+					margin-bottom: 1em;
+				}
+				&--poids{
+					width: 100%;
+					margin-bottom: 1em;
+				}
+				&--extention{
+					width: 100%;
+				}
+				&--download{
+					width: 15%;
+					background-color: $purple;
+					padding: 1em;
+					text-align: center;
+				    writing-mode: vertical-rl;
+	    			transform: rotate(180deg);
+				}
+				&--link{
+					text-decoration: none;
+					width: 10%;
+					writing-mode: vertical-rl;
+	  				transform: rotate(180deg);
+	  				color: white;
+				}
+			}
+		}
+		.last-year{
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+			}
+			&__heading4{
+				font-family: 'Goodvibes';
+				width: 100%;
+				background-color: $grey;
+				color: $white;
+				padding: 1em 1.2rem;
+			}
+			&__years{
+				margin-bottom: 2em;
+				padding: 0 1.2rem 2em;
+				line-height: 1.35em;
+				&--img{
+					width: 100%;
+					max-width: 350px;
+					margin-bottom: 2em;
+					display: inline;
+					float: left;
+					margin-right: 2em;
+				}
+				&--txt{
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 750px) {
+	.about{
+		.presentation{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+			}
+			&__content{
+				padding: 0 1.2rem 2em;
+				&--txt{
+					margin-bottom: 1em;
+					line-height: 1.35em;
+				}
+			}
+		}
+		.historique{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+			}
+			&__content{
+				padding: 0 1.2rem 2em;
+				&--txt{
+					margin-bottom: 1em;
+					line-height: 1.35em;
+				}
+			}
+			.list{
+				margin-left: 1em;
+				&__elt{
+					list-style: circle;
+					&--txt{
+						margin-bottom: 1em;
+						line-height: 1.35em;
+						span{
+							font-weight: 800;
+						}
+					}
+				}
+			}
+		}
+		.organisateur{
+			// margin-bottom: 3em;
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+			}
+			&__role{
+				padding: 0 1.2rem 2em;
+				&--bloc{
+					margin-bottom: 2em;
+				}
+				&--perso{
+					margin-bottom: 2em;
+					.list{
+						&__elt{
+							margin-bottom: 0.5em;
+							&--txt{
+								font-weight: 600;
+							}
+							&--link{
+								text-decoration: none;
+								color: $purple;
+
+							}
+						}
+					}
+				}
+			}
+		}
+		.presse{
+			// margin-bottom: 3em;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+				margin-bottom: 5px;
+			}
+			&__heading4{
+				font-family: 'Raleway';
+				width: 100%;
+				font-weight: 600;
+			}
+			&__docs{
+				position: relative;
+				background-color: $yellow;
+				display: flex;
+				flex-wrap: wrap;
+				margin-bottom: 5px;
+				&--infos{
+					padding: 1.2rem;
+					width: 85%;
+				}
+				&--date{
+					width: 100%;
+					margin-bottom: 1em;
+				}
+				&--poids{
+					width: 100%;
+					margin-bottom: 1em;
+				}
+				&--extention{
+					width: 100%;
+				}
+				&--download{
+					width: 15%;
+					background-color: $purple;
+					padding: 1em;
+					text-align: center;
+				    writing-mode: vertical-rl;
+	    			transform: rotate(180deg);
+				}
+				&--link{
+					text-decoration: none;
+					width: 10%;
+					writing-mode: vertical-rl;
+	  				transform: rotate(180deg);
+	  				color: white;
+				}
+			}
+		}
+		.last-year{
+			background-color: $extraLightGrey;
+			&__heading3{
+				background-color: $purple;
+				color: $white;
+				padding: 1.5em 1.2rem;
+			}
+			&__heading4{
+				font-family: 'Goodvibes';
+				width: 100%;
+				background-color: $grey;
+				color: $white;
+				padding: 1em 1.2rem;
+			}
+			&__years{
+				margin-bottom: 2em;
+				padding: 0 1.2rem 2em;
+				line-height: 1.35em;
+				&--img{
+					width: 100%;
+					margin-bottom: 2em;
+				}
+				&--txt{
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}

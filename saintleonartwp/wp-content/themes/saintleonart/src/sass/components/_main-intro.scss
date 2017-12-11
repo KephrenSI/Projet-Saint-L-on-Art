@@ -1,0 +1,37 @@
+
+@media only screen and (min-width: 768px) {
+	.intro{
+		margin: 5rem auto 0;
+		max-width: 640px;
+		&__content{
+			&--txt{
+				margin-bottom: 1em;
+				line-height: 1.35em;
+			}
+		}
+	}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.intro{
+		margin: 5rem auto 0;
+		max-width: 460px;
+		&__content{
+			&--txt{
+				margin-bottom: 1em;
+				line-height: 1.35em;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 479px) {
+	.intro{
+		margin: 5rem 1.2rem 0;
+		max-width: 460px;
+		&__content{
+			&--txt{
+				margin-bottom: 1em;
+				line-height: 1.35em;
+			}
+		}
+	}
+}

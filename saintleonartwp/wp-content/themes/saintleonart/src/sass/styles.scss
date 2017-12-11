@@ -1,0 +1,81 @@
+/* Képhren/Projet
+*
+* /src/sass/styles.scss - Main style for projet
+*
+* coded by Képhren SIMONIS
+* started at 19/09/2017
+*/
+
+// 1. Settings - Variables globales
+@import "settings/paths";
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/sizes";
+
+// 2. Tools - Mixins globaux, functions & outils
+@import "tools/utils";
+
+// 3. Generic - Style de remise à zéro (reset, normalize…)
+@import "generic/meyer-reset";
+@import "generic/box-sizing";
+
+// 4. Base - Éléments bruts
+@import "base/root";
+
+// 5. Objects - Éléments de mise en forme non-cosmétique
+@import "objects/main-nav";
+@import "objects/second-nav";
+
+@import "objects/banner";
+
+@import "objects/main-intro";
+@import "objects/main-artistes";
+@import "objects/main-last-event";
+@import "objects/main-actu";
+@import "objects/statistiques";
+@import "objects/main-insta";
+@import "objects/main-newsletter";
+
+@import "objects/apropos";
+@import "objects/agenda";
+@import "objects/programme";
+@import "objects/pratique";
+@import "objects/partenaire";
+@import "objects/all-artistes";
+@import "objects/all-news";
+@import "objects/all-events";
+@import "objects/single-artiste";
+@import "objects/single-new";
+@import "objects/single-event";
+@import "objects/contact";
+
+@import "objects/footer";
+
+// 6. Components - Design des composants, morceaux d'UI
+@import "components/main-nav";
+@import "components/second-nav";
+
+@import "components/banner";
+
+@import "components/main-intro";
+@import "components/main-artistes";
+@import "components/main-last-event";
+@import "components/main-actu";
+@import "components/statistiques";
+@import "components/main-insta";
+@import "components/main-newsletter";
+
+@import "components/apropos";
+@import "components/agenda";
+@import "components/programme";
+@import "components/pratique";
+@import "components/partenaire";
+@import "components/all-artistes";
+@import "components/all-news";
+@import "components/all-events";
+@import "components/single-artiste";
+@import "components/single-new";
+@import "components/single-event";
+@import "components/contact";
+
+@import "components/footer";

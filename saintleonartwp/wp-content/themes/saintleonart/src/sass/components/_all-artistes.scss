@@ -1,0 +1,357 @@
+@media only screen and (min-width: 980px) {
+	.all-artistes{
+		@media only screen and (min-width: 2001px) {
+			max-width: 2000px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		@media only screen and (max-width: 2000px) {
+			margin: 0 3rem;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		&__heading2{
+			width: 50%;
+		}
+		&__heading3{
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&__filter{
+			width: 100%;
+			text-align: right;
+			margin-top: -4rem;
+			margin-bottom: 1rem;
+			opacity: 0.2;
+			transition: all 0.5s ease-in-out;
+			select{
+				cursor: pointer;
+				font-size: $currentText;
+				height: 50px;
+				width: 130px;
+			    background-color: transparent;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
+			    border: none;
+			    background:  url(../img/filtre.png) no-repeat center right;
+			    background-size: 15px;
+    			appearance: textfield;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+		&__artiste{
+			@media only screen and (min-width: 2001px) {
+				margin-bottom: 5px;
+				color: $white;
+				width: 24.8%;
+				height: 320px;
+				position: relative;
+				overflow: hidden;
+				margin-left: 5px;
+			}
+			@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
+				margin-bottom: 5px;
+				color: $white;
+				width: 49.6%;
+				height: 320px;
+				position: relative;
+				overflow: hidden;
+				margin-left: 5px;
+			}
+			@media only screen and (max-width: 1350px)  {
+				margin-bottom: 5px;
+				color: $white;
+				width: 49.4%;
+				height: 320px;
+				position: relative;
+				overflow: hidden;
+				margin-left: 5px;
+			}
+			&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+				background-color: $yellow;
+				z-index: 2;
+			}
+			&--bloc{
+				text-decoration: none;
+				color: inherit;
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				z-index: 3;
+				&:hover~img,
+				&:focus~img{
+					filter: blur(8px);
+				}
+			}
+			&--img{
+				transition: all 0.5s ease-in-out;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				@media only screen and (min-width: 1101px) {
+					width: 100%;
+				}
+				@media only screen and (max-width: 1100px) {
+					height: 100%;
+				}
+			}
+			&--taxonomy{
+				background-color: $purple;
+				padding: 1rem 2rem;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+			}
+			&--social{
+				position: absolute;
+				z-index: 4;
+				bottom: 0;
+				right: 0;
+				&:hover{
+					div{
+						right: 100px;
+					}
+				}
+			}
+			&--txt{
+				background-color: $purple;
+				display: inline-block;
+				position: relative;
+				z-index: 6;
+				padding: 1rem 2rem;
+				cursor: default;
+			}
+			&--reseaux{
+				transition: all 0.5s ease-in-out;
+				position: absolute;
+				right: -80px;
+				bottom: 0;
+				display: flex;
+				z-index: 5;
+			}
+			&--link{
+				transition: all 0.5s ease-in-out;
+				fill: $white;
+				padding: 1rem 0.5rem;
+				margin-right: 1em;
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				z-index: 100000;
+				top: 8px;
+				&:hover,
+				&:focus{
+					transition: all 0.5s ease-in-out;
+					fill: $purple;
+				}
+			}
+		}
+		&__load{
+			font-size: $subText;
+			text-align: center;
+			width: 100%;
+			margin: 3rem 1.2rem 2rem;
+			a{
+				color: $lightGrey;	
+				text-decoration: none;
+			}
+		}
+		@media only screen and (min-width: 2001px) {
+			&__artiste:nth-of-type(4n+2){
+				margin-left: 0px;
+			}
+		}
+		@media only screen and (max-width: 2000px) {
+			&__artiste:nth-of-type(2n+1){
+				margin-left: 5px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 979px) {
+	.all-artistes{
+		@media only screen and (min-width: 768px) and (max-width: 979px) {
+			margin: 5rem 1.2rem;
+		}
+		// margin-top: 5rem;
+		display: flex;
+		flex-wrap: wrap;
+		&__heading2{
+			@media only screen and (min-width: 768px) and (max-width: 979px) {
+				margin: 0;
+				width: 50%;
+			}
+			@media only screen and (max-width: 767px){
+				margin-left: 1.2rem;
+				margin-right: 1.2rem;
+				width: 25%;
+			}
+		}
+		&__heading3{
+			position: absolute;
+			z-index: 2;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&__filter{
+			text-align: right;
+			position: relative;
+			top: 20px;
+			@media only screen and (min-width: 768px) {
+				margin: -5rem 0 0rem;
+			}
+			@media only screen and (max-width: 767px) {
+				margin: -5rem 1.2rem 0rem;
+			}
+			opacity: 0.2;
+			transition: all 0.5s ease-in-out;
+			select{
+				cursor: pointer;
+				font-size: $currentText;
+				height: 50px;
+				width: 130px;
+			    background-color: transparent;
+			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
+			    border: none;
+			    background:  url(../img/filtre.png) no-repeat center right;
+			    background-size: 15px;
+    			appearance: textfield;
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+		&__artiste{
+			margin-bottom: 5px;
+			color: $white;
+			width: 100%;
+			height: 320px;
+			position: relative;
+			overflow: hidden;
+			&::before{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0.5;
+				background-color: $yellow;
+				z-index: 2;
+			}
+			&--bloc{
+				text-decoration: none;
+				color: inherit;
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				z-index: 3;
+				&:hover~img,
+				&:focus~img{
+					filter: blur(8px);
+				}
+			}
+			&--img{
+				transition: all 0.5s ease-in-out;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				@media only screen and (min-width: 450px){
+				width: 100%;
+				}
+				@media only screen and (max-width: 449px){
+				height: 100%;
+				}
+			}
+			&--taxonomy{
+				background-color: $purple;
+				padding: 1rem 2rem;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+			}
+			&--social{
+				position: absolute;
+				z-index: 4;
+				bottom: 0;
+				right: 0;
+				&:hover{
+					div{
+						right: 100px;
+					}
+				}
+			}
+			&--txt{
+				background-color: $purple;
+				display: inline-block;
+				position: relative;
+				z-index: 6;
+				padding: 1rem 2rem;
+			}
+			&--reseaux{
+				transition: all 0.5s ease-in-out;
+				position: absolute;
+				right: -80px;
+				bottom: 0;
+				display: flex;
+				z-index: 5;
+				// background-color: $purple;
+			}
+			&--link{
+				fill: $white;
+				padding: 1rem 0.5rem;
+				margin-right: 1em;
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				top: 8px;
+				&:hover,
+				&:focus{
+					transition: all 0.5s ease-in-out;
+					fill: $purple;
+				}
+			}
+		}
+		&__load{
+			font-size: $subText;
+			text-align: center;
+			width: 100%;
+			margin: 3rem 1.2rem 2rem;
+			a{
+				color: $lightGrey;	
+				text-decoration: none;
+			}
+		}
+		@media only screen and (min-width: 768px){
+			&__cta{
+				margin: 1.2rem 0rem;
+			}
+		}
+		@media only screen and (max-width: 767px) {
+			&__cta{
+				margin: 1.2rem;
+			}
+		}
+	}
+}
