@@ -14,10 +14,10 @@
 			.presentation{
 	    		width: 30%;
 	    		margin: 0 3rem 0 auto;
-	    		&__heading4{
+	    		&__heading3{
 					letter-spacing: 2px;
 	    		}
-	    		&__content{
+	    		p{
 					line-height: 1.5rem;
 					margin-bottom: 2em;
 					// padding: 0 3rem;
@@ -33,7 +33,7 @@
 	    	.infos{
 	    		width: 18%;
 	    		margin: 0 3rem;
-				&__heading4{
+				&__heading3{
 					letter-spacing: 2px;
 				}
 				&__content{
@@ -41,17 +41,17 @@
 					display: flex;
 					flex-direction: column;
 					margin-bottom: 2em;
-					&--txt{
+					p{
 						margin-bottom: 1em;
 					}
 					&--link{
 						transition: all 0.5s ease-in-out;
-						color: $white;
+						color: $yellow;
 						margin-bottom: 1em;
 						text-decoration: none;
 						&:hover,
 						&:focus{
-							color: $yellow;
+							color: darken($yellow, 20);
 						}
 					}
 				}
@@ -59,7 +59,7 @@
     	}
     	@media only screen and (max-width: 979px) {
 			.infos{
-				&__heading4{
+				&__heading3{
 					padding: 1em 1.2rem 0;
 				}
 				&__content{
@@ -67,17 +67,17 @@
 					display: flex;
 					flex-direction: column;
 					margin-bottom: 2em;
-					&--txt{
+					p{
 						margin-bottom: 1em;
 					}
 					&--link{
 						transition: all 0.5s ease-in-out;
-						color: $white;
+						color: $yellow;
 						margin-bottom: 1em;
 						text-decoration: none;
 						&:hover,
 						&:focus{
-							color: $yellow;
+							color: darken($yellow, 20);
 						}
 					}
 				}
@@ -99,7 +99,7 @@
     			.last-nav{
 					width: 100%;
 					margin: 0 3rem;
-					&__heading4{
+					&__heading3{
 						letter-spacing: 2px;
 		    		}
 					&__list{
@@ -172,7 +172,7 @@
 			background-color: $white;
 			margin-top: 2rem;
     		padding: 3rem;
-			&__heading4{
+			&__heading3{
 				max-width: 2000px;
 				margin: 0 auto;
 				padding-top: 1em;
@@ -202,7 +202,7 @@
     		color: $black;
 			background-color: $white;
 			padding: 1.2rem;
-			&__heading4{
+			&__heading3{
 				padding: 1em 1.2rem;
 			}
 			&__bloc{

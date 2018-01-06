@@ -4,7 +4,7 @@
 		line-height: 1.35em;
 		margin: 5rem auto 0;
 		&__content{
-			&--txt{
+			p{
 				margin-bottom: 1em;
 				&:last-child{
 					font-family: "Goodvibes";
@@ -14,7 +14,8 @@
 		}
 	}
 	.all-partenaire{
-		width: 100%;
+		margin: 0 auto;
+		max-width: 1000px;
 		color: $black;
 		background-color: $white;
 		margin-top: 2rem;
@@ -46,7 +47,7 @@
 		line-height: 1.35em;
 		margin: 5rem 1.2rem 0;
 		&__content{
-			&--txt{
+			p{
 				margin-bottom: 1em;
 				&:last-child{
 					font-family: "Goodvibes";

@@ -1,2 +1,11 @@
+ADMIN: 
+
 Identifiant: kephren
 Mot de passe: gbRUOWe^ZaeME&NHwO
+
+
+
+CONTRIBUTOR: 
+
+Identifiant: test
+Mot de passe: test

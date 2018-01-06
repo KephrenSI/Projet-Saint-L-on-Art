@@ -36,6 +36,7 @@
                 display: inline-block;
             }
             &--link {
+                transition: all 0.5s ease-in-out;
                 padding: 3em 1rem;
                 color: $white;
                 text-decoration: none;
@@ -48,9 +49,14 @@
                     background-color: darken($purple, 2);
                 }
             }
+            .active{
+                color: $yellow;
+                background-color: darken($purple, 2);
+            }
             .submenu{
+                transition: all 0.5s ease-in-out;
                 color: $white;
-                padding: 3em 1rem;
+                padding: 2.9em 1rem;
                 position: relative;
                 &__list{
                     z-index: -1;
@@ -64,6 +70,7 @@
 
                     }
                     &--link{
+                        transition: all 0.5s ease-in-out;
                         padding: 1em 2em;
                         color: $black;
                         display: inline-block;
@@ -71,9 +78,14 @@
                         text-decoration: none;
                         display: inline-block;
                         &:hover,
-                        &:focus{
+                        &:focus
+                        {
                             background-color: darken($yellow, 10);
                         }
+                    }
+                    .active{
+                        background-color: darken($yellow, 10);
+                        color: $white;
                     }
                     &:hover{
                         top: 6.9em;
@@ -225,6 +237,25 @@
             }
             &--elt p{
                 display: none;
+            }
+        }
+    }
+    .submenu__list--link{
+        &.actived{
+            color: $white;
+            &::before{
+                content: "";
+                font-size: $heading2;
+                font-weight: 100;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2rem;
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $white;
             }
         }
     }

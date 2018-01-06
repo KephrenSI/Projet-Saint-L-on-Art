@@ -17,7 +17,7 @@
         }
         &__taxonomy{
             position: absolute;
-            &--txt{
+            p{
                 color: white;
                 font-size: $subHeading4;
                 background-color: $purple;
@@ -29,13 +29,13 @@
             font-weight: 800;
             font-size: $heading4;
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
         &__bloc{
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
@@ -123,7 +123,7 @@
         }
         &__taxonomy{
             position: absolute;
-            &--txt{
+            p{
                 color: white;
                 font-size: $subHeading4;
                 background-color: $purple;
@@ -141,7 +141,7 @@
             font-weight: 800;
             font-size: $heading4;
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
@@ -153,7 +153,7 @@
                 margin: 1.2rem;
             }
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }

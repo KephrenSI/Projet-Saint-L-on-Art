@@ -6,7 +6,6 @@
                     <label class="newsletter__form--label" for="user_email">Email</label>
                     <span class="focus-border"></span>
                 </div>
-                <!-- <input class="newsletter__form--submit" type="submit" value="S'inscrire"> -->
                 <div class="cta">
                     <span class="cta__masque">S'inscrire</span>
                     <button class="cta__submit" type="button" name="Hover">S'inscrire</button>
@@ -15,130 +14,66 @@
         </section>
     </main>
     <footer class="footer">
-        <h2  class="footer__heading2 heading2 hidden" aria-level="2" role="heading">Footer</h2>
         <section class="global">
-            <h3  class="global__heading3 heading3 hidden" aria-level="3" role="heading">Infos globales</h3>
+            <h2  class="global__heading2 heading2 hidden" aria-level="2" role="heading">Infos globales</h2>
             <div class="presentation">
-                <h4  class="presentation__heading4 heading4" aria-level="4" role="heading">Saint Léon'Art</h4>
+                <h3  class="presentation__heading3 heading3" aria-level="3" role="heading">Saint Léon'Art</h3>
                 <div class="presentation__content">
-                    <p class="presentation__content--txt">
-                        <span>Saint Léon'Art,</span> c'est un vaste parcours artistique citoyen, mis sur pied par les artistes eux-mêmes et les associations du quartier Saint-Léonard.
-                    </p>
-                    <p class="presentation__content--txt">
-                        Ce site web vous présente la programmation de l'édition 2018 et permet aux artistes de s'inscrire à l'évènement via la page contact.
-                    </p>
-                    <!-- <div class="presentation__share">
-                        <a class="presentation__share--link" href="#" title="Aller vers la page Facebook">Facebook</a>
-                        <a class="presentation__share--link" href="#" title="Aller vers la page Twitter">Twitter</a>
-                    </div> -->
-                    <!-- <div class="presentation__cta cta">
-                        <a href="#" title="Aller vers la page à propos" >En savoir plus</a>
-                    </div> -->
+                    <div class="presentation__content--txt">
+                        <?php the_field('text_de_presentation', 38); ?>
+                    </div>
                 </div>
                 <div class="presentation__cta cta">
                     <span class="cta__masque">En savoir plus</span>
-                    <a href="#" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
+                    <a href="<?php the_permalink(80); ?>" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
                 </div>
             </div>
             <div class="infos">
-                <h4  class="infos__heading4 heading4" aria-level="4" role="heading">Informations</h4>
+                <h3  class="infos__heading3 heading3" aria-level="3" role="heading">Informations</h3>
                 <div class="infos__content">
-                    <p class="infos__content--txt">Organiser par <a class="infos__content--link" href="#"><?php the_field('nom', 80); ?></a></p>
+                    <p class="infos__content--txt">Organiser par <a class="infos__content--link" title="Aller sur le site de <?php the_field('nom', 80); ?>" href="#">Lencreuse</a></p>
                     <a class="infos__content--link" href="mailto:<?php the_field('email', 80); ?>" title="Envoyer un mail à <?php the_field('nom', 80); ?>"><?php the_field('email', 80); ?></a>
                     <a class="infos__content--link" href="tel:<?php the_field('telephone', 80); ?>" title="Telephoner chez <?php the_field('nom', 80); ?>"><?php the_field('telephone', 80); ?></a>
                 </div>
-                <!-- <div class="infos__cta cta">
-                    <span class="cta__masque">En savoir plus</span>
-                    <button class="cta__button" type="button" name="Hover">En savoir plus</button>
-                </div> -->
                 <div class="infos__cta cta">
                     <span class="cta__masque">En savoir plus</span>
-                    <a href="#" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
+                    <a href="<?php the_permalink(80); ?>" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
                 </div>
             </div>
             <div class="footer-nav">
                 <nav class="last-nav">
-                    <h4 class="last-nav__heading4 heading4" aria-level="4" role="heading">Navigation</h4>
+                    <h3 class="last-nav__heading3 heading3" aria-level="3" role="heading">Navigation</h3>
                     <div class="nav">
                         <ul class="last-nav__list">
-                            <?php foreach (dw_get_nav_items('header') as $item): ?>
+                            <?php foreach (dw_get_nav_items('footer-menu') as $item): ?>
                                 <li class="last-nav__list--elt">
-                                    <?php if(!$item->children): ?>
-                                    <a href="<?php echo $item->link; ?>" title="Aller vers la page page <?php echo $sub->label; ?>" class="last-nav__list--link <?php echo $item -> isCurrent ? ' active' : ''; ?>"><?php echo $item->label; ?></a>
-                                    <?php else: ?>
-                                    <span class="last-nav__list--submenu submenu"><?php echo $item->label; ?></span>
-                                    <ul class="submenu__list">
-                                        <?php foreach($item->children as $sub): ?>
-                                        <li class="submenu__list--elt">
-                                            <a href="<?php echo $sub->link; ?>" title="Aller vers la page pages <?php echo $sub->label; ?>" class="submenu__list--link <?php echo $item -> isCurrent ? ' actived' : ''; ?>"><?php echo $sub->label; ?></a>
-                                        </li>
-                                        <?php endforeach ?>
-                                    </ul>
-                                    <?php endif; ?>
+                                    <a href="<?php echo $item->link; ?>" title="Aller vers la page <?php echo $item->label; ?>" class="last-nav__list--link<?php echo $item -> isCurrent ? ' active' : ''; ?>"><?php echo $item->label; ?></a>
                                 </li>
                             <?php endforeach; ?>
-                            <!-- <li class="last-nav__list--elt">
-                                <a href="#" title="Recharger la page d'accueil" class="last-nav__list--link active">Accueil</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/programme.html" title="Aller vers la page du programme" class="submenu__list--link">Programme</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/agenda.html" title="Aller vers la page de l'agenda" class="last-nav__list--link">Agenda</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/artistes.html" title="Aller vers la page des artistes" class="last-nav__list--link">Artistes</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/events.html" title="Aller vers la page des évènements" class="last-nav__list--link">Évènements</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/news.html" title="Aller vers la page des actualités" class="last-nav__list--link">Actualités</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/pratique.html" title="Aller sur la page des infos pratiques" class="last-nav__list--link">Infos pratiques</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/partenaires.html" title="Aller sur la page des partenaires" class="last-nav__list--link">Partenaires</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/about.html" title="Aller sur la page à propos" class="last-nav__list--link">À propos</a>
-                            </li>
-                            <li class="last-nav__list--elt">
-                                <a href="./assets/html/contact.html" title="Aller sur la page de contact" class="last-nav__list--link">Contact</a>
-                            </li> -->
                         </ul>
                     </div>
                 </nav>
             </div>
         </section>
         <section class="partenaire">
-            <h4  class="partenaire__heading4 heading4" aria-level="4" role="heading">Partenaires</h4>
+            <h2  class="partenaire__heading2 heading2 hidden" aria-level="2" role="heading">Partenaires</h2>
             <div class="partenaire__bloc">
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/crc.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/vi.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/pac.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/calg.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/liege.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/ravi.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/arsenic.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/pdl.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/cpcr.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/cgsl.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/naos.png" alt="logo de la province de liège" width="100"></a>
-                <a href="#" title="Aller vers le site de la province de liège" class="partenaire__bloc--link"><img src="./assets/img/lehangar.png" alt="logo de la province de liège" width="100"></a>
+                <?php
+                $args = array( 'post_type' => 'partners', 'posts_per_page' => -1 ); $the_query = new WP_Query( $args );
+                ?>
+                <?php if ( $the_query->have_posts() ) : ?>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <?php $fields = get_field('logo'); ?>
+                    <a href="<?php the_field('url'); ?>" title="Aller vers le site du partenaire <?php the_title(); ?>" class="partenaire__bloc--link"><img src="<?php echo $fields['url']; ?>" alt="logo du partenaire <?php the_title(); ?>" width="80"></a>
+                <?php endwhile; endif; ?>
             </div>
-            <!-- <div class="partenaire__cta cta">
-                <span class="cta__masque">Tous les voir</span>
-                <button class="cta__button" type="button" name="Hover">Tous les voir</button>
-            </div> -->
             <div class="partenaire__cta cta">
                 <span class="cta__masque">Tous les voir</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
+                <a href="<?php the_permalink(64); ?>" title="Aller vers la page des partenaires" class="cta__button">Tous les voir</a>
             </div>
         </section>
         <section class="reseaux">
-            <h3  class="reseaux__heading3 heading3 hidden" aria-level="3" role="heading">Liens sociaux</h3>
+            <h2  class="reseaux__heading2 heading2 hidden" aria-level="2" role="heading">Liens sociaux</h2>
             <div class="reseaux__social">
                 <a class="reseaux__social--link" href="#" title="Aller vers la page Facebook"><span class="hidden">&nbsp;</span>
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -163,10 +98,10 @@
             </div>
         </section>
         <section class="cpr">
-            <h3  class="cpr__heading3 heading3 hidden" aria-level="3" role="heading">Droits</h3>
+            <h2  class="cpr__heading2 heading2 hidden" aria-level="2" role="heading">Droits</h2>
             <p class="cpr__txt">© Copyright 2017-2018 | <?php bloginfo('name') ?> tous droits réservés.</p>
         </section>
     </footer>
-    <?php if( is_user_logged_in() ) wp_footer(); ?>
+    <?php //if( is_user_logged_in() ) wp_footer(); ?>
 </body>
 </html>

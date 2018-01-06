@@ -6,7 +6,7 @@
         &__taxonomy{
             margin: 0 auto 2em;
             // position: absolute;
-            &--txt{
+            p{
                 // width: auto;
                 display: inline;
                 color: $white;
@@ -21,13 +21,13 @@
             text-align: right;
             font-weight: 800;
             font-size: $heading4;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
         &__bloc{
             margin: 8em auto 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
@@ -129,7 +129,7 @@
                 margin: 0 1.2rem 4em;
             }
             // position: absolute;
-            &--txt{
+            p{
                 display: inline;
                 color: $white;
                 font-size: $subHeading4;
@@ -149,7 +149,7 @@
             font-weight: 800;
             font-size: $heading4;
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }
@@ -161,7 +161,7 @@
                 margin: 1.2rem;
             }
             margin-bottom: 2em;
-            &--txt{
+            p{
                 margin-bottom: 1em;
             }
         }

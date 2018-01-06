@@ -100,6 +100,7 @@
 			}
 		}
 		.cta{
+			width: 80%;
 			@media only screen and (min-width: 2001px){
 				max-width: 2000px;
 				margin: 0 auto;
@@ -197,6 +198,7 @@
 			}
 		}
 		.cta{
+			width: 80%;
 			margin: 1.2rem;
 			&__button{
 				background-color: $yellow;

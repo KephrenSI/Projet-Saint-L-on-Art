@@ -21,7 +21,7 @@
 			&__content{
 				max-width: 640px;
 				padding: 0 3rem 2em;
-				&--txt{
+				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
@@ -38,7 +38,7 @@
 			&__content{
 				max-width: 640px;
 				padding: 0 3rem 2em;
-				&--txt{
+				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
@@ -47,7 +47,7 @@
 				margin-left: 1em;
 				&__elt{
 					list-style: disc;
-					&--txt{
+					p{
 						margin-bottom: 1em;
 						line-height: 1.35em;
 						span{
@@ -82,7 +82,7 @@
 					.list{
 						&__elt{
 							margin-bottom: 0.5em;
-							&--txt{
+							p{
 								font-weight: 600;
 							}
 							&--link{
@@ -96,10 +96,13 @@
 			}
 		}
 		.presse{
+			display: flex;
+			flex-wrap: wrap;
 			// margin-bottom: 3em;
 			&__heading3{
 				background-color: $purple;
 				color: $white;
+				width: 100%;
 				padding: 1.5em 1.2rem;
 				margin-bottom: 5px;
 			}
@@ -109,37 +112,49 @@
 				font-weight: 600;
 			}
 			&__docs{
+				width: 49.6%;
 				position: relative;
 				background-color: $yellow;
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 5px;
+				&:nth-child(2n+3){
+					margin-left: 5px;
+				}
 				&--infos{
 					padding: 1.2rem;
+					order: 2;
 					width: 85%;
 				}
 				&--date{
-					width: 100%;
+					// width: 20%;
 					margin-bottom: 1em;
 				}
 				&--poids{
-					width: 100%;
+					// width: 20%;
 					margin-bottom: 1em;
 				}
 				&--extention{
-					width: 100%;
+					// width: 20%;
 				}
 				&--download{
-					width: 15%;
+					order: 1;
+					// width: 15%;
 					background-color: $purple;
-					padding: 1em;
+					// padding: 1em;
 					text-align: center;
 				    writing-mode: vertical-rl;
 	    			transform: rotate(180deg);
 				}
 				&--link{
+					transition: all 0.5s ease-in-out;
+					&:hover{
+						background-color: darken($purple, 5);
+					}
+					display: block;
+					padding: 1em;
+					height: 100%;
 					text-decoration: none;
-					width: 10%;
 					writing-mode: vertical-rl;
 	  				transform: rotate(180deg);
 	  				color: white;
@@ -172,7 +187,7 @@
 					float: left;
 					margin-right: 2em;
 				}
-				&--txt{
+				p{
 					margin-bottom: 1em;
 				}
 			}
@@ -191,7 +206,7 @@
 			}
 			&__content{
 				padding: 0 1.2rem 2em;
-				&--txt{
+				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
@@ -207,7 +222,7 @@
 			}
 			&__content{
 				padding: 0 1.2rem 2em;
-				&--txt{
+				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
@@ -216,7 +231,7 @@
 				margin-left: 1em;
 				&__elt{
 					list-style: circle;
-					&--txt{
+					p{
 						margin-bottom: 1em;
 						line-height: 1.35em;
 						span{
@@ -244,7 +259,7 @@
 					.list{
 						&__elt{
 							margin-bottom: 0.5em;
-							&--txt{
+							p{
 								font-weight: 600;
 							}
 							&--link{
@@ -330,7 +345,7 @@
 					width: 100%;
 					margin-bottom: 2em;
 				}
-				&--txt{
+				p{
 					margin-bottom: 1em;
 				}
 			}

@@ -137,28 +137,28 @@
 				padding: 1rem 2rem;
 				cursor: default;
 			}
-			&--reseaux{
+			&--follow{
 				transition: all 0.5s ease-in-out;
 				position: absolute;
 				right: -80px;
 				bottom: 0;
 				display: flex;
 				z-index: 5;
-			}
-			&--link{
-				transition: all 0.5s ease-in-out;
-				fill: $white;
-				padding: 1rem 0.5rem;
-				margin-right: 1em;
-				text-decoration: none;
-				color: inherit;
-				position: relative;
-				z-index: 100000;
-				top: 8px;
-				&:hover,
-				&:focus{
+				a{
 					transition: all 0.5s ease-in-out;
-					fill: $purple;
+					fill: $white;
+					padding: 1rem 0.5rem;
+					margin-right: 1em;
+					text-decoration: none;
+					color: inherit;
+					position: relative;
+					z-index: 100000;
+					top: 8px;
+					&:hover,
+					&:focus{
+						transition: all 0.5s ease-in-out;
+						fill: $purple;
+					}
 				}
 			}
 		}
@@ -309,27 +309,28 @@
 				z-index: 6;
 				padding: 1rem 2rem;
 			}
-			&--reseaux{
+			&--follow{
 				transition: all 0.5s ease-in-out;
 				position: absolute;
 				right: -80px;
 				bottom: 0;
 				display: flex;
 				z-index: 5;
-				// background-color: $purple;
-			}
-			&--link{
-				fill: $white;
-				padding: 1rem 0.5rem;
-				margin-right: 1em;
-				text-decoration: none;
-				color: inherit;
-				position: relative;
-				top: 8px;
-				&:hover,
-				&:focus{
+				a{
 					transition: all 0.5s ease-in-out;
-					fill: $purple;
+					fill: $white;
+					padding: 1rem 0.5rem;
+					margin-right: 1em;
+					text-decoration: none;
+					color: inherit;
+					position: relative;
+					z-index: 100000;
+					top: 8px;
+					&:hover,
+					&:focus{
+						transition: all 0.5s ease-in-out;
+						fill: $purple;
+					}
 				}
 			}
 		}

@@ -5,6 +5,7 @@ add_action( 'init', 'dw_init_types' );
 add_filter( 'wp_title', 'dw_page_title' );
 add_filter( 'excerpt_length', 'my_excerpt_length' );
 add_theme_support( 'post-thumbnails' );
+add_action('acf/init', 'my_acf_init');
 
 /**
  *
@@ -14,13 +15,6 @@ add_theme_support( 'post-thumbnails' );
  * @return string Filtered title.
  */
 function dw_page_title( $title ) {
-    // if( empty( $title ) && ( is_home() || is_front_page() ) ){
-    // 	$title = 'HELLO!';
-    // }
-    // $title .= ' | ' . get_bloginfo( 'name' );
-    // return $title;
-
-   	// COMPLEXE
     if ( empty( $title ) || is_home() || is_front_page() ) {
         $title = 'HELLO!' .' | '. get_bloginfo( 'name' );
     }
@@ -35,7 +29,6 @@ function dw_page_title( $title ) {
 * UPLOAD SVG ENABLE
 * 
 */
-
 function cc_mime_types($mimes) {
   $mimes['svg'] = 'image/svg+xml';
   return $mimes;
@@ -44,32 +37,12 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 /*
 *
-* Hide opsolet item admin menu
-* 
-*/
-function remove_menus(){
-  
-  // remove_menu_page( 'index.php' );                  //Dashboard
-  // remove_menu_page( 'jetpack' );                    //Jetpack* 
-   remove_menu_page( 'edit.php' );                   //Posts
-  // remove_menu_page( 'upload.php' );                 //Media
-  // remove_menu_page( 'edit.php?post_type=page' );    //Pages
-  remove_menu_page( 'edit-comments.php' );          //Comments
-  // remove_menu_page( 'themes.php' );                 //Appearance
-  // remove_menu_page( 'plugins.php' );                //Plugins
-  // remove_menu_page( 'users.php' );                  //Users
-  // remove_menu_page( 'tools.php' );                  //Tools
-  // remove_menu_page( 'options-general.php' );        //Settings
-  
-}
-add_action( 'admin_menu', 'remove_menus' );
-
-/*
-*
 * Register navigation menu
 * 
 */
-register_nav_menu( 'header', 'Menu principale, affiché dans le header'); 
+register_nav_menu( 'header-menu', 'Menu principale, affiché dans le header'); 
+
+register_nav_menu( 'footer-menu', 'Menu principale, affiché dans le footer');
 
 /*
 *
@@ -144,6 +117,61 @@ function dw_asset($resource){
 function my_excerpt_length($length) {
 	return 9999;
 }
+
+/*
+*
+* Hide opsolet item admin menu
+* 
+*/
+function remove_menus(){
+  
+  // remove_menu_page( 'index.php' );                  //Dashboard
+  // remove_menu_page( 'jetpack' );                    //Jetpack* 
+  remove_menu_page( 'edit.php' );                   //Posts
+  // remove_menu_page( 'upload.php' );                 //Media
+  // remove_menu_page( 'edit.php?post_type=page' );    //Pages
+  remove_menu_page( 'edit-comments.php' );          //Comments
+  // remove_menu_page( 'themes.php' );                 //Appearance
+  // remove_menu_page( 'plugins.php' );                //Plugins
+  // remove_menu_page( 'users.php' );                  //Users
+  // remove_menu_page( 'tools.php' );                  //Tools
+  // remove_menu_page( 'options-general.php' );        //Settings
+  
+}
+add_action( 'admin_menu', 'remove_menus' );
+
+
+/*
+*
+* Hide opsolet item contributor menu
+* 
+*/
+
+function my_remove_menu_pages() {
+ 
+    global $user_ID;
+ 
+    if ( current_user_can( 'contributor' ) ) {
+    	
+    	remove_menu_page('edit.php?post_type=artiste');
+    	remove_menu_page('edit.php?post_type=evenement');
+    	remove_menu_page('edit.php?post_type=actualite');
+    	remove_menu_page('edit.php?post_type=stat');
+    	remove_menu_page('edit.php?post_type=partners');
+    	remove_menu_page('edit.php?post_type=lieux');
+    	remove_menu_page('wpcf7');
+		remove_menu_page('edit.php'); // Posts
+		remove_menu_page('upload.php'); // Media
+		remove_menu_page('link-manager.php'); // Links
+		remove_menu_page('edit-comments.php'); // Comments
+		remove_menu_page('edit.php?post_type=page'); // Pages
+		remove_menu_page('plugins.php'); // Plugins
+		remove_menu_page('themes.php'); // Appearance
+		remove_menu_page('users.php'); // Users
+		remove_menu_page('tools.php'); // Tools
+    }
+}
+add_action( 'admin_init', 'my_remove_menu_pages' );
 
 /*
 *
@@ -253,57 +281,44 @@ function dw_init_types(){
         'supports' => ['title'],
         'public' => true
     ]);
- //    register_post_type('partners', [
- //        'label' => 'Partenaires',
- //        'labels' => [
- //            'singular_name' => 'Partenaires',
- //            'add_new' => 'Ajouter un Partenaire'
- //        ],
- //        'description' => 'Type d\'article permettant d\'ajouter des Partenaires au site.',
- //        'menu_position' => 7,
- //        'menu_icon' => 'dashicons-networking',
- //        'supports' => ['title'],
- //        'public' => true
- //    ]);
+    register_post_type('partners', [
+        'label' => 'Partenaires',
+        'labels' => [
+            'singular_name' => 'Partenaires',
+            'add_new' => 'Ajouter un Partenaire'
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter des Partenaires au site.',
+        'menu_position' => 7,
+        'menu_icon' => 'dashicons-networking',
+        'supports' => ['title'],
+        'public' => true
+    ]);
+    register_post_type('lieux', [
+        'label' => 'Lieux',
+        'labels' => [
+            'singular_name' => 'Lieux',
+            'add_new' => 'Ajouter une salle à l\'exposition'
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter des lieux au festivlal.',
+        'menu_position' => 9,
+        'menu_icon' => 'dashicons-location',
+        'supports' => ['title'],
+        'public' => true
+    ]);
 
-    
-
- //    register_post_type('faq', [
-	// 	'label' => 'FAQ',
-	// 	'labels' => [
-	// 		'singular_name' => 'FAQ',
-	// 		'add_new' => 'Ajouter une question/réponse'
-	// 	],
-	// 	'description' => 'Type d\'article permettant d\'ajouter des questions/réponses à la page FAQ du site',
-	// 	'menu_position' => 9,
-	// 	'menu_icon' => 'dashicons-editor-help',
-	// 	'supports' => ['title'],
-	// 	'public' => true
-	// ]);
+    register_post_type('documents internes', [
+        'label' => 'Documents internes',
+        'labels' => [
+            'singular_name' => 'Documents internes',
+            'add_new' => 'Ajouter un document interne visible par les autres organisateurs'
+        ],
+        'description' => 'Type d\'article permettant d\'ajouter un document interne visible par les autres organisateurs.',
+        'menu_position' => 11,
+        'menu_icon' => 'dashicons-media-archive',
+        'supports' => ['title'],
+        'public' => true
+    ]);
 }
-
-/*
-*
-* Return the places taxonomy for current posts (in the loop) 
-* 
-*/
-// function dw_get_the_places($glue='', $prefix='', $suffix=''){
-// 	$terms = wp_get_post_terms(get_the_ID(), 'places', ['orderby' => 'name', 'order' => 'ASC', 'fields' => 'all']);
-
-// 	if(!$terms) return'il n\'y a pas d\'endroits associé à ce voyage';
-// 	return implode($glue, array_map(function($term) use($prefix, $suffix){
-// 		return str_replace(':type', get_field('type', $term ), $prefix) . $term->name . $suffix; 
-// 	}, $terms));
-// }
-
-/*
-*
-* Output the places taxonomy for current posts (in the loop) 
-* 
-*/
-// function dw_the_places($glue='', $prefix='', $suffix=''){
-// 	echo dw_get_the_places($glue, $prefix, $suffix);
-// }
 
 /*
 *
@@ -353,26 +368,12 @@ function dw_the_discipline($glue='', $prefix='', $suffix=''){
 
 /*
 *
-* Return the pays taxonomy for current posts (in the loop) 
+* get the google_api_key
 * 
 */
-// function dw_get_the_pays($glue='', $prefix='', $suffix=''){
-// 	$terms = wp_get_post_terms(get_the_ID(), 'pays', ['orderby' => 'name', 'order' => 'ASC', 'fields' => 'all']);
-
-// 	if(!$terms) return'il n\'y a pas de pays associé à ce projet';
-// 	return implode(array_map(function($term){
-// 		return str_replace(':type', get_field('type', $term ), $prefix) . $term->name . $suffix;
-// 	}, $terms));
-// }
-
-/*
-*
-* Output the category taxonomy for current posts (in the loop) 
-* 
-*/
-// function dw_the_pays($glue='', $prefix='', $suffix=''){
-// 	echo dw_get_the_pays();
-// }
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyDt4Q4g4WKG8mCQyweq5JgWU1Kja4sZp7Q');
+}
 
 /*
 *
