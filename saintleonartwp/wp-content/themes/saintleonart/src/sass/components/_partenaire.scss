@@ -14,11 +14,10 @@
 		}
 	}
 	.all-partenaire{
-		margin: 0 auto;
+		margin: 2rem auto 0;
 		max-width: 1000px;
 		color: $black;
 		background-color: $white;
-		margin-top: 2rem;
 		// padding: 3rem;
 		&__heading4{
 			max-width: 2000px;
@@ -45,7 +44,7 @@
 	.remerciement{
 		max-width: 640px;
 		line-height: 1.35em;
-		margin: 5rem 1.2rem 0;
+		margin: 5rem 1.2rem 2rem;
 		&__content{
 			p{
 				margin-bottom: 1em;
@@ -60,6 +59,7 @@
 		}
 	}
 	.all-partenaire{
+		margin-bottom: 4rem;
 		color: $black;
 		background-color: $white;
 		&__heading4{

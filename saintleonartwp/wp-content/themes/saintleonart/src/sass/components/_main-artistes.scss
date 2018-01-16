@@ -13,6 +13,7 @@
 		}
 		&__heading2{
 			width: 50%;
+			margin-bottom: 2rem;
 		}
 		&__heading3{
 			position: absolute;
@@ -23,7 +24,7 @@
 		}
 		&__random{
 			text-decoration: none;
-			font-size: $subText;
+			//font-size: $subText;
 			width: 50%;
 			text-align: right;
 			color: $lightGrey;
@@ -44,31 +45,31 @@
 		}
 		&__artiste{
 			@media only screen and (min-width: 2001px) {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 24.8%;
+				width: 21.2%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.6%;
+				width: 47.5%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 1350px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.4%;
+				width: 47.4%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			&::before{
 				content: "";
@@ -81,6 +82,22 @@
 				opacity: 0.5;
 				background-color: $yellow;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;
@@ -167,7 +184,7 @@
 		}
 		@media only screen and (max-width: 2000px) {
 			&__artiste:nth-of-type(2n+1){
-				margin-left: 5px;
+				margin-left: 0px;
 			}
 		}
 	}
@@ -182,7 +199,7 @@
 		flex-wrap: wrap;
 		&__heading2{
 			@media only screen and (min-width: 768px) and (max-width: 979px) {
-				margin: 0;
+				margin: 0 0 1rem 0;
 				width: 50%;
 			}
 			@media only screen and (max-width: 767px){
@@ -200,7 +217,7 @@
 		}
 		&__random{
 			text-decoration: none;
-			font-size: $subText;
+			// font-size: $subText;
 			width: 50%;
 			text-align: right;
 			color: $lightGrey;
@@ -237,6 +254,22 @@
 				opacity: 0.5;
 				background-color: $yellow;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;
@@ -290,7 +323,7 @@
 				z-index: 6;
 				padding: 1rem 2rem;
 			}
-			&--reseaux{
+			&--follow{
 				transition: all 0.5s ease-in-out;
 				position: absolute;
 				right: -80px;
@@ -298,19 +331,19 @@
 				display: flex;
 				z-index: 5;
 				// background-color: $purple;
-			}
-			&--link{
-				fill: $white;
-				padding: 1rem 0.5rem;
-				margin-right: 1em;
-				text-decoration: none;
-				color: inherit;
-				position: relative;
-				top: 8px;
-				&:hover,
-				&:focus{
-					transition: all 0.5s ease-in-out;
-					fill: $purple;
+				a{
+					fill: $white;
+					padding: 1rem 0.5rem;
+					margin-right: 1em;
+					text-decoration: none;
+					color: inherit;
+					position: relative;
+					top: 8px;
+					&:hover,
+					&:focus{
+						transition: all 0.5s ease-in-out;
+						fill: $purple;
+					}
 				}
 			}
 		}

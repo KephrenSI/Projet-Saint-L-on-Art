@@ -14,6 +14,7 @@
                 <?php bloginfo('description'); ?>
             </div>
         </div>
+        <?php //get_search_form(); ?>
     </section>
     <section class="intro">
         <h2  class="intro__heading2 heading2" aria-level="2" role="heading">Saint Léon'Art</h2>
@@ -152,9 +153,9 @@
                     Publié le <?php echo get_the_date('l j F Y'); ?>
                 </time>
             </div>
-            <div class="news__actu--taxonomy">
-                <?php dw_the_category(', ', '<strong class="">', '</strong>'); ?>
-            </div>
+            <!-- <div class="news__actu--taxonomy">
+                <?php //dw_the_category(', ', '<strong class="">', '</strong>'); ?>
+            </div> -->
             <div class="news__content">
                 <div class="news__content--txt">
                     <?php dw_the_excerpt(500); ?>
@@ -222,18 +223,28 @@
             <a href="<?php the_permalink(80); ?>" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
         </div>
     </section>
+    <?php $data = wp_get_the_gram(); ?>
+    <?php if ($data): ?>
     <section class="insta">
         <h2  class="insta__heading2 heading2" aria-level="2" role="heading">Fils instagram</h2>
         <div class="insta__bloc">
-            <?php //echo do_shortcode('[instagram-feed]'); ?>
-            <a href="#" title="Voir l'image sur Instagram" class="insta__bloc--pix"><img src="<?php dw_asset('img/insta.jpg'); ?>" alt="photo instagram de Sophie" width="250"></a>
-            <a href="#" title="Voir l'image sur Instagram" class="insta__bloc--pix"><img src="<?php dw_asset('img/insta.jpg'); ?>" alt="photo instagram de Sophie" width="250"></a>
-            <a href="#" title="Voir l'image sur Instagram" class="insta__bloc--pix"><img src="<?php dw_asset('img/insta.jpg'); ?>" alt="photo instagram de Sophie" width="250"></a>
-            <a href="#" title="Voir l'image sur Instagram" class="insta__bloc--pix"><img src="<?php dw_asset('img/insta.jpg'); ?>" alt="photo instagram de Sophie" width="250"></a>
+            <?php foreach ($data as $item): ?>
+                <?php 
+                    $width = $item->images->low_resolution->width; 
+                    $height = $item->images->low_resolution->height; 
+                    $url = $item->images->low_resolution->url; 
+                ?>
+                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
+                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
+                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
+                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
+                <?php //var_dump( $item->images->low_resolution ); ?>
+            <?php endforeach; ?>
         </div>
         <div class="insta__cta cta">
             <span class="cta__masque">Aller sur Insta</span>
             <a href="#" title="Aller sur la page Instagram de l'expo Saint Léon'Art" class="cta__button">Aller sur Insta</a>
         </div>
     </section>
+    <?php endif; ?>
 <?php get_footer(); ?>

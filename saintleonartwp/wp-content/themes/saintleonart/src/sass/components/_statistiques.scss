@@ -1,14 +1,14 @@
 @media only screen and (min-width: 980px) {
 	.stat{
 		@media only screen and (min-width: 2001px) {
-			margin: 5rem auto 0;
+			margin: 5rem auto 5rem;
 			padding-bottom: 2em;
 			background-color: $purple;
 			color: $white;
 		}
 		@media only screen and (max-width: 2000px) {
 			margin-top: 5rem;
-			padding-bottom: 2em;
+			padding-bottom: 5rem;
 			background-color: $purple;
 			color: $white;
 		}
@@ -33,7 +33,7 @@
 				margin-left: 5px;
 				&:hover,
 				&:focus{
-					background-color: darken($yellow, 10);
+					background: darken($yellow, 15);
 				}
 			}
 			&--elt:last-child{
@@ -47,11 +47,11 @@
 				font-weight: 100;
 			}
 			.active{
-				background-color: darken($yellow, 10);
+				background: darken($yellow, 15);
 			}
 		}
 		&__list2{
-			height: 17em;
+			height: 15em;
 			&--elt{
 				left: 50%;
 				transform: translateX(-50%);
@@ -142,7 +142,7 @@
 				transition: all 0.5s ease-in-out;
 				&:hover,
 				&:focus{
-					background-color: darken($yellow, 10);
+					background: darken($yellow, 15);
 				}
 			}
 			&--link{
@@ -153,7 +153,7 @@
 				font-weight: 100;
 			}
 			.active{
-				background-color: darken($yellow, 10);
+				background: darken($yellow, 15);
 			}
 		}
 		&__list2{

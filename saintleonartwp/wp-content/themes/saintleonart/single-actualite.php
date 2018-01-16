@@ -4,15 +4,18 @@
 */
 get_header(); ?>
 	<section class="title">
-		<h2  class="title__heading2 heading2" aria-level="2" role="heading"><?php the_title(); ?></h2>
+		<h2  class="title__heading2 heading2 single-new-heading2" aria-level="2" role="heading"><?php the_title(); ?></h2>
 	</section>
 	<section class="single-article">
 		<h2  class="single-article__heading2 heading2 hidden" aria-level="2" role="heading">article</h2>
-		<div class="single-article__taxonomy">
-			<p class="single-article__taxonomy--txt">Concert</p>
-		</div>
+		<!-- <div class="single-article__taxonomy">
+			<?php //dw_the_discipline(', ', '<strong class="">', '</strong>'); ?>
+		</div> -->
 		<div class="single-article__date">
 			<p class="single-article__date--txt">Le 27 avril 2018</p>
+		</div>
+		<div class="single-article__date">
+			<p class="single-article__date--txt"><time class="single-article__date--time" datetime="<?php the_time('c'); ?>"><?php the_field('date'); ?></time></p>
 		</div>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="single-article__bloc">
@@ -20,18 +23,18 @@ get_header(); ?>
 		</div>
 		<?php endwhile; endif; ?>
 		<div class="single-article__auteur">
-			<p class="single-article__auteur--txt">Ecrit par <span class="single-article__auteur--name">Jean-Marc Dupont</span></p>
+			<p class="single-article__auteur--txt">Ecrit par <span class="single-article__auteur--name"><?php the_field('auteur'); ?></span></p>
 		</div>
 		<div class="single-article__find">
 			<h3  class="single-article__heading3 heading3" aria-level="3" role="heading">Partagez</h3>
-			<a class="single-article__find--link" href="#" title="Aller vers la page Facebook">
+			<a class="single-article__find--link" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title();?>" title="Aller vers la page Facebook">
 				<span class="hidden">&nbsp;</span>
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                     <title>facebook</title>
                     <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
                 </svg>
 			</a>
-            <a class="single-article__find--link" href="#" title="Aller vers la page Twitter">
+            <a class="single-article__find--link" href="https://twitter.com/intent/tweet/?url=<?php the_permalink(); ?>" title="Aller vers la page Twitter">
             	<span class="hidden">&nbsp;</span>
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                     <title>twitter</title>

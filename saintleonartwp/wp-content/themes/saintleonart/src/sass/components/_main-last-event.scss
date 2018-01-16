@@ -13,6 +13,7 @@
 		}
 		&__heading2{
 			width: 100%;
+			margin-bottom: 2rem;
 		}
 		&__heading3{
 			position: absolute;
@@ -23,31 +24,31 @@
 		}
 		&__event{
 			@media only screen and (min-width: 2001px) {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 24.8%;
+				width: 21.2%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.6%;
+				width: 47.5%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 1350px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.4%;
+				width: 47.4%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			&::before{
 				content: "";
@@ -60,6 +61,22 @@
 				opacity: 0.5;
 				background-color: $purple;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;
@@ -174,7 +191,7 @@
 		}
 		@media only screen and (max-width: 2000px) {
 			&__event:nth-of-type(2n+1){
-				margin-left: 5px;
+				margin-left: 0px;
 			}
 		}
 	}
@@ -189,7 +206,7 @@
 		flex-wrap: wrap;
 		&__heading2{
 			@media only screen and (min-width: 768px) and (max-width: 979px) {
-				margin: 0;
+				margin: 0 0 1rem 0;
 				width: 50%;
 			}
 			margin-left: 1.2rem;
@@ -220,6 +237,22 @@
 				opacity: 0.5;
 				background-color: $purple;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;
@@ -276,14 +309,6 @@
 				top: 0;
 				left: 0;
 			}
-			// &--social{
-			// 	background-color: $yellow;
-			// 	padding: 1rem 2rem;
-			// 	position: absolute;
-			// 	z-index: 4;
-			// 	bottom: 0;
-			// 	right: 0;
-			// }
 			&--social{
 				position: absolute;
 				z-index: 4;
@@ -302,20 +327,29 @@
 				z-index: 6;
 				padding: 1rem 2rem;
 			}
-			&--reseaux{
+			&--share{
 				transition: all 0.5s ease-in-out;
 				position: absolute;
 				right: -80px;
 				bottom: 0;
 				display: flex;
 				z-index: 5;
-				// background-color: $yellow;
-			}
-			&--link{
-				padding: 1rem 0.5rem;
-				margin-right: 1em;
-				text-decoration: none;
-				color: inherit;
+				a{
+					transition: all 0.5s ease-in-out;
+					fill: $white;
+					padding: 1rem 0.5rem;
+					margin-right: 1em;
+					text-decoration: none;
+					color: inherit;
+					position: relative;
+					z-index: 100000;
+					top: 8px;
+					&:hover,
+					&:focus{
+						transition: all 0.5s ease-in-out;
+						fill: $yellow;
+					}
+				}
 			}
 		}
 		@media only screen and (min-width: 768px){

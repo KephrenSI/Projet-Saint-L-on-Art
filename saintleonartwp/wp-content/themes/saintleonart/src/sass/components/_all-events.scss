@@ -2,12 +2,12 @@
 	.all-events{
 		@media only screen and (min-width: 2001px) {
 			max-width: 2000px;
-			margin: 5rem auto 0;
+			margin: 0 auto 5rem;
 			display: flex;
 			flex-wrap: wrap;
 		}
 		@media only screen and (max-width: 2000px) {
-			margin: 5rem 3rem 0;
+			margin: 0 3rem 5rem;
 			display: flex;
 			flex-wrap: wrap;
 		}
@@ -22,11 +22,12 @@
 			transform: translateX(-50%) translateY(-50%);
 		}
 		&__filter{
+
 			width: 100%;
 			text-align: right;
 			margin-top: -4rem;
 			margin-bottom: 1rem;
-			opacity: 0.2;
+			// opacity: 0.2;
 			transition: all 0.5s ease-in-out;
 			select{
 				cursor: pointer;
@@ -44,33 +45,38 @@
 				opacity: 1;
 			}
 		}
+		.querty{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
 		&__event{
 			@media only screen and (min-width: 2001px) {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 24.8%;
+				width: 21.2%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.6%;
+				width: 47.5%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 1350px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				color: $white;
-				width: 49.4%;
+				width: 47.4%;
 				height: 320px;
 				position: relative;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			&::before{
 				content: "";
@@ -83,6 +89,22 @@
 				opacity: 0.5;
 				background-color: $purple;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;
@@ -201,13 +223,13 @@
 			}
 		}
 		@media only screen and (min-width: 2001px) {
-			&__event:nth-of-type(4n+2){
+			&__event:nth-of-type(4n+1){
 				margin-left: 0px;
 			}
 		}
 		@media only screen and (max-width: 2000px) {
 			&__event:nth-of-type(2n+1){
-				margin-left: 5px;
+				margin-left: 0px;
 			}
 		}
 	}
@@ -236,32 +258,12 @@
 			transform: translateX(-50%) translateY(-50%);
 		}
 		&__filter{
-			text-align: right;
-			position: relative;
-			top: 20px;
-			@media only screen and (min-width: 768px) {
-				margin: -5rem 0 0rem;
-			}
-			@media only screen and (max-width: 767px) {
-				margin: -5rem 1.2rem 0rem;
-			}
-			opacity: 0.2;
-			transition: all 0.5s ease-in-out;
-			select{
-				cursor: pointer;
-				font-size: $currentText;
-				height: 50px;
-				width: 130px;
-			    background-color: transparent;
-			    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#bdbdbd',GradientType=0 ); /* IE6-9 */
-			    border: none;
-			    background:  url(../img/filtre.png) no-repeat center right;
-			    background-size: 15px;
-    			appearance: textfield;
-			}
-			&:hover{
-				opacity: 1;
-			}
+			display: none;
+		}
+		.querty{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
 		}
 		&__event{
 			color: $white;
@@ -281,6 +283,22 @@
 				opacity: 0.5;
 				background-color: $purple;
 				z-index: 2;
+			}
+			&::after{
+				content: "";
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 70%;
+				height: 70%;
+				opacity: 0.5;
+				background-image: url('../img/logoshape.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				z-index: -1;
 			}
 			&--bloc{
 				text-decoration: none;

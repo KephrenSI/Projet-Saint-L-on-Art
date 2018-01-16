@@ -221,41 +221,41 @@ get_header(); ?>
 			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDt4Q4g4WKG8mCQyweq5JgWU1Kja4sZp7Q&callback=initMap">
 			</script>
 		</section>
-		<section class="programmation">
-			<h3 class="programmation__heading3 heading3 hidden" aria-level="3" role="heading">Programmation</h3>
-			<div class="programmation__filter">
+		<section class="programation">
+			<h3 class="programation__heading3 heading3 hidden" aria-level="3" role="heading">Programation</h3>
+			<!-- <div class="programation__filter">
 				<select>
                 	<option value="type">filtrer par type</option>
 					<option value="date">filtrer par date</option>
 				</select>
-			</div>
+			</div> -->
 			<?php
 	            $posts = new WP_Query( ['post_type' => 'evenement', 'posts_per_page' => -1, 'orderby' => the_field(''), 'order' => 'DESC' ] );
 	            if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
 	        ?>
-			<div class="programmation__event">
-				<a class="programmation__event--bloc" href="<?php the_permalink(); ?>" title="Aller vers la page de l'évènement <?php get_the_title(); ?>"><span class="hidden">&nbsp;</span></a>
-				<img class="programmation__event--img" src="<?php the_post_thumbnail_url('medium_large');?>" alt="Photo de l'évènement <?php the_title();?>">
-				<div class="programmation__event--taxonomy">
+			<div class="programation__event">
+				<a class="programation__event--bloc" href="<?php the_permalink(); ?>" title="Aller vers la page de l'évènement <?php get_the_title(); ?>"><span class="hidden">&nbsp;</span></a>
+				<img class="programation__event--img" src="<?php the_post_thumbnail_url('medium_large');?>" alt="Photo de l'évènement <?php the_title();?>">
+				<div class="programation__event--taxonomy">
 					<?php dw_the_category(', ', '<strong class="">', '</strong>'); ?>
 				</div>
-				<!-- <div class="programmation__event--date">
-					<span class="programmation__event--month"><?php the_field('date_month'); ?></span>
-					<span class="programmation__event--day"><?php the_field('date_day'); ?></span>
+				<!-- <div class="programation__event--date">
+					<span class="programation__event--month"><?php the_field('date_month'); ?></span>
+					<span class="programation__event--day"><?php the_field('date_day'); ?></span>
 				</div> -->
-				<div class="programmation__event--date">
+				<div class="programation__event--date">
 	                <?php
 	                    // get raw date
 	                    $date = get_field('date', false, false);
 	                    // make date object
 	                    $date = new DateTime($date);
 	                ?>
-	                <span class="programmation__event--month"><?php echo substr($date->format('M'), 0, 4); ?></span>
-	                <span class="programmation__event--day"><?php echo $date->format('j'); ?></span>
+	                <span class="programation__event--month"><?php echo substr($date->format('M'), 0, 4); ?></span>
+	                <span class="programation__event--day"><?php echo $date->format('j'); ?></span>
 	            </div>
-				<h3  class="programmation__heading3 heading3" aria-level="3" role="heading"><?php the_title(); ?></h3>
-				<div class="programmation__event--social">
-					<p class="programmation__event--txt">Partager</p>
+				<h3  class="programation__heading3 heading3" aria-level="3" role="heading"><?php the_title(); ?></h3>
+				<div class="programation__event--social">
+					<p class="programation__event--txt">Partager</p>
 					<div class="last-event__event--share">
 	                    <a class="artistes__artiste--link" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&t=<?php the_title();?>" title="Aller vers la page Facebook"><span class="hidden">&nbsp;</span>
 	                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -273,14 +273,14 @@ get_header(); ?>
 				</div>
 			</div>
 			<?php endwhile; endif; ?>
-			<div class="last-event__cta cta">
+			<!-- <div class="last-event__cta cta">
                 <span class="cta__masque">Tous les évènements</span>
                 <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les évènements</a>
-            </div>
-            <div class="last-event__cta cta">
+            </div> -->
+            <!-- <div class="last-event__cta cta">
                 <span class="cta__masque">Tous les artistes</span>
                 <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les artistes</a>
-            </div>
+            </div> -->
 		</section>
 	</section>
 	<section class="artistes">
@@ -295,7 +295,7 @@ get_header(); ?>
             </span>
 		</a>
 		<?php
-            $posts = new WP_Query( ['post_type' => 'artiste', 'posts_per_page' => 4, 'orderby' => 'RAND'] );
+            $posts = new WP_Query( ['post_type' => 'artiste', 'posts_per_page' => 4, 'orderby' => 'rand'] );
             if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
         ?>
 		<div class="artistes__artiste">
@@ -337,7 +337,7 @@ get_header(); ?>
 		<?php endwhile; endif; ?>
 		<div class="artistes__cta cta">
             <span class="cta__masque">Tous les voir</span>
-            <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
+            <a href="<?php the_permalink(24); ?>" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
         </div>
 	</section>
 <?php get_footer(); ?>

@@ -13,7 +13,7 @@
     	@media only screen and (min-width: 980px) {
 			.presentation{
 	    		width: 30%;
-	    		margin: 0 3rem 0 auto;
+	    		margin: 0 3rem 0 3rem;
 	    		&__heading3{
 					letter-spacing: 2px;
 	    		}
@@ -46,12 +46,12 @@
 					}
 					&--link{
 						transition: all 0.5s ease-in-out;
-						color: $yellow;
+						color: darken($yellow, 25);
 						margin-bottom: 1em;
 						text-decoration: none;
 						&:hover,
 						&:focus{
-							color: darken($yellow, 20);
+							color: $yellow;
 						}
 					}
 				}
@@ -59,6 +59,7 @@
     	}
     	@media only screen and (max-width: 979px) {
 			.infos{
+				width: 80%;
 				&__heading3{
 					padding: 1em 1.2rem 0;
 				}
@@ -72,12 +73,12 @@
 					}
 					&--link{
 						transition: all 0.5s ease-in-out;
-						color: $yellow;
+						color: darken($yellow, 25);
 						margin-bottom: 1em;
 						text-decoration: none;
 						&:hover,
 						&:focus{
-							color: darken($yellow, 20);
+							color: $yellow;
 						}
 					}
 				}
@@ -97,7 +98,7 @@
     		.footer-nav{
     			margin: 0 auto 0 3rem;
     			.last-nav{
-					width: 100%;
+					width: 80%;
 					margin: 0 3rem;
 					&__heading3{
 						letter-spacing: 2px;

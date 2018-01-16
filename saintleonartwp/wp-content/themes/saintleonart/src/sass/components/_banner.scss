@@ -1,4 +1,4 @@
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1090px) {
 	.banner{
 		position: relative;
 		background-image: url('#{ $imgPath }banner.jpg');
@@ -52,7 +52,7 @@
 		}
 	}
 }
-@media only screen and (min-width: 768px) and (max-width: 979px) {
+@media only screen and (min-width: 768px) and (max-width: 1089px) {
 	.banner{
 		background-image: url('#{ $imgPath }banner.jpg');
 		background-size: cover;

@@ -8,38 +8,6 @@ get_header(); ?>
 	</section>
 	<section class="all-news">
 		<h2 class="title__heading2 heading2 hidden" aria-level="2" role="heading">All</h2>
-		<div class="all-news__filter">
-			<select>
-			  <optgroup label="filtrer par type">
-				<!--  custom event taxo -->
-				<?php $custom_terms = get_terms('category'); ?>
-				<?php foreach($custom_terms as $custom_term):?>
-				<?php
-				   wp_reset_query();
-				   $args = array(
-				       'post_type' => 'evenement',
-				       'posts_per_page' => -1,
-				       'tax_query' => array(
-				           array(
-				               'taxonomy' => 'category',
-				               'field' => 'slug',
-				               'terms' => $custom_term->slug,
-				           )
-				       )
-				   );
-				?>
-				<?php $loop = new WP_Query($args); ?>
-				<?php if($loop->have_posts()): ?>
-				   <option value="<?php $custom_term->name; ?>"><?php echo $custom_term->name; ?></option>
-				<?php endif; endforeach; ?>
-
-			  </optgroup>
-			  <optgroup label="filtrer par date">
-			    <option value="recent">Plus récent</option>
-				<option value="ancien">Plus ancien</option>
-			  </optgroup>
-			</select>
-		</div>
 		<?php
             $posts = new WP_Query( ['post_type' => 'actualite', 'posts_per_page' => -1] );
             if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
@@ -55,9 +23,9 @@ get_header(); ?>
 				<span class="all-news__actu--month">SEP</span>
 				<span class="all-news__actu--day">24</span>
 			</div> -->
-			<div class="all-news__actu--taxonomy">
-				<?php dw_the_category(', ', '<strong class="">', '</strong>'); ?>
-			</div>
+			<!-- <div class="all-news__actu--taxonomy">
+				<?php //dw_the_category(', ', '<strong class="">', '</strong>'); ?>
+			</div> -->
 			<div class="all-news__content">
 				<div class="all-news__content--txt">
                     <?php dw_the_excerpt(500); ?>
@@ -75,9 +43,9 @@ get_header(); ?>
 				</svg>
             </span>
 		</div> -->
-		<div class="all-news__cta cta">
+		<!-- <div class="all-news__cta cta">
             <span class="cta__masque">Tous les voir</span>
             <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
-        </div>
+        </div> -->
 	</section>
 <?php get_footer(); ?>

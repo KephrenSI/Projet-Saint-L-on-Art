@@ -1,4 +1,10 @@
 @media only screen and (min-width: 980px) {
+    .single-new-heading2{
+        line-height: 1.35em;
+        max-width: 640px;
+        margin: 0 auto 2em;
+        text-align: left;
+    }
     .single-article{
         line-height: 1.35em;
         max-width: 640px;
@@ -29,6 +35,15 @@
             margin: 8em auto 2em;
             p{
                 margin-bottom: 1em;
+            }
+            a{
+                color: darken($yellow, 25);
+                transition: all 0.5s ease-in-out;
+                &:hover,
+                &:focus{
+                    color:  $purple;
+                    text-decoration: none;
+                }
             }
         }
         &__find{

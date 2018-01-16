@@ -103,6 +103,11 @@
 					&--link{
 						text-decoration: none;
 						color: $purple;
+						transition: all 0.5s ease-in-out;
+						&:hover,
+						&:focus{
+							color: $red;
+						}
 					}
 				}
 			}
@@ -170,6 +175,11 @@
 					&--link{
 						text-decoration: none;
 						color: $purple;
+						transition: all 0.5s ease-in-out;
+						&:hover,
+						&:focus{
+							color: $red;
+						}
 					}
 				}
 			}

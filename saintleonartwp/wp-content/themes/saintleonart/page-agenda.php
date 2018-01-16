@@ -41,32 +41,63 @@ get_header(); ?>
 		<h2  class="agenda__heading2 heading2 hidden" aria-level="2" role="heading">Bloc</h2>
 		<section class="menu-day">
 			<h3  class="menu-day__heading3 heading3 hidden" aria-level="3" role="heading">Menu</h3>
+			<?php
+	            $posts = new WP_Query( ['post_type' => 'date', 'posts_per_page' => -1, 'orderby' => 'desc'] );
+	            if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
+	        ?>
 			<div class="menu-day__bloc">
 				<ul class="list">
 					<li class="list__elt">
-						<a class="list__elt--link" href="">Vendredi 18 septembre</a>
+						<a class="list__elt--link" href="#18">Vendredi 18 septembre</a>
 					</li>
 					<li class="list__elt">
-						<a class="list__elt--link" href="">Samedi 19 septembre</a>
+						<a class="list__elt--link" href="#19">Samedi 19 septembre</a>
 					</li>
 					<li class="list__elt">
-						<a class="list__elt--link" href="">Dimanche 20 septembre</a>
+						<a class="list__elt--link" href="#20">Dimanche 20 septembre</a>
 					</li>
 					<li class="list__elt">
-						<a class="list__elt--link active" href="">Tous le festival</a>
+						<a class="list__elt--link active" href="javascript:window.location.reload(true)">Tous le festival</a>
 					</li>
 				</ul>
 			</div>
+			<?php endwhile; endif; ?>
 		</section>
 		<section class="programmation">
 			<h3  class="programmation__heading3 heading3 hidden" aria-level="3" role="heading">Programme</h3>
-			<div class="programmation__filter">
+			<!-- <div class="programmation__filter">
 				<select>
                 	<option value="type">filtrer par type</option>
 					<option value="date">filtrer par date</option>
 				</select>
+			</div> -->
+			<div class="programmation__bloc" id="18">
+				<div class="programmation__bloc--event">
+					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
+					<div class="programmation__bloc--glob">
+						<p class="programmation__bloc--taxonomy">Photo</p>
+						<div class="programmation__bloc--infos">
+							<p class="programmation__bloc--heure">10h30-12h</p>
+							<p class="programmation__bloc--date">15 Septembre</p>
+							<p class="programmation__bloc--nom">Maria Delaquir</p>
+							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
+						</div>
+					</div>
+				</div>
+				<div class="programmation__bloc--event">
+					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
+					<div class="programmation__bloc--glob">
+						<p class="programmation__bloc--taxonomy">Photo</p>
+						<div class="programmation__bloc--infos">
+							<p class="programmation__bloc--heure">10h30-12h</p>
+							<p class="programmation__bloc--date">15 Septembre</p>
+							<p class="programmation__bloc--nom">Maria Delaquir</p>
+							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="programmation__bloc">
+			<div class="programmation__bloc" id="19">
 				<div class="programmation__bloc--event">
 					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
 					<div class="programmation__bloc--glob">
@@ -103,54 +134,8 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div class="programmation__bloc--event">
-					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
-					<div class="programmation__bloc--glob">
-						<p class="programmation__bloc--taxonomy">Photo</p>
-						<div class="programmation__bloc--infos">
-							<p class="programmation__bloc--heure">10h30-12h</p>
-							<p class="programmation__bloc--date">15 Septembre</p>
-							<p class="programmation__bloc--nom">Maria Delaquir</p>
-							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
-						</div>
-					</div>
-				</div>
-				<div class="programmation__bloc--event">
-					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
-					<div class="programmation__bloc--glob">
-						<p class="programmation__bloc--taxonomy">Photo</p>
-						<div class="programmation__bloc--infos">
-							<p class="programmation__bloc--heure">10h30-12h</p>
-							<p class="programmation__bloc--date">15 Septembre</p>
-							<p class="programmation__bloc--nom">Maria Delaquir</p>
-							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
-						</div>
-					</div>
-				</div>
-				<div class="programmation__bloc--event">
-					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
-					<div class="programmation__bloc--glob">
-						<p class="programmation__bloc--taxonomy">Photo</p>
-						<div class="programmation__bloc--infos">
-							<p class="programmation__bloc--heure">10h30-12h</p>
-							<p class="programmation__bloc--date">15 Septembre</p>
-							<p class="programmation__bloc--nom">Maria Delaquir</p>
-							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
-						</div>
-					</div>
-				</div>
-				<div class="programmation__bloc--event">
-					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
-					<div class="programmation__bloc--glob">
-						<p class="programmation__bloc--taxonomy">Photo</p>
-						<div class="programmation__bloc--infos">
-							<p class="programmation__bloc--heure">10h30-12h</p>
-							<p class="programmation__bloc--date">15 Septembre</p>
-							<p class="programmation__bloc--nom">Maria Delaquir</p>
-							<p class="programmation__bloc--adresse">Rue montmartre 15, 4000 Liège Belgique</p>
-						</div>
-					</div>
-				</div>
+			</div>
+			<div class="programmation__bloc" id="20">
 				<div class="programmation__bloc--event">
 					<a class="programmation__bloc--link" href="#"><span class="hidden">&nbsp;</span></a>
 					<div class="programmation__bloc--glob">

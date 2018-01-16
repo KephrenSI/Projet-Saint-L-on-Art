@@ -20,10 +20,12 @@
 		padding: 2em 0;
 		z-index: 2;
 		&--bloc{
+			margin-bottom: 2rem;
 			position: relative;
 		}
 		&--label{
 			position: absolute;
+			font-size: 1.2em;
 			left: 0;
 			top: 0;
 			transition: all 0.5s ease-in-out;
@@ -51,9 +53,10 @@
 			background-color: transparent;
 		    border: 0px solid;
 		    padding-bottom: 1em;
-		    text-indent: 60px;
+		    text-indent: 80px;
 		    border: 0;
 			border-bottom: 1px solid $purple;
+			font-size: 1em;
 		}
 		&--input ~ .focus-border{
 			position: absolute;

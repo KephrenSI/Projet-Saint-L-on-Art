@@ -88,7 +88,10 @@
 							&--link{
 								text-decoration: none;
 								color: $purple;
-
+								&:hover,
+								&:focus{
+									color: $red; 
+								}
 							}
 						}
 					}
@@ -112,7 +115,15 @@
 				font-weight: 600;
 			}
 			&__docs{
-				width: 49.6%;
+				@media only screen and (min-width: 1780px) {
+					width: 49.85%;
+				}
+				@media only screen and (max-width: 1779px) and (min-width: 990px) {
+					width: 49.7%;
+				}
+				@media only screen and (min-width: 751px) and (max-width: 989px) {
+					width: 49.6%;
+				}
 				position: relative;
 				background-color: $yellow;
 				display: flex;
@@ -148,8 +159,9 @@
 				}
 				&--link{
 					transition: all 0.5s ease-in-out;
-					&:hover{
-						background-color: darken($purple, 5);
+					&:hover,
+					&:focus{
+						background-color: darken($red, 15);
 					}
 					display: block;
 					padding: 1em;
@@ -179,16 +191,21 @@
 				margin-bottom: 2em;
 				padding: 0 1.2rem 2em;
 				line-height: 1.35em;
-				&--img{
-					width: 100%;
-					max-width: 350px;
-					margin-bottom: 2em;
-					display: inline;
-					float: left;
-					margin-right: 2em;
-				}
-				p{
-					margin-bottom: 1em;
+				&--txt{
+					column-count: 2;
+					p{
+						max-width: 640px;
+						margin-bottom: 1em;
+						img{
+							width: 100%;
+							height: auto;
+							max-width: 350px;
+							margin-bottom: 2em;
+							display: inline;
+							float: left;
+							margin-right: 2em;
+						}
+					}
 				}
 			}
 		}
@@ -265,7 +282,10 @@
 							&--link{
 								text-decoration: none;
 								color: $purple;
-
+								&:hover,
+								&:focus{
+									color: $red; 
+								}
 							}
 						}
 					}
@@ -293,7 +313,7 @@
 				margin-bottom: 5px;
 				&--infos{
 					padding: 1.2rem;
-					width: 85%;
+					width: 89%;
 				}
 				&--date{
 					width: 100%;
@@ -307,16 +327,24 @@
 					width: 100%;
 				}
 				&--download{
-					width: 15%;
+					order: 1;
+					width: 11%;
 					background-color: $purple;
-					padding: 1em;
+					// padding: 1em;
 					text-align: center;
 				    writing-mode: vertical-rl;
 	    			transform: rotate(180deg);
 				}
 				&--link{
+					transition: all 0.5s ease-in-out;
+					&:hover,
+					&:focus{
+						background-color: darken($red, 15);
+					}
+					display: block;
+					padding: 2em;
+					height: 100%;
 					text-decoration: none;
-					width: 10%;
 					writing-mode: vertical-rl;
 	  				transform: rotate(180deg);
 	  				color: white;
@@ -341,12 +369,18 @@
 				margin-bottom: 2em;
 				padding: 0 1.2rem 2em;
 				line-height: 1.35em;
-				&--img{
-					width: 100%;
-					margin-bottom: 2em;
-				}
-				p{
-					margin-bottom: 1em;
+				&--txt{
+					p{
+						max-width: 640px;
+						margin-bottom: 1em;
+						img{
+							float: left;
+							height: auto;
+							width: 50%;
+							margin-right: 2em;
+							margin-bottom: 1em;
+						}
+					}
 				}
 			}
 		}

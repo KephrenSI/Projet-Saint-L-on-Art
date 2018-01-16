@@ -8,6 +8,136 @@ add_theme_support( 'post-thumbnails' );
 add_action('acf/init', 'my_acf_init');
 
 /**
+ * AJAX filter artist posts by taxonomy term
+ */
+function misha_filter_function(){
+	$args = array(
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> $_POST['date'],
+		'posts_per_page' => -1, // ASC или DESC
+		'post_type' => 'artiste'
+	);
+ 
+	// for taxonomies / categories
+	if( isset( $_POST['disciplinefilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'discipline',
+				'field' => 'id',
+				'terms' => $_POST['disciplinefilter']
+			)
+		);
+
+	$query = new WP_Query( $args );
+ 
+	if( $query->have_posts() ) : while( $query->have_posts() ): $query->the_post();
+		include('parts/all-artists.php');
+	endwhile;
+
+		wp_reset_postdata();
+
+	else :
+		echo 'Aucune artistes n\'a été trouvé';
+	endif;
+ 
+	die();
+}
+ 
+add_action('wp_ajax_myfilter', 'misha_filter_function'); 
+add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
+
+
+/**
+ * AJAX filter events posts by taxonomy term
+ */
+function misha_event_filter_function(){
+	$args = array(
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> $_POST['date'],
+		'posts_per_page' => -1, // ASC или DESC
+		'post_type' => 'evenement'
+	);
+ 
+	// for taxonomies / categories
+	if( isset( $_POST['event_categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['event_categoryfilter']
+			)
+		);
+
+	$query = new WP_Query( $args );
+ 
+	if( $query->have_posts() ) : while( $query->have_posts() ): $query->the_post();
+		include('parts/all-events.php');
+	endwhile;
+
+		wp_reset_postdata();
+
+	else :
+		echo 'Aucune évènement n\'a été trouvé';
+	endif;
+ 
+	die();
+}
+ 
+add_action('wp_ajax_eventfilter', 'misha_event_filter_function'); 
+add_action('wp_ajax_nopriv_eventfilter', 'misha_event_filter_function');
+
+/**
+ * Add theme support for infinity scroll
+ */
+function wpc_theme_support() {
+	add_theme_support('infinite-scroll', array(
+		'type'           => 'scroll',
+	    'footer_widgets' => false,
+	    'container'      => 'content',
+	    'footer'		 => 'page',
+	    'wrapper'        => true,
+	    'render'         => 'wpc_scroll_render',
+	    'posts_per_page' => 5,
+	) );
+}
+add_action('after_setup_theme','wpc_theme_support');
+
+function wpc_scroll_render() {
+	get_template_part('page', 'artiste');
+}
+
+function wp_get_the_gram()
+{
+	$auth_config = [
+		'user_id'             => '6876297989',
+		'token'             => '6876297989.0c6968b.ee8b9a6cead44f0faa9127edf0ae516b',
+		'limit'             => '4',
+		//'scope'             => array( 'likes', 'comments', 'relationships' )
+	];
+	
+	$recent_media_url = sprintf( 'https://api.instagram.com/v1/users/%s/media/recent/?access_token=%s&count=%s', $auth_config['user_id'], $auth_config['token'], $auth_config['limit'] );
+	$curl = curl_init($recent_media_url);
+	curl_setopt( $curl, CURLOPT_CONNECTTIMEOUT, 3);
+	curl_setopt( $curl, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt( $curl, CURLOPT_SSL_VERIFYPEER, false);
+	$curl_return = json_decode( curl_exec( $curl) );
+	
+	//var_dump( $data);
+	if(curl_errno($curl)){
+		echo '<script>console.error(\'backend error -> Instagram API : ' . curl_error($curl) . '\')</script>';
+	}elseif ($curl_return->meta->error_message){
+		echo '<script>console.error(\'backend error -> Instagram API : ' . $curl_return->meta->error_message . '\')</script>';
+	}else{
+		return $curl_return->data;
+	}
+	return false;
+}
+//URL insta API
+//'https://api.instagram.com/oauth/authorize/?client_id=0c6968bc0f214c5a87645daac2e26dfb&redirect_uri=http://localhost:8888/saintleonartwp/&response_type=token'
+//'https://api.instagram.com/v1/users/search?q=kephrensi&access_token=6876297989.0c6968b.ee8b9a6cead44f0faa9127edf0ae516b'
+//'https://api.instagram.com/oauth/authorize/?client_id=0c6968bc0f214c5a87645daac2e26dfb&redirect_uri=http://localhost:8888/saintleonartwp/&response_type=token&response_type=code&scope=public_content'
+
+/**
  *
  * 
  *
@@ -113,7 +243,24 @@ function dw_asset($resource){
 	echo get_dw_asset($resource);
 }
 
-/* New excerpt length of 9999 words*/
+/*
+*
+* Change search function globally to search only artist, event and news post types
+* 
+*/ 
+function prefix_limit_post_types_in_search( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array( 'artiste', 'evenement', 'actualite' ) );
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts', 'prefix_limit_post_types_in_search' );
+
+/*
+*
+* New excerpt length of 9999 words
+* 
+*/
 function my_excerpt_length($length) {
 	return 9999;
 }
@@ -146,7 +293,6 @@ add_action( 'admin_menu', 'remove_menus' );
 * Hide opsolet item contributor menu
 * 
 */
-
 function my_remove_menu_pages() {
  
     global $user_ID;
@@ -229,7 +375,18 @@ function dw_init_types(){
 		'hierarchical' => true,
 		'public' => true
 	]);
-
+	register_post_type('date', [
+		'label' => 'Dates',
+		'labels' => [
+			'singular_name' => 'Dates',
+			'add_new' => 'Ajouter une date'
+		],
+		'description' => 'Type d\'article permettant d\'ajouter les dates de l\'exposition',
+		'menu_position' => 3,
+		'menu_icon' => 'dashicons-calendar-alt',
+		'supports' => ['title'],
+		'public' => true
+	]);
 	register_post_type('artiste', [
 		'label' => 'Artistes',
 		'labels' => [
@@ -242,7 +399,6 @@ function dw_init_types(){
 		'supports' => ['title','thumbnail'],
 		'public' => true
 	]);
-
 	register_post_type('evenement', [
 		'label' => 'Évènements',
 		'labels' => [
@@ -255,7 +411,6 @@ function dw_init_types(){
 		'supports' => ['title','thumbnail', 'editor'],
 		'public' => true
 	]);
-
     register_post_type('actualite', [
         'label' => 'Actualites',
         'labels' => [

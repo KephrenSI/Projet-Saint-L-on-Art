@@ -4,7 +4,7 @@
 */
 get_header(); ?>
 	<section class="title">
-		<h2  class="title__heading2 heading2" aria-level="2" role="heading"><?php the_title(); ?></h2>
+		<h2  class="title__heading2 heading2 single-event-heading2" aria-level="2" role="heading"><?php the_title(); ?></h2>
 	</section>
 	<section class="single-event">
 		<h2  class="single-event__heading2 heading2 hidden" aria-level="2" role="heading">évènement</h2>

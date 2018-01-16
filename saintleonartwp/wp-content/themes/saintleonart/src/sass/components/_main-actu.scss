@@ -13,60 +13,48 @@
 		}
 		&__heading2{
 			width: 100%;
+			margin-bottom: 2rem;
 		}
 		&__heading3{
 			
 		}
 		&__actu{
 			@media only screen and (min-width: 2001px) {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				border-bottom: 1px solid $black;
 				width: 21.2%;
 				position: relative;
 				// margin: 1.2rem;
 				padding: 1.2rem;
 				overflow: hidden;
-				margin-left: 100px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				border-bottom: 1px solid $black;
-				width: 49.6%;
+				width: 47.5%;
 				position: relative;
 				padding: 1.2rem;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
 			@media only screen and (max-width: 1350px)  {
-				margin-bottom: 5px;
+				margin-bottom: 5%;
 				border-bottom: 1px solid $black;
-				width: 49.4%;
+				width: 47.4%;
 				position: relative;
 				padding: 1.2rem;
 				overflow: hidden;
-				margin-left: 5px;
+				margin-left: 5%;
 			}
-			&:hover,
-			&:focus{
-				&::after{
-					filter: blur(8px);
-				}
-			}
-			&--date{
-				color: $white;
-				background-color: $red;
-				width: 4rem;
-				height: 4rem;
-				position: absolute;
-				z-index: 2;
-				top: 0;
-				right: 0;
-				font-family: "Good_Vibes";
-				text-align: center;
-				display: flex;
-				flex-direction: column;
-				flex-wrap: nowrap;
-				justify-content: center;
+			// &:hover,
+			// &:focus{
+			// 	&::after{
+			// 		filter: blur(8px);
+			// 	}
+			// }
+			&--publication_date{
+				margin-bottom: 2rem;
 			}
 			&--month{
 				font-size: 1.5em;
@@ -137,7 +125,7 @@
 		}
 		@media only screen and (max-width: 2000px) {
 			&__actu:nth-of-type(2n+1){
-				margin-left: 5px;
+				margin-left: 0px;
 			}
 		}
 	}
@@ -152,7 +140,7 @@
 		flex-wrap: wrap;
 		&__heading2{
 			@media only screen and (min-width: 768px) and (max-width: 979px) {
-				margin: 0;
+				margin: 0 0 1rem 0;
 				width: 50%;
 			}
 			margin-left: 1.2rem;
@@ -162,11 +150,10 @@
 			
 		}
 		&__actu{
-			margin-bottom: 5px;
 			border-bottom: 1px solid $black;
 			width: 100%;
 			position: relative;
-			margin: 1.2rem;
+			margin: 0 1.2rem 5%;
 			overflow: hidden;
 			&:hover,
 			&:focus{
@@ -252,12 +239,12 @@
 		}
 		@media only screen and (min-width: 768px){
 			&__cta{
-				margin: 1.2rem 0rem;
+				margin: -1.2rem 0rem;
 			}
 		}
 		@media only screen and (max-width: 767px) {
 			&__cta{
-				margin: 1.2rem;
+				margin: 0rem 1.2rem 1.2rem;
 			}
 		}
 	}
