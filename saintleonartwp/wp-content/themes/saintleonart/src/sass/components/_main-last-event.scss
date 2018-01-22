@@ -183,6 +183,16 @@
 					}
 				}
 			}
+			// &--location{
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	left: 0;
+			// 	&:hover{
+			// 		div{
+			// 			right: 120px;
+			// 		}
+			// 	}
+			// }
 		}
 		@media only screen and (min-width: 2001px) {
 			&__event:nth-of-type(4n+1){

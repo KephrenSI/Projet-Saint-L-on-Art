@@ -814,6 +814,7 @@ class NewsletterModule {
     function get_list($id) {
         global $wpdb;
         $id = (int) $id;
+        if (!$id) return null;
         $list = get_option('newsletter_list_' . $id, array());
         $profile = get_option('newsletter_profile');
         $list['name'] = $profile['list_' . $id];
@@ -1031,27 +1032,26 @@ class NewsletterModule {
 
             $options_subscription = NewsletterSubscription::instance()->options;
 
+            $home_url = home_url('/');
+            
             if ($email) {
                 $text = str_replace('{email_id}', $email->id, $text);
                 $text = str_replace('{email_subject}', $email->subject, $text);
+                $text = $this->replace_url($text, 'EMAIL_URL', $home_url . '?na=v&id=' . $email->id . '&amp;nk=' . $nk);
             }
 
-            $home_url = home_url('/');
-            //$text = $this->replace_url($text, 'SUBSCRIPTION_CONFIRM_URL', self::add_qs(plugins_url('do.php', __FILE__), 'a=c' . $id_token));
 
             $text = $this->replace_url($text, 'SUBSCRIPTION_CONFIRM_URL', $home_url . '?na=c&nk=' . $nk);
             $text = $this->replace_url($text, 'ACTIVATION_URL', $home_url . '?na=c&nk=' . $nk);
 
             $text = $this->replace_url($text, 'UNSUBSCRIPTION_CONFIRM_URL', $home_url . '?na=uc&nk=' . $nk . ($email ? '&nek=' . $email->id : ''));
-            //$text = $this->replace_url($text, 'UNSUBSCRIPTION_CONFIRM_URL', NEWSLETTER_URL . '/do/unsubscribe.php?nk=' . $nk);
             $text = $this->replace_url($text, 'UNSUBSCRIPTION_URL', $home_url . '?na=u&nk=' . $nk . ($email ? '&nek=' . $email->id : ''));
-//            $text = $this->replace_url($text, 'CHANGE_URL', plugins_url('newsletter/do/change.php'));
+
             // Obsolete.
             $text = $this->replace_url($text, 'FOLLOWUP_SUBSCRIPTION_URL', self::add_qs($base, 'nm=fs' . $id_token));
             $text = $this->replace_url($text, 'FOLLOWUP_UNSUBSCRIPTION_URL', self::add_qs($base, 'nm=fu' . $id_token));
             $text = $this->replace_url($text, 'FEED_SUBSCRIPTION_URL', self::add_qs($base, 'nm=es' . $id_token));
             $text = $this->replace_url($text, 'FEED_UNSUBSCRIPTION_URL', self::add_qs($base, 'nm=eu' . $id_token));
-
 
             if (empty($options_profile['profile_url']))
                 $text = $this->replace_url($text, 'PROFILE_URL', $home_url . '?na=p&nk=' . $nk);
@@ -1059,8 +1059,8 @@ class NewsletterModule {
                 $text = $this->replace_url($text, 'PROFILE_URL', self::add_qs($options_profile['profile_url'], 'ni=' . $user->id . '&amp;nt=' . $user->token));
 
             $text = $this->replace_url($text, 'UNLOCK_URL', $home_url . '?na=ul&nk=' . $nk);
-            if (!empty($email_id)) {
-                $text = $this->replace_url($text, 'EMAIL_URL', $home_url . '?na=v&id=' . $email_id . '&amp;nk=' . $nk);
+            if ($email) {
+                
             }
         } else {
             $text = $this->replace_url($text, 'SUBSCRIPTION_CONFIRM_URL', '#');

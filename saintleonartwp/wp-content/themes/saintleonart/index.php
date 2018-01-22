@@ -2,9 +2,19 @@
     <section class="banner">
         <h2  class="banner__heading2 heading2 hidden" aria-level="2" role="heading">Banner</h2>
         <div class="banner__date">
-            <p class="banner__date--txt"><?php the_field('date_start_day'); ?> - <?php the_field('date_end_day'); ?></p>
-            <p class="banner__date--txt"><?php the_field('date_month'); ?></p>
-            <p class="banner__date--txt"><?php the_field('date_years'); ?></p>
+            <?php 
+                $rows = get_field( 'dates' ); 
+                $date_content = $rows[0]['date'];
+                
+                $end_row = end( $rows );
+                $last_date_content = $end_row['date'];
+
+                $date_content_array = explode(' ', $date_content);
+                $last_date_content_array = explode(' ', $last_date_content);
+            ?>
+            <p class="banner__date--txt"><?php echo $date_content_array[0];  ?> - <?php echo $last_date_content_array[0]; ?></p>
+            <p class="banner__date--txt"><?php echo $date_content_array[1]; ?></p>
+            <p class="banner__date--txt"><?php echo $date_content_array[2]; ?></p>
         </div>
         <div class="banner__logo-shape">
             <svg class="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 67 74"><title>138_saint_leonart_logo-03</title><path class="cls-1" d="M100.4,70.78A29.62,29.62,0,1,1,70.77,41.16,29.62,29.62,0,0,1,100.4,70.78" transform="translate(-37.43 -33.7)"/><rect class="cls-2" x="17.87" y="3.04" width="30.94" height="68.08"/><polygon class="cls-3" points="66.69 39.59 0 0 0 34.41 0 34.57 66.69 74.15 66.69 39.74 66.69 39.59"/></svg>
@@ -109,12 +119,14 @@
                        $dateformatstringmonth = "M";
                        $dateformatstringday = "j";
                        $unixtimestamp = strtotime(get_field('date', false, false));
+
                        
                     ?>
                     <span class="last-event__event--month"><?php echo date_i18n($dateformatstringmonth, $unixtimestamp); ?></span>
                     <span class="last-event__event--day"><?php echo date_i18n($dateformatstringday, $unixtimestamp); ?></span>
                 </time>
             </div>
+
             <h3  class="last-event__heading3 heading3" aria-level="3" role="heading"><?php the_title();?></h3>
             <div class="last-event__event--social">
                 <p class="last-event__event--txt">Partager</p>
@@ -133,6 +145,7 @@
                     </a>
                 </div>
             </div>
+            
         </div>
         <?php endwhile; endif; ?>
         <div class="last-event__cta cta">

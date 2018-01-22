@@ -585,7 +585,7 @@ $options = $module->get_options('status');
                         </td>
                         <td>
                             <?php if ($wp_cron_calls_avg > NEWSLETTER_CRON_INTERVAL * 1.1) { ?>
-                                The blog cron system is NOT triggere enough often.
+                                The blog cron system is NOT triggered enough often.
 
                             <?php } else { ?>
 

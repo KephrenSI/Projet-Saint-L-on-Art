@@ -247,7 +247,12 @@ select[name=disciplinefilter]:first-child{
 .heading2{
 	line-height: 1.2em;
 	font-family: "Good_Vibes";
-	@media only screen and (min-width: 980px) {
+	@media only screen and (min-width: 1091px) {
+		margin-bottom:1.5em;
+		font-size: $subHeading2;
+	}
+	@media only screen and (min-width: 980px) and (max-width: 1090px) {
+		margin-top: 2em;
 		margin-bottom:1.5em;
 		font-size: $subHeading2;
 	}

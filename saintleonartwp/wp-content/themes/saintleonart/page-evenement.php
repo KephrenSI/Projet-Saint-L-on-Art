@@ -9,14 +9,31 @@ get_header(); ?>
 	<section class="all-events">
 		<h2 class="all-events__heading2 heading2 hidden" aria-level="2" role="heading">All</h2>
 		<div class="all-events__filter">
-			<?php
+
+
+
+
+			<form class="searchform" method="get" id="searchform" action="<?php bloginfo('home'); ?>/">
+                <div>
+                    <label for="s" class="screen-reader-text"></label>
+                    <input type="text" value="" name="s" id="s" />
+                    <input name="searchsubmit" id="searchsubmit" type="submit" value="Rechercher" />
+                </div>
+                <input type="hidden" name="search-type" value="evenement" />
+            </form>
+
+
+
+
+
+			<!-- <?php
 				// Output a search for that only searches artiste post types
 				$search = get_search_form( false );
 				$find = '</form>';
 				$replace = '<input type="hidden" name="post_type" value="artiste">' . $find;
 				$search = str_replace( $find, $replace, $search );
 				echo $search;
-			?>
+			?> -->
 
 			<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="event_filter">
 				<!-- <select name="disciplinefilter"> -->

@@ -1,6 +1,8 @@
 @media only screen and (min-width: 751px) {
 	.about{
 		max-width: 2000px;
+		display: flex;
+		flex-wrap: wrap;
 		@media only screen and (min-width: 2001px) {
 			margin: 0 auto;
 		}
@@ -11,6 +13,8 @@
 			margin: 0 1.2rem;
 		}
 		.presentation{
+			width: 45%;
+			margin-bottom: 5%;
 			// margin-bottom: 3em;
 			background-color: $extraLightGrey;
 			&__heading3{
@@ -28,6 +32,9 @@
 			}
 		}
 		.historique{
+			width: 50%;
+			margin-left: 5%;
+			margin-bottom: 5%;
 			// margin-bottom: 3em;
 			background-color: $extraLightGrey;
 			&__heading3{
@@ -58,6 +65,8 @@
 			}
 		}
 		.organisateur{
+			width: 100%;
+			margin-bottom: 5%;
 			// margin-bottom: 3em;
 			background-color: $extraLightGrey;
 			&__heading3{
@@ -99,8 +108,10 @@
 			}
 		}
 		.presse{
+			width: 100%;
 			display: flex;
 			flex-wrap: wrap;
+			margin-bottom: 5%;
 			// margin-bottom: 3em;
 			&__heading3{
 				background-color: $purple;
@@ -116,10 +127,10 @@
 			}
 			&__docs{
 				@media only screen and (min-width: 1780px) {
-					width: 49.85%;
+					width: 25%;
 				}
 				@media only screen and (max-width: 1779px) and (min-width: 990px) {
-					width: 49.7%;
+					width: 25%;
 				}
 				@media only screen and (min-width: 751px) and (max-width: 989px) {
 					width: 49.6%;
@@ -129,8 +140,9 @@
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 5px;
-				&:nth-child(2n+3){
-					margin-left: 5px;
+				margin-left: 5px;
+				&:nth-child(4n+2){
+					margin-left: 0;
 				}
 				&--infos{
 					padding: 1.2rem;
@@ -174,6 +186,8 @@
 			}
 		}
 		.last-year{
+			width: 100%;
+			margin-bottom: 5%;
 			background-color: $extraLightGrey;
 			&__heading3{
 				background-color: $purple;

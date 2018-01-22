@@ -69,14 +69,14 @@
             }
         }
         &__bloc{
-            margin-bottom: 2em;
+            margin-bottom: 3em;
             p{
                 margin-bottom: 1em;
             }
         }
         &__find{
             width: 50%;
-            margin-bottom: 2em;
+            margin-bottom: 3em;
             &--link{
                 transition: all 0.5s ease-in-out;
                 fill: $black;
@@ -93,6 +93,9 @@
                     fill: $purple;
                 }
             }
+        }
+        &__location{
+            margin-bottom: 3em;
         }
         .horaire{
             display: flex;

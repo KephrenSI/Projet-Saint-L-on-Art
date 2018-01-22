@@ -83,6 +83,30 @@
 			display: flex;
 			flex-wrap: wrap;
 		}
+		.wpcf7-mail-sent-ok,
+		.screen-reader-response{
+			margin: 2em 0;
+			color: green;
+		}
+		.wpcf7-submit{
+			width: 100%;
+			background-color: $purple;
+			color: $white;
+			border: none;
+			font-size: $currentText;
+			position: relative;
+			padding: 0.5em;
+			margin-top: 2em;
+			z-index: 2;
+			border-radius: 5px;
+			padding: 1em 1.6em;
+			transition: all 0.5s ease-in-out;
+			margin-top: -1em;
+			&:hover{
+				cursor: pointer;
+				background-color: darken($purple, 5);
+			}
+		}
 		&__form{
 			display: flex;
 			flex-wrap: wrap;
@@ -169,20 +193,7 @@
 				font-weight: 600;
 				border-right: 2px solid $black;
 			}
-			&--submit{
-				width: 100%;
-				background-color: $purple;
-				color: $white;
-				border: none;
-				font-size: $currentText;
-				position: relative;
-				padding: 0.5em;
-				margin-top: 2em;
-				z-index: 2;
-				&:hover{
-					cursor: pointer;
-				}
-			}
+
 		}
 	}
 }

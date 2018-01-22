@@ -45,176 +45,170 @@ get_header(); ?>
 			<script>
 				function initMap() {
 					var center = {lat: 50.648376, lng: 5.5855541};
-						// nom1 = {lat: 50.6479241, lng: 5.5884746},
-						// nom2 = {lat: 50.6477818, lng: 5.5844575};
 					var map = new google.maps.Map(document.getElementById('map'), {
 						scrollwhell: false,
-					  	styles: 
-					  		[
-							    {
-							        "featureType": "administrative",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "saturation": "-100"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "administrative.province",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "visibility": "off"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "landscape",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "saturation": -100
-							            },
-							            {
-							                "lightness": 65
-							            },
-							            {
-							                "visibility": "on"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "poi",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "saturation": -100
-							            },
-							            {
-							                "lightness": "0"
-							            },
-							            {
-							                "visibility": "simplified"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "road",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "saturation": "-100"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "road.highway",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "visibility": "simplified"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "road.arterial",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "lightness": "30"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "road.local",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "lightness": "40"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "transit",
-							        "elementType": "all",
-							        "stylers": [
-							            {
-							                "saturation": -100
-							            },
-							            {
-							                "visibility": "simplified"
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "water",
-							        "elementType": "geometry",
-							        "stylers": [
-							            {
-							                "hue": "#ffff00"
-							            },
-							            {
-							                "lightness": -25
-							            },
-							            {
-							                "saturation": -97
-							            }
-							        ]
-							    },
-							    {
-							        "featureType": "water",
-							        "elementType": "labels",
-							        "stylers": [
-							            {
-							                "lightness": -25
-							            },
-							            {
-							                "saturation": -100
-							            }
-							        ]
-							    }
-							]
-					  ,
-					  zoom: 16,
-					  center: center
+						zoomControl: false,
+						streetViewControl: false,
+						fullscreenControl: false,
+						mapTypeControl: false,
+					  	styles:[
+						    {
+						        "featureType": "administrative",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "saturation": "-100"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "administrative.province",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "visibility": "off"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "landscape",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "saturation": "-100"
+						            },
+						            {
+						                "lightness": 65
+						            },
+						            {
+						                "visibility": "off"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "poi",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "saturation": "-100"
+						            },
+						            {
+						                "lightness": "0"
+						            },
+						            {
+						                "visibility": "off"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "road",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "saturation": "-100"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "road.highway",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "visibility": "simplified"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "road.arterial",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "lightness": "30"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "road.local",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "lightness": "40"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "transit",
+						        "elementType": "all",
+						        "stylers": [
+						            {
+						                "saturation": "-100"
+						            },
+						            {
+						                "visibility": "simplified"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "water",
+						        "elementType": "geometry",
+						        "stylers": [
+						            {
+						                "hue": "blue"
+						            },
+						            {
+						                "lightness": "0"
+						            },
+						            {
+						                "saturation": "-80"
+						            }
+						        ]
+						    },
+						    {
+						        "featureType": "water",
+						        "elementType": "labels",
+						        "stylers": [
+						            {
+						                "lightness": "-25"
+						            },
+						            {
+						                "saturation": "-100"
+						            }
+						        ]
+						    }
+						],
+						zoom: 17,
+						center: center
 					});
-					// var marker = new google.maps.Marker({
-					//   position: nom1,
-					//   map: map
-					// });
-					// var marker = new google.maps.Marker({
-					//   position: nom2,
-					//   map: map
-					// });
+					
 				// custom lieu
                    <?php $args = array( 'post_type' => 'lieux', 'posts_per_page' => -1 ); $the_query = new WP_Query( $args ); ?>
                    <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-                       // var image = {
-                       //     // Adresse de l'icône personnalisée
-                       //     url: '<?php the_field('icon'); ?>',
-                       //     size: new google.maps.Size(150,150),
-                       //     scaledSize: new google.maps.Size(100, 100),
-                       //     origin: new google.maps.Point(0,0),
-                       //     anchor: new google.maps.Point(50, 100)
-                       // };
+					var image = {
+					   // Adresse de l'icône personnalisée
+					   //url: '<?php //the_field('icon'); ?>',
+					   url:'<?php dw_asset('img/logo.ico'); ?>',
+					   size: new google.maps.Size(50,50),
+					   scaledSize: new google.maps.Size(40,40),
+					   origin: new google.maps.Point(0,0),
+					   anchor: new google.maps.Point(0,0)
+					};
 					<?php $location = get_field('location');  ?>
                        var marker<?php the_ID(); ?> = new google.maps.Marker( {
                            map: map,
                            "position": {lat: <?php echo $location['lat']; ?>, lng: <?php echo $location['lng']; ?>	},
-                           "title": '<?php the_title(); ?>'
-                           // "icon": 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png (3 kB)',
-                           //"icon": image
+                           "title": '<?php the_title(); ?>',
+                           //"icon": 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png',
+                           "icon": image
                        } );
-                       // var contentString<?php //the_ID(); ?> = '<?php //the_title(); ?>: <?php //the_field('infos'); ?>';
+                       var contentString<?php the_ID(); ?> = '<?php the_title(); ?>: <?php echo $location['address']; ?>';
 
-                       // var infowindow<?php //the_ID(); ?> = new google.maps.InfoWindow({
-                       //   content: contentString<?php //the_ID(); ?>
-                       // });
-                       // marker<?php //the_ID(); ?>.addListener('click', function() {
-                       //   infowindow<?php //the_ID(); ?>.open(map, marker<?php //the_ID(); ?>);
-                       // });
+                       var infowindow<?php the_ID(); ?> = new google.maps.InfoWindow({
+                         content: contentString<?php the_ID(); ?>
+                       });
+                       marker<?php the_ID(); ?>.addListener('click', function() {
+                         infowindow<?php the_ID(); ?>.open(map, marker<?php the_ID(); ?>);
+                       });
                    <?php endwhile; endif; ?>
                 }
 			</script>
@@ -299,7 +293,7 @@ get_header(); ?>
             if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
         ?>
 		<div class="artistes__artiste">
-			<a class="artistes__artiste--bloc" href="<?php the_permalink(); ?>" title="Aller vers la page de l'artiste <?php get_the_title(); ?>">&nbsp;</a>
+			<a class="artistes__artiste--bloc" href="<?php the_permalink(); ?>" title="Aller vers la page de l'artiste <?php get_the_title(); ?>"><span class="hidden">&nbsp;</span></a>
 			<img class="artistes__artiste--img" src="<?php the_post_thumbnail_url('medium_large');?>" alt="Photo de profil de l'artiste <?php the_title();?>">
 			<div class="artistes__artiste--taxonomy">
 				<?php dw_the_discipline(', ', '<strong class="">', '</strong>'); ?>
@@ -308,14 +302,14 @@ get_header(); ?>
 			<div class="artistes__artiste--social">
 				<p class="artistes__artiste--txt">Suivre</p>
 				<div class="artistes__artiste--follow">
-					<a class="artistes__artiste--link" href="#" title="Aller vers la page Facebook">
+					<a class="artistes__artiste--link" href="<?php the_field('facebook'); ?>" title="Aller vers la page Facebook">
 						<span class="hidden">&nbsp;</span>
 						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                             <title>facebook</title>
                             <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
                         </svg>
 					</a>
-					<a class="artistes__artiste--link" href="#" title="Aller vers la page Instagram">
+					<a class="artistes__artiste--link" href="<?php the_field('instagram'); ?>" title="Aller vers la page Instagram">
 						<span class="hidden">&nbsp;</span>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                             <title>instagram</title>
@@ -324,7 +318,7 @@ get_header(); ?>
                             <path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
                         </svg>
                     </a>
-                    <a class="artistes__artiste--link" href="#" title="Aller vers la page Twitter">
+                    <a class="artistes__artiste--link" href="<?php the_field('twitter'); ?>" title="Aller vers la page Twitter">
                     	<span class="hidden">&nbsp;</span>
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
                             <title>twitter</title>

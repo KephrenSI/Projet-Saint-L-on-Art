@@ -55,10 +55,10 @@ get_header(); ?>
 					<label class="formulaire__form--label" for="message">Message</label>
 					<span class="focus-border"></span>
 				</div> -->
-				<div class="intro__cta cta">
+				<!--< div class="intro__cta cta">
 					<span class="cta__masque">Envoyer</span>
 					<button class="cta__submit" type="button" name="Hover">Envoyer</button>
-				</div>
+				</div> -->
 			</form>
 		</section>
 	</section>

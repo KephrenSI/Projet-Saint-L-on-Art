@@ -1,32 +1,15 @@
 <section class="newsletter">
-            <h2  class="newsletter__heading2 heading2" aria-level="2" role="heading">Newsletter</h2>
-            <!-- <form action="post" class="newsletter__form">
-                <div class="newsletter__form--bloc">
-                    <input class="newsletter__form--input" type="email" name="user_email" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" id="user_email" placeholder="Email@example.com">
-                    <label class="newsletter__form--label" for="user_email">Email</label>
-                    <span class="focus-border"></span>
-                </div>
-                <div class="cta">
-                    <span class="cta__masque">S'inscrire</span>
-                    <button class="cta__submit" type="button" name="Hover">S'inscrire</button>
-                </div>
-            </form> -->
-
-
-
-            <form class="newsletter__form" method="post" action="http://localhost:8888/saintleonartwp/?na=s" onsubmit="return newsletter_check(this)">
+            
+            <form class="newsletter__form" method="post" action="<?php home_url('/'); ?>?na=s" onsubmit="return newsletter_check(this)">
                 <div class="tnp-field tnp-field-email newsletter__form--bloc">
-                    <input id="user_email" class="newsletter__form--input input tnp-email" type="email" name="user_email" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" placeholder="Email@example.com" required>
-                    <label class="newsletter__form--label" for="user_email">Email</label>
+                    <input id="ne" class="newsletter__form--input input tnp-email" type="email" name="ne" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" placeholder="Email@example.com" required>
+                    <label class="newsletter__form--label" for="ne">Email</label>
                     <span class="focus-border"></span>
                 </div>
                 <div class="cta tnp-field tnp-field-button">
                     <span class="cta__masque">S'inscrire</span>
-                    <button class="cta__submit btn btn--anim tnp-submit" type="button" name="Hover" data-text="Inscritpion au newsletter">S'inscrire</button>
+                    <button class="cta__submit btn btn--anim tnp-submit" type="submit" name="Hover" data-text="Inscritpion au newsletter">S'inscrire</button>
                 </div>
-                <!-- <div class="tnp-field tnp-field-button">
-                    <button type="submit" class="btn btn--anim tnp-submit" data-text="Inscritpion au newsletter">Inscritpion au newsletter</button>
-                </div> -->
             </form>
 
 
