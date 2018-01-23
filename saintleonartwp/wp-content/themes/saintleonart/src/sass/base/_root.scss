@@ -5,6 +5,7 @@
 * coded by Képhren SIMONIS
 * started at 19/09/2017
 */
+
 html{
 	font-family: "Raleway";
 	font-size: 16px;
@@ -31,6 +32,14 @@ select[name=event_categoryfilter]:first-child{
 select[name=disciplinefilter]:first-child{
 	position: relative;
 	right: 10px;
+}
+.wpcf7-not-valid-tip{
+	color: red;
+	position: relative;
+	top: 10px;
+}
+.screen-reader-response{
+	display: none;
 }
 .filtrage{
 	border: none;
