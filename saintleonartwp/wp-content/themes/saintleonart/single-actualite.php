@@ -8,9 +8,6 @@ get_header(); ?>
 	</section>
 	<section class="single-article">
 		<h2  class="single-article__heading2 heading2 hidden" aria-level="2" role="heading">article</h2>
-		<!-- <div class="single-article__taxonomy">
-			<?php //dw_the_discipline(', ', '<strong class="">', '</strong>'); ?>
-		</div> -->
 		<div class="single-article__date">
 			<p class="single-article__date--txt">Le 27 avril 2018</p>
 		</div>
@@ -44,7 +41,7 @@ get_header(); ?>
 		</div>
 		<div class="single-article__cta cta">
             <span class="cta__masque">Tous les voir</span>
-            <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
+            <a href="<?php the_permalink(62); ?>" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
         </div>
 	</section>
 <?php get_footer(); ?>

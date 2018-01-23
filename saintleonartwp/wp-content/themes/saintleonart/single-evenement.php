@@ -106,7 +106,7 @@ get_header(); ?>
 		</div>
 		<div class="single-event__cta cta">
             <span class="cta__masque">Tous les voir</span>
-            <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
+            <a href="<?php the_permalink(21); ?>" title="Aller vers la page des évènements" class="cta__button">Tous les voir</a>
         </div>
 	</section>
 <?php get_footer(); ?>

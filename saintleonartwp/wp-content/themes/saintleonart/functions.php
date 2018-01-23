@@ -46,46 +46,6 @@ function misha_filter_function(){
 add_action('wp_ajax_myfilter', 'misha_filter_function'); 
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
 
-// /**
-//  * AJAX filter event posts by day term
-//  */
-// function misha_date_filter_function(){
-// 	$args = array(
-// 		'orderby' => 'date', // we will sort posts by date
-// 		'order'	=> $_POST['date'],
-// 		'posts_per_page' => -1, // ASC или DESC
-// 		'post_type' => 'event'
-// 	);
- 
-// 	// for taxonomies / categories
-// 	if( isset( $_POST['datefilter'] ) )
-// 		$args['tax_query'] = array(
-// 			array(
-// 				'taxonomy' => 'date',
-// 				'field' => 'id',
-// 				'terms' => $_POST['datefilter']
-// 			)
-// 		);
-
-// 	$query = new WP_Query( $args );
- 
-// 	if( $query->have_posts() ) : while( $query->have_posts() ): $query->the_post();
-// 		include('parts/all-events.php');
-// 	endwhile;
-
-// 		wp_reset_postdata();
-
-// 	else :
-// 		echo 'Aucune évènment n\'a été trouvé';
-// 	endif;
- 
-// 	die();
-// }
- 
-// add_action('wp_ajax_datefilter', 'misha_date_filter_function'); 
-// add_action('wp_ajax_nopriv_datefilter', 'misha_date_filter_function');
-
-
 /**
  * AJAX filter events posts by taxonomy term
  */
@@ -402,18 +362,6 @@ function dw_init_types(){
 		'hierarchical' => true,
 		'public' => true
 	]);
-
-	// register_taxonomy('date', 'evenement', [
-	// 	'label' => 'Date',
-	// 	'labels' => [
-	// 		'singular_name' => 'Date',
-	// 		'edit_item' => 'Éditer le jour de l\'expo',
-	// 		'add_new_item' => 'Définir le jour de l\'évènement'
-	// 	],
-	// 	'description' => 'Jour de l\'exposition où l\'évènmenet se déroulera',
-	// 	'hierarchical' => true,
-	// 	'public' => true
-	// ]);
 
 	register_taxonomy('category', 'evenement', [
 		'label' => 'Catégories',

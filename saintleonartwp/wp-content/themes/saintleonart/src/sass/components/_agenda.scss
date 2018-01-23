@@ -136,6 +136,15 @@
 				}
 			}
 		}
+		.programmation{
+			&__heading4{
+				width: 100%;
+				font-size: $heading4;
+				@media only screen and (max-width: 979px) {
+					margin: 2em 1.2rem 1em;
+				}
+			}
+		}
 		@media only screen and (min-width: 768px){
 			&__cta{
 				margin: 1.2rem 0rem;

@@ -151,7 +151,7 @@ get_header(); ?>
             <?php endwhile; endif; ?> 
         </ul>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script type="text/javascript" src="<?php dw_asset('js/anchor.js'); ?>"></script>
+        <script type="text/javascript" src="<?php dw_asset('js/active.js'); ?>"></script>
         <div class="stat__cta cta">
             <span class="cta__masque">En savoir plus</span>
             <a href="<?php the_permalink(80); ?>" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>

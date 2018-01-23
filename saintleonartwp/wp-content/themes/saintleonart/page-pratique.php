@@ -29,8 +29,7 @@ get_header(); ?>
             </li>
     	</ul>
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-        <script src="<?php dw_asset('js/anchor2.js'); ?>"></script>
-        <script src="<?php dw_asset('js/active2.js'); ?>"></script>
+        <script src="<?php dw_asset('js/active.js'); ?>"></script>
         <script src="<?php dw_asset('js/scrollfixed.js'); ?>"></script>
     	<ul  class="pratique__list2">
 			<li class="pratique__list2--elt" id="info1">

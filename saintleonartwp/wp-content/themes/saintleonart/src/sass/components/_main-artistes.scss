@@ -27,8 +27,8 @@
 			//font-size: $subText;
 			width: 50%;
 			text-align: right;
-			color: $lightGrey;
-			fill: $lightGrey;
+			color: $grey;
+			fill: $grey;
 			align-self: center;
 			margin-bottom: 2.8em;
 			transition: all 0.5s ease-in-out;
@@ -220,8 +220,8 @@
 			// font-size: $subText;
 			width: 50%;
 			text-align: right;
-			color: $lightGrey;
-			fill: $lightGrey;
+			color: $grey;
+			fill: $grey;
 			align-self: center;
 			margin-bottom: 2.8em;
 			transition: all 0.5s ease-in-out;
@@ -306,27 +306,28 @@
 				left: 0;
 			}
 			&--social{
-				position: absolute;
-				z-index: 4;
-				bottom: 0;
-				right: 0;
-				&:hover{
-					div{
-						right: 100px;
-					}
-				}
+				// position: absolute;
+				// z-index: 4;
+				// bottom: 0;
+				// right: 0;
+				// &:hover{
+				// 	div{
+				// 		right: 100px;
+				// 	}
+				// }
 			}
 			&--txt{
-				background-color: $purple;
-				display: inline-block;
-				position: relative;
-				z-index: 6;
-				padding: 1rem 2rem;
+				display: none;
+				// background-color: $purple;
+				// display: inline-block;
+				// position: relative;
+				// z-index: 6;
+				// padding: 1rem 2rem;
 			}
 			&--follow{
 				transition: all 0.5s ease-in-out;
 				position: absolute;
-				right: -80px;
+				right: 0;
 				bottom: 0;
 				display: flex;
 				z-index: 5;

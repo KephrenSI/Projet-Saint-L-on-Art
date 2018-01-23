@@ -72,6 +72,7 @@
             margin-bottom: 3em;
             p{
                 margin-bottom: 1em;
+
             }
         }
         &__find{
@@ -184,6 +185,7 @@
             }
         }
         &__bloc{
+
             @media only screen and (min-width: 768px) {
                 
             }
@@ -272,6 +274,14 @@
                 &--day{
                     font-size: 2em;
                 }
+            }
+        }
+        &__location{
+            @media only screen and (min-width: 768px){
+                    margin: 4rem 3rem;
+            }
+            @media only screen and (max-width: 767px) {
+                    margin: 4rem 1.2rem;
             }
         }
         @media only screen and (min-width: 768px){

@@ -327,7 +327,7 @@
 				margin-bottom: 5px;
 				&--infos{
 					padding: 1.2rem;
-					width: 89%;
+					width: 80%;
 				}
 				&--date{
 					width: 100%;
@@ -342,7 +342,7 @@
 				}
 				&--download{
 					order: 1;
-					width: 11%;
+					width: 20%;
 					background-color: $purple;
 					// padding: 1em;
 					text-align: center;
@@ -356,7 +356,7 @@
 						background-color: darken($red, 15);
 					}
 					display: block;
-					padding: 2em;
+					padding: 1em;
 					height: 100%;
 					text-decoration: none;
 					writing-mode: vertical-rl;

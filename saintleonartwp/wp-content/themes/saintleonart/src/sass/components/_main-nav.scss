@@ -176,6 +176,7 @@
                 position: absolute;
                 left: 1.2rem;
                 fill: $white;
+
                 &:hover,
                 &:focus{
                     fill: $yellow;
@@ -197,8 +198,8 @@
         }
         &__list{
             height: 88vh;
-            margin-top: 5rem;
-            &--elt {
+            margin-top: 5.5rem;
+            &--elt{
                 color: $purple;
                 list-style: none;
                 font-size: $subHeading4;
@@ -212,13 +213,16 @@
                 padding: 0.7em 4.5rem;
                 text-align: right;
                 position: relative;
-                transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;                
             }
             &--elt a:hover,
             &--elt a:focus{
                 color: $white;
             }
             &--elt a{
+                @media only screen and (max-width: 400px) {
+                    font-size: 0.8em;
+                }
                 &.active{
                     color: $white;
                     &::before{

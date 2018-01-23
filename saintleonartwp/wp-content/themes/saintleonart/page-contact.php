@@ -22,7 +22,7 @@ get_header(); ?>
 			</div>
 			<div class="introduction__cta cta">
                 <span class="cta__masque">Tous le programme</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous le programme</a>
+                <a href="<?php the_permalink(103); ?>" title="Aller vers la page à propos" class="cta__button">Tous le programme</a>
             </div>
 		</section>
 		<section class="formulaire">
@@ -30,35 +30,6 @@ get_header(); ?>
 			<?php echo do_shortcode( '[contact-form-7 id="281" title="Contact"]' ); ?>
 			<form action="post" class="formulaire__form">
 
-				<!-- <div class="formulaire__form--bloc">
-					<input class="formulaire__form--input" type="text" name="firstname" id="firstname" placeholder="Jean">
-					<label class="formulaire__form--label" for="firstname">Prénom</label>
-					<span class="focus-border"></span>
-				</div>
-				<div class="formulaire__form--bloc">
-					<input class="formulaire__form--input" type="text" name="name" id="name" placeholder="Legros">
-					<label class="formulaire__form--label" for="name">Nom</label>
-					<span class="focus-border"></span>
-				</div>
-				<div class="formulaire__form--bloc">
-					<input class="formulaire__form--input" type="email" name="user_email" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" id="email" placeholder="Email@example.com">
-					<label class="formulaire__form--label" for="email">Email</label>
-					<span class="focus-border"></span>
-				</div>
-				<div class="formulaire__form--bloc">
-					<input class="formulaire__form--input" type="text" name="object" id="object" placeholder="Sujet">
-					<label class="formulaire__form--label" for="object">Sujet</label>
-					<span class="focus-border"></span>
-				</div>
-				<div class="formulaire__form--bloc">
-					<textarea class="formulaire__form--input formulaire__form--textarea" name="message" id="message" placeholder="Quel est votre message ?"></textarea>
-					<label class="formulaire__form--label" for="message">Message</label>
-					<span class="focus-border"></span>
-				</div> -->
-				<!--< div class="intro__cta cta">
-					<span class="cta__masque">Envoyer</span>
-					<button class="cta__submit" type="button" name="Hover">Envoyer</button>
-				</div> -->
 			</form>
 		</section>
 	</section>

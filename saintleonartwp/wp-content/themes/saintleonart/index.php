@@ -24,7 +24,6 @@
                 <?php bloginfo('description'); ?>
             </div>
         </div>
-        <?php //get_search_form(); ?>
     </section>
     <section class="intro">
         <h2  class="intro__heading2 heading2" aria-level="2" role="heading">Saint Léon'Art</h2>
@@ -166,9 +165,6 @@
                     Publié le <?php echo get_the_date('l j F Y'); ?>
                 </time>
             </div>
-            <!-- <div class="news__actu--taxonomy">
-                <?php //dw_the_category(', ', '<strong class="">', '</strong>'); ?>
-            </div> -->
             <div class="news__content">
                 <div class="news__content--txt">
                     <?php dw_the_excerpt(500); ?>
@@ -230,7 +226,7 @@
             <?php endwhile; endif; ?> 
         </ul>
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script type="text/javascript" src="<?php dw_asset('js/anchor.js'); ?>"></script>
+        <script type="text/javascript" src="<?php dw_asset('js/active.js'); ?>"></script>
         <div class="stat__cta cta">
             <span class="cta__masque">En savoir plus</span>
             <a href="<?php the_permalink(80); ?>" title="Aller vers la page à propos" class="cta__button">En savoir plus</a>
@@ -249,14 +245,14 @@
                 ?>
                 <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
                 <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
-                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
-                <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>">
+                <!-- <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>"> -->
+                <!-- <img class="insta__bloc--pics" src="<?= $url ?>" alt="Dernière photo postée sur le compte instagram de Saintléonart" width="<?= $width ?>" height="<?= $height ?>"> -->
                 <?php //var_dump( $item->images->low_resolution ); ?>
             <?php endforeach; ?>
         </div>
         <div class="insta__cta cta">
             <span class="cta__masque">Aller sur Insta</span>
-            <a href="#" title="Aller sur la page Instagram de l'expo Saint Léon'Art" class="cta__button">Aller sur Insta</a>
+            <a href="https://www.instagram.com/?hl=fr" title="Aller sur la page Instagram de l'expo Saint Léon'Art" class="cta__button">Aller sur Insta</a>
         </div>
     </section>
     <?php endif; ?>

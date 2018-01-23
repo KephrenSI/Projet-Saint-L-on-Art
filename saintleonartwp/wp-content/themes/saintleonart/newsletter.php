@@ -26,7 +26,6 @@
                 <p class="thanks">L'équipe Saint Léon'Art vous remercie.</p>
             </h2>
             
-            <!-- <a href="#" onClick="history.back()">Continuer à consulter le site</a> -->
                 <div class="artistes__cta cta">
                 <span class="cta__masque">Continuer à consulter le site</span>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Aller vers la page des artistes" class="cta__button">Continuer à consulter le site</a>

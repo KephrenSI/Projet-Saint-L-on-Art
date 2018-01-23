@@ -99,7 +99,7 @@
 }
 @media only screen and (max-width: 767px) {
 	.banner{
-		background-image: url('#{ $imgPath }banner.jpg');
+		background-image: url('#{ $imgPath }banner2.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -117,8 +117,8 @@
 			text-align: center;
 			width: 60%;
 			svg{
-				width: 150px;
-				height: 150px;
+				width: 125px;
+				height: 125px;
 				.cls-1{
 					fill:#e52114;
 				}
@@ -133,9 +133,9 @@
 		&__slogan{
 			font-family: "Whoopass";
 			color: #6f0934;
-			font-size: $subHeading4;
+			font-size: $currentText;
 			width: 80%;
-			margin: 0 auto;
+			margin: -1em auto;
 			line-height: 1.35em;
 		}
 	}

@@ -17,7 +17,7 @@ get_header(); ?>
 			</div>
 			<div class="remerciement__cta cta">
                 <span class="cta__masque">Tous le programme</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous le programme</a>
+                <a href="<?php the_permalink(103); ?>" title="Aller vers la page à propos" class="cta__button">Tous le programme</a>
             </div>
 		</section>
 		<section class="all-partenaire">

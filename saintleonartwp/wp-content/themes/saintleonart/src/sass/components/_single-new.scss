@@ -179,6 +179,15 @@
             p{
                 margin-bottom: 1em;
             }
+            a{
+                color: darken($yellow, 25);
+                transition: all 0.5s ease-in-out;
+                &:hover,
+                &:focus{
+                    color:  $purple;
+                    text-decoration: none;
+                }
+            }
         }
         &__find{
             @media only screen and (min-width: 768px) {

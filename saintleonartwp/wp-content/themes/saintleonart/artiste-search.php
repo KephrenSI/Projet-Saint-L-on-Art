@@ -18,15 +18,6 @@ query_posts( $args ); ?>
                 </div>
                 <input type="hidden" name="search-type" value="artiste" />
             </form>
-
-            <!-- <?php
-                // Output a search for that only searches portfolio post types
-                $search = get_search_form( false );
-                $find = '</form>';
-                $replace = '<input type="hidden" name="post_type" value="artiste">' . $find;
-                $search = str_replace( $find, $replace, $search );
-                echo $search;
-            ?> -->
             <div class="azerty">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <?php include('parts/all-artists.php'); ?>

@@ -217,12 +217,6 @@ get_header(); ?>
 		</section>
 		<section class="programation">
 			<h3 class="programation__heading3 heading3 hidden" aria-level="3" role="heading">Programation</h3>
-			<!-- <div class="programation__filter">
-				<select>
-                	<option value="type">filtrer par type</option>
-					<option value="date">filtrer par date</option>
-				</select>
-			</div> -->
 			<?php
 	            $posts = new WP_Query( ['post_type' => 'evenement', 'posts_per_page' => -1, 'orderby' => the_field(''), 'order' => 'DESC' ] );
 	            if ( $posts->have_posts() ): while ( $posts->have_posts() ): $posts->the_post();
@@ -233,10 +227,6 @@ get_header(); ?>
 				<div class="programation__event--taxonomy">
 					<?php dw_the_category(', ', '<strong class="">', '</strong>'); ?>
 				</div>
-				<!-- <div class="programation__event--date">
-					<span class="programation__event--month"><?php the_field('date_month'); ?></span>
-					<span class="programation__event--day"><?php the_field('date_day'); ?></span>
-				</div> -->
 				<div class="programation__event--date">
 	                <?php
 	                    // get raw date
@@ -267,14 +257,6 @@ get_header(); ?>
 				</div>
 			</div>
 			<?php endwhile; endif; ?>
-			<!-- <div class="last-event__cta cta">
-                <span class="cta__masque">Tous les évènements</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les évènements</a>
-            </div> -->
-            <!-- <div class="last-event__cta cta">
-                <span class="cta__masque">Tous les artistes</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les artistes</a>
-            </div> -->
 		</section>
 	</section>
 	<section class="artistes">

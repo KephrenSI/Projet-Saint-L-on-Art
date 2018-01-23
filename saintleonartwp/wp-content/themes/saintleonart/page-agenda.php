@@ -73,10 +73,6 @@ get_header(); ?>
 						<div class="all-events__event--taxonomy">
 							<?php dw_the_category(', ', '<strong class="">', '</strong>'); ?>
 						</div>
-						<!-- <div class="all-events__event--date">
-							<span class="all-events__event--month"><?php //the_field('date_month'); ?></span>
-							<span class="all-events__event--day"><?php //the_field('date_day'); ?></span>
-						</div> -->
 						<div class="all-events__event--date">
 					        <?php
 					            // get raw date
@@ -87,7 +83,7 @@ get_header(); ?>
 					        <span class="all-events__event--month"><?php echo substr($date->format('M'), 0, 4); ?></span>
 					        <span class="all-events__event--day"><?php echo $date->format('j'); ?></span>
 					    </div>
-						<h3  class="all-events__heading3 heading3" aria-level="3" role="heading"><?php the_title(); ?></h3>
+						<h5  class="all-events__heading3 heading3" aria-level="3" role="heading"><?php the_title(); ?></h5>
 						<div class="all-events__event--social">
 							<p class="all-events__event--txt">Partager</p>
 							<div class="last-event__event--share">
@@ -116,7 +112,7 @@ get_header(); ?>
 
 			<div class="programmation__cta cta">
                 <span class="cta__masque">Tous les voir</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
+                <a href="<?php the_permalink(21); ?>" title="Aller vers la page à propos" class="cta__button">Tous les voir</a>
             </div>
 		</section>
 	</section>

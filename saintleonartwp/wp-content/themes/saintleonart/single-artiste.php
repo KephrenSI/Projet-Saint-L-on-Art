@@ -132,15 +132,15 @@ get_header(); ?>
 		<div class="choix">
 			<div class="choix__cta cta">
                 <span class="cta__masque">Tous le programme</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous le programme</a>
+                <a href="<?php the_permalink(103); ?>" title="Aller vers la page du programme" class="cta__button">Tous le programme</a>
             </div>
             <div class="choix__cta cta">
                 <span class="cta__masque">Tous l'agenda</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous l'agenda</a>
+                <a href="<?php the_permalink(101); ?>" title="Aller vers la page de l'agenda" class="cta__button">Tous l'agenda</a>
             </div>
             <div class="choix__cta cta">
                 <span class="cta__masque">Tous les artistes</span>
-                <a href="#" title="Aller vers la page à propos" class="cta__button">Tous les artistes</a>
+                <a href="<?php the_permalink(24); ?>" title="Aller vers la page des artistes" class="cta__button">Tous les artistes</a>
             </div>
         </div>
 	</section>
