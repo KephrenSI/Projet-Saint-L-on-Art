@@ -11,6 +11,18 @@ html{
 	font-size: 16px;
 	font-weight: normal;
 	line-height: 1.35em;
+	// background-color: $white;
+	background-image: url('../img/tic-tac-toe.png');
+	background-attachment: fixed;
+}
+.body{
+	
+}
+.main{
+	// background-color: transparent;
+}
+.background{
+	padding: 5rem 0;
 	background-color: $white;
 }
 :focus{
@@ -63,7 +75,7 @@ select[name=disciplinefilter]:first-child{
 @media only screen and (min-width: 1090px) {
 	.searchform{
 		position: relative;
-		top: -200px;
+		top: -300px;
 	}
 }
 @media only screen and (max-width: 1089px) {
@@ -185,7 +197,9 @@ select[name=disciplinefilter]:first-child{
 }
 
 .cta {
-	width: 100%;
+	@media only screen and (min-width: 980px) {
+		width: 100%;
+	}
 	position: relative;
 	z-index: 2;
 	margin: 1em 0em 1em;
@@ -233,6 +247,9 @@ select[name=disciplinefilter]:first-child{
 			animation: effacer 0.5s steps(29) forwards;
 		}
 	}
+	&__btn-bug{
+		padding: 0.3em 1rem;
+	}
 	&__masque {
 		color: $purple;
 		text-align: center;
@@ -244,6 +261,16 @@ select[name=disciplinefilter]:first-child{
 		font-size: 1.2em;
 		padding: 0.5rem 1rem;
 	}
+}
+.cta-bug{
+	@media only screen and (max-width: 960px) {
+		margin-left: 94%;
+	    transform: translateX( -110px );
+	    width: 10px;
+	}
+    margin-left: 100%;
+    transform: translateX( -110px );
+    width: 10px;
 }
 .hidden{
 	display: none;

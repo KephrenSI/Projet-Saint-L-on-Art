@@ -2,10 +2,10 @@
 $args = array_merge( $args, $wp_query->query );
 query_posts( $args ); ?>
 <?php if ( 'evenement' == get_post_type() ): ?>
-<section class="all-events" style="margin-top: 10em;">
     <section class="title">
         <h2  class="title__heading2 heading2" aria-level="2" role="heading">Résultats de la recherche</h2>
     </section>
+    <section class="all-events" style="margin-top: 10em;">
         <div class="all-events__filter">
 
 

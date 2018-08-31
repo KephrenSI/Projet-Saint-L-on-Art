@@ -1,15 +1,27 @@
-    <section class="newsletter">
+    <section class="newsletter" id="abonnement">
         <h2  class="newsletter__heading2 heading2" aria-level="2" role="heading">Newsletter</h2>
 
-        <form class="newsletter__form" method="post" action="<?php home_url('/'); ?>?na=s" onsubmit="return newsletter_check(this)">
+        <!-- <form class="newsletter__form" method="post" action="<?php //home_url('/'); ?>?na=s" onsubmit="return newsletter_check(this)"> -->
+            <form class="newsletter__form" method="post" action="#abonnement" onsubmit="return newsletter_check(this)">
             <div class="tnp-field tnp-field-email newsletter__form--bloc">
                 <input id="ne" class="newsletter__form--input input tnp-email" type="email" name="ne" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" placeholder="Email@example.com" required>
                 <label class="newsletter__form--label" for="ne">Email</label>
                 <span class="focus-border"></span>
             </div>
-            <div class="cta tnp-field tnp-field-button">
+
+
+            <?php if($_SERVER['REQUEST_METHOD'] == 'POST') :  ?>
+                <div class="newsletter__confirmation">
+                    <p class="newsletter__confirmation-txt">
+                        Vous êtes bien inscrit à la newsletter de Saint Léon'Art! Vous allez bientôt recevoir un email de confirmation.
+                    </p>
+                </div>
+            <?php endif; ?>
+
+
+            <div class="cta cta-bug tnp-field tnp-field-button">
                 <span class="cta__masque">S'inscrire</span>
-                <button class="cta__submit btn btn--anim tnp-submit" type="submit" name="Hover" data-text="Inscritpion au newsletter">S'inscrire</button>
+                <button class="cta__submit btn btn--anim tnp-submit cta__btn-bug" type="submit" name="Hover" data-text="Inscritpion au newsletter">S'inscrire</button>
             </div>
         </form>
 
@@ -51,7 +63,7 @@
                         <ul class="last-nav__list">
                             <?php foreach (dw_get_nav_items('footer-menu') as $item): ?>
                                 <li class="last-nav__list--elt">
-                                    <a href="<?php echo $item->link; ?>" title="Aller vers la page <?php echo $item->label; ?>" class="last-nav__list--link<?php echo $item -> isCurrent ? ' active' : ''; ?>"><?php echo $item->label; ?></a>
+                                    <a href="<?php echo $item->link; ?>" title="Aller vers la page <?php echo $item->label; ?>" class="last-nav__list--link <?php echo $item -> isCurrent ? ' active' : ''; ?>"><?php echo $item->label; ?></a>
                                 </li>
                             <?php endforeach; ?>
                         </ul>

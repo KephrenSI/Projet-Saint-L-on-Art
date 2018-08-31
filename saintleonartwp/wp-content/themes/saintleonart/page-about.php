@@ -22,15 +22,6 @@ get_header(); ?>
 				<div class="historique__content--txt">
 					<?php the_field('context') ?>
 				</div>
-				<div class="historique__content--bloc">
-					<p class="historique__content--txt">Cette initiative a également pour objectif de rendre l'art et la culture accessible à tous, toutes origines et toutes classes sociales confondues, en offrant un accès libre et gratuit à l'évènement. Durant le week-end, une foule d'animations sont prévues pour les visiteurs :</p>
-					<ul class="list">
-						<li class="list__elt">
-							<div class="list__elt--txt">
-							</div>
-						</li>
-					</ul>
-				</div>
 			</div>
 		</section>
 		<section class="organisateur">
@@ -67,29 +58,31 @@ get_header(); ?>
 		</section>
 		<section class="presse">
 			<h3  class="presse__heading3 heading3" aria-level="3" role="heading">Espace presse</h3>
-			<?php if( have_rows('docs') ) : while ( have_rows('docs') ) : the_row(); ?>
-			<div class="presse__docs">
-				<?php $file = get_sub_field('media'); ?>
-				<?php $extention = $file['filename']; ?>
-				<?php $url = $file['url']; ?>
-				<?php if( $file ): ?>
-				<div class="presse__docs--infos">
-					<h4  class="presse__heading4 heading4" aria-level="4" role="heading"><?php the_sub_field('nom') ?></h4>
-					<time class="presse__docs--date" datetime="<?php echo get_the_date('d/m/Y'); ?>">
-	                    Publié le <?php echo get_the_date('j F Y'); ?>
-	                </time>
+			<div class="presse__global">
+				<?php if( have_rows('docs') ) : while ( have_rows('docs') ) : the_row(); ?>
+				<div class="presse__docs">
+					<?php $file = get_sub_field('media'); ?>
+					<?php $extention = $file['filename']; ?>
+					<?php $url = $file['url']; ?>
+					<?php if( $file ): ?>
+					<div class="presse__docs--infos">
+						<h4  class="presse__heading4 heading4" aria-level="4" role="heading"><?php the_sub_field('nom') ?></h4>
+						<time class="presse__docs--date" datetime="<?php echo get_the_date('d/m/Y'); ?>">
+		                    Publié le <?php echo get_the_date('j F Y'); ?>
+		                </time>
 
-					<div>
-						<p class="presse__docs--poids"><?php //echo $filesize ?></p>
-						<p class="presse__docs--extention"><?php echo "." . pathinfo($extention, PATHINFO_EXTENSION); ?></p>
+						<div>
+							<p class="presse__docs--poids"><?php //echo $filesize ?></p>
+							<p class="presse__docs--extention"><?php echo "." . pathinfo($extention, PATHINFO_EXTENSION); ?></p>
+						</div>
 					</div>
+					<div class="presse__docs--download">
+						<a href="<?php echo $url; ?>" class="presse__docs--link">Télécharger</a>
+					</div>
+					<?php endif; ?>
 				</div>
-				<div class="presse__docs--download">
-					<a href="<?php echo $url; ?>" class="presse__docs--link">Télécharger</a>
-				</div>
-				<?php endif; ?>
+				<?php endwhile; endif; ?>
 			</div>
-			<?php endwhile; endif; ?>
 		</section>
 		<section class="last-year">
 			<h3 class="last-year__heading3 heading3" aria-level="3" role="heading">Que c'est il passé ?</h3>

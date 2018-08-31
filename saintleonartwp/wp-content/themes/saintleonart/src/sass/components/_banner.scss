@@ -1,75 +1,32 @@
-@media only screen and (min-width: 1090px) {
+@media only screen and (min-width: 1180px) {
 	.banner{
 		position: relative;
 		background-image: url('#{ $imgPath }banner.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
-		padding: 3rem;
-		height: 100vh;
+		padding: 5rem;
+		@media only screen and (min-width: 1670px){
+			padding: 5rem 10rem;
+		}
+		height: 90vh;
 		&__date{
 			max-width: 1880px;
 			margin: 0 auto 2rem;
-			font-family: "Whoopass";
+			font-family: "Good_Vibes";
 			text-align: right;
-			font-size: $heading4;
+			letter-spacing: 2px;
+			font-size: $heading3;
 			color: $white;
 			cursor: default;
+			position: relative;
+			z-index: 1;
 		}
 		&__logo-shape{
 			position: absolute;
-			top: 40%;
+			top: 35%;
 			left: 50%;
 			transform: translateX(-50%) translateY(-50%);
-			width: 100%;
-			text-align: center;
-			svg{
-				width: 300px;
-				height: 300px;
-				.cls-1{
-					fill:#e52114;
-				}
-				.cls-2{
-					fill:#fecb5a;
-				}
-				.cls-3{
-					fill:#6f0934;
-				}
-			}
-		}
-		&__slogan{
-			cursor: default;
-			position: absolute;
-			bottom: 3em;
-			left: 50%;
-			transform: translateX(-50%);
-			font-family: "Whoopass";
-			color: #6f0934;
-			font-size: $heading3;
-			max-width: 650px;
-			margin-bottom: 1em;
-			line-height: 1.35em;
-		}
-	}
-}
-@media only screen and (min-width: 768px) and (max-width: 1089px) {
-	.banner{
-		background-image: url('#{ $imgPath }banner.jpg');
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-		padding: 1.2rem;
-		height: 100vh;
-		&__date{
-			cursor: default;
-			margin: 100px 0 2rem;
-			font-family: "Whoopass";
-			text-align: right;
-			font-size: $heading4;
-			color: $white;
-		}
-		&__logo-shape{
-			margin: 0em auto 3em;
 			width: 100%;
 			text-align: center;
 			svg{
@@ -88,12 +45,129 @@
 		}
 		&__slogan{
 			cursor: default;
-			font-family: "Whoopass";
+			position: absolute;
+			bottom: 2em;
+			left: 50%;
+			letter-spacing: 2px;
+			transform: translateX(-50%);
+			font-family: "Good_Vibes";
 			color: #6f0934;
-			font-size: $heading4;
-			width: 60%;
-			margin: 0 auto;
-			line-height: 1.35em;
+			font-size: $subHeading2;
+			max-width: 650px;
+			// margin-bottom: 1em;
+			// line-height: 1.15em;
+			&::after{
+				content: "";
+				position: relative;
+				left: 50%;
+				top: 0.5em;
+				transform: translateX(-50%);
+				background-image: url('#{ $imgPath }scroll.png');
+				background-size: 100%;
+				display: block;
+				width: 80px;
+				height: 30px;
+				transition: all 0.5s ease-in-out;
+				// border: 2px solid red;
+			}
+			&:hover::after{
+				top: 0.8em;
+			}
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+			background-color: rgba($yellow, 0.5);
+
+		}
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 1179px) {
+	.banner{
+		background-image: url('#{ $imgPath }banner.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+		padding: 1.2rem;
+		@media only screen and (min-width: 980px) and (max-width: 1179px) {
+			padding: 1.2rem 10rem;
+		}
+		height: 100vh;
+		&__date{
+			cursor: default;
+			margin: 100px 0 2rem;
+			font-family: "Good_Vibes";
+			text-align: right;
+			font-size: $subHeading3;
+			letter-spacing: 2px;
+			color: $white;
+			position: relative;
+			z-index: 1;
+		}
+		&__logo-shape{
+			margin: 0em auto 3em;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+			svg{
+				width: 200px;
+				height: 200px;
+				.cls-1{
+					fill:#e52114;
+				}
+				.cls-2{
+					fill:#fecb5a;
+				}
+				.cls-3{
+					fill:#6f0934;
+				}
+			}
+		}
+		// &__slogan{
+		// 	cursor: default;
+		// 	font-family: "Whoopass";
+		// 	color: #6f0934;
+		// 	font-size: $heading4;
+		// 	width: 60%;
+		// 	letter-spacing: 2px;
+		// 	margin: 0 auto;
+		// 	line-height: 1.15em;
+		// 	position: relative;
+		// 	z-index: 2;
+		// }
+		&__slogan{
+			cursor: default;
+			position: absolute;
+			// bottom: 3em;
+			text-align: center;
+			left: 50%;
+			letter-spacing: 2px;
+			transform: translateX(-50%);
+			font-family: "Good_Vibes";
+			color: #6f0934;
+			font-size: $subHeading3;
+			max-width: 650px;
+			margin-bottom: 1em;
+			line-height: 1.15em;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+			background-color: rgba($yellow, 0.5);
+
 		}
 	}
 }
@@ -107,15 +181,19 @@
 		height: 100vh;
 		&__date{
 			margin: 100px 0 2rem;
-			font-family: "Whoopass";
+			font-family: "Good_Vibes";
 			text-align: right;
-			font-size: $heading4;
+			font-size: $subHeading3;
 			color: $white;
+			position: relative;
+			z-index: 1;
 		}
 		&__logo-shape{
 			margin: 0 auto 3em;
 			text-align: center;
 			width: 60%;
+			position: relative;
+			z-index: 1;
 			svg{
 				width: 125px;
 				height: 125px;
@@ -130,13 +208,39 @@
 				}
 			}
 		}
+		// &__slogan{
+		// 	font-family: "Whoopass";
+		// 	color: #6f0934;
+		// 	font-size: $currentText;
+		// 	width: 80%;
+		// 	margin: -1em auto;
+		// 	line-height: 1.35em;
+		// }
 		&__slogan{
-			font-family: "Whoopass";
+			cursor: default;
+			position: absolute;
+			// bottom: 3em;
+			left: 50%;
+			letter-spacing: 2px;
+			transform: translateX(-50%);
+			font-family: "Good_Vibes";
 			color: #6f0934;
-			font-size: $currentText;
-			width: 80%;
-			margin: -1em auto;
-			line-height: 1.35em;
+			font-size: $subHeading4;
+			max-width: 650px;
+			margin-bottom: 1em;
+			line-height: 1.15em;
+		}
+		&::before{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+			background-color: rgba($yellow, 0.5);
+
 		}
 	}
 }

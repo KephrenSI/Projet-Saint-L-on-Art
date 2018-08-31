@@ -259,7 +259,7 @@ get_header(); ?>
 			<?php endwhile; endif; ?>
 		</section>
 	</section>
-	<section class="artistes">
+	<section class="artistes programmation__artistes">
 		<h2  class="artistes__heading2 heading2" aria-level="2" role="heading">Artistes</h2>
 		<a class="artistes__random" href="javascript:window.location.reload(true)"  title="Artistes aléatoire de l'expo Saint Léon'Art">
 			mélanger

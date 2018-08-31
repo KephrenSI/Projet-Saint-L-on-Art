@@ -1,22 +1,30 @@
 @media only screen and (min-width: 980px) {
 	.programme{
-		max-width: 2000px;
+		background-color: $white;
+		// max-width: 1800px;
 		@media only screen and (min-width: 2001px) {
 			margin: 0 auto;
+			padding: 5rem;
+			max-width: 1800px;
 		}
 		@media only screen and (max-width: 2000px) and (min-width: 980px) {
-			margin: 0 3rem;
+			padding: 5rem 10rem 5rem;
 		}
 		@media only screen and (min-width: 768px) and (max-width: 979px) {
-			margin: 0 1.2rem;
+			padding: 0 1.2rem;
 		}
 		#map{
 			height: 400px;
 	        width: 100%;
+	        max-width: 1800px;
+		}
+		.carte{
+			display: none;
 		}
 		.programation{
+			max-width: 1800px;
 			@media only screen and (min-width: 2001px) {
-				max-width: 2000px;
+				max-width: 1800px;
 				margin: 5rem auto 0;
 				display: flex;
 				flex-wrap: wrap;
@@ -38,31 +46,31 @@
 			}
 			&__event{
 				@media only screen and (min-width: 2001px) {
-					margin-bottom: 5%;
+					margin-bottom: 2%;
 					color: $white;
-					width: 21.2%;
+					width: 23.5%;
 					height: 320px;
 					position: relative;
 					overflow: hidden;
-					margin-left: 5%;
+					margin-left: 2%;
 				}
 				@media only screen and (max-width: 2000px) and (min-width: 1351px)  {
-					margin-bottom: 5%;
+					margin-bottom: 2%;
 					color: $white;
-					width: 47.5%;
+					width: 49%;
 					height: 320px;
 					position: relative;
 					overflow: hidden;
-					margin-left: 5%;
+					margin-left: 2%;
 				}
 				@media only screen and (max-width: 1350px)  {
-					margin-bottom: 5%;
+					margin-bottom: 2%;
 					color: $white;
-					width: 47.4%;
+					width: 49%;
 					height: 320px;
 					position: relative;
 					overflow: hidden;
-					margin-left: 5%;
+					margin-left: 2%;
 				}
 				&::before{
 					content: "";
@@ -210,12 +218,19 @@
 			}
 		}
 	}
+	.programmation__artistes{
+		// margin-bottom: 5rem;
+	}
 }
 @media only screen and (max-width: 979px) {
 	.programme{
+	background-color: $white;
 		#map{
 			height: 400px;
 	        width: 100%;
+		}
+		.carte{
+			display: none;
 		}
 		.programation{
 			@media only screen and (min-width: 768px) and (max-width: 979px) {
@@ -384,5 +399,8 @@
 				}
 			}
 		}
+	}
+	.programmation__artistes{
+		padding-bottom: 5rem;
 	}
 }

@@ -23,8 +23,9 @@ get_header(); ?>
 				<div class="all-news__content--txt">
                     <?php dw_the_excerpt(500); ?>
                 </div>
+                <a href="<?php the_permalink(); ?>" class="all-news__actu--link" title="Aller vers la page de l'actualité <?php get_the_title(); ?>" ><p>Lire la suite</p><span>+</span></a>
 			</div>
-			<a href="<?php the_permalink(); ?>" class="all-news__actu--link" title="Aller vers la page de l'actualité <?php get_the_title(); ?>" ><p>Voir l'article</p><span>+</span></a>
+			<!-- <a href="<?php the_permalink(); ?>" class="all-news__actu--link" title="Aller vers la page de l'actualité <?php get_the_title(); ?>" ><p>Voir l'article</p><span>+</span></a> -->
 		</div>
 		<?php endwhile; endif; ?>
 		

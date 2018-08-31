@@ -1,13 +1,15 @@
-
 @media only screen and (min-width: 768px) {
 	.intro{
-		margin: 5rem auto 0;
+		margin: 5rem auto;
 		max-width: 640px;
 		&__content{
 			p{
 				margin-bottom: 1em;
 				line-height: 1.35em;
 			}
+		}
+		&__cta{
+			margin: 1.2rem 0rem;
 		}
 	}
 }
@@ -21,6 +23,9 @@
 				line-height: 1.35em;
 			}
 		}
+		&__cta{
+			margin: 1.2rem 0rem;
+		}
 	}
 }
 @media only screen and (max-width: 479px) {
@@ -32,6 +37,9 @@
 				margin-bottom: 1em;
 				line-height: 1.35em;
 			}
+		}
+		&__cta{
+			margin: 1.2rem 0rem;
 		}
 	}
 }

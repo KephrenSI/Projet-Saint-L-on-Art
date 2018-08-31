@@ -1,26 +1,56 @@
+.about__objectives-list{
+	list-style: square;
+	position: relative;
+	left: 20px;
+}
+.about__objectives-item{
+	margin-bottom: 1em;
+	line-height: 1.35em;
+}
 @media only screen and (min-width: 751px) {
 	.about{
-		max-width: 2000px;
+		// max-width: 1800px;
 		display: flex;
 		flex-wrap: wrap;
+		background-color: $white;
+		// @media only screen and (min-width: 2001px) {
+		// 	margin: 0 auto;
+		// }
+		// @media only screen and (max-width: 2000px) and (min-width: 981px) {
+		// 	margin: 0 10rem;
+		// }
+		// @media only screen and (min-width: 768px) and (max-width: 979px) {
+		// 	margin: 0 1.2rem;
+		// }
 		@media only screen and (min-width: 2001px) {
 			margin: 0 auto;
+			padding: 5rem;
+			max-width: 1800px;
 		}
-		@media only screen and (max-width: 2000px) and (min-width: 981px) {
-			margin: 0 3rem;
+		@media only screen and (max-width: 2000px) and (min-width: 980px) {
+			padding: 5rem 10rem 5rem;
 		}
-		@media only screen and (min-width: 768px) and (max-width: 979px) {
-			margin: 0 1.2rem;
+		@media only screen and (min-width: 860px) and (max-width: 979px) {
+			padding: 0 1.2rem 5rem;
 		}
 		.presentation{
-			width: 45%;
+			width: 49%;
 			margin-bottom: 5%;
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
+			box-sizing: border-box;
+			height: 300px;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 3rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 3rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 50%;
 			}
 			&__content{
 				max-width: 640px;
@@ -32,15 +62,22 @@
 			}
 		}
 		.historique{
-			width: 50%;
-			margin-left: 5%;
+			width: 49%;
+			margin-left: 2%;
 			margin-bottom: 5%;
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 3rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 3rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 50%;
 			}
 			&__content{
 				max-width: 640px;
@@ -68,11 +105,18 @@
 			width: 100%;
 			margin-bottom: 5%;
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 3rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 3rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 25%;
 			}
 			&__role{
 				display: flex;
@@ -109,21 +153,30 @@
 		}
 		.presse{
 			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
 			margin-bottom: 5%;
 			// margin-bottom: 3em;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				width: 100%;
-				padding: 1.5em 1.2rem;
-				margin-bottom: 5px;
+				// background-color: $purple;
+				// color: $white;
+				// width: 100%;
+				// padding: 1.5em 1.2rem;
+				// margin-bottom: 5px;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 25%;
 			}
 			&__heading4{
 				font-family: 'Raleway';
 				width: 100%;
 				font-weight: 600;
+			}
+			&__global{
+				display: flex;
+				flex-wrap: wrap;
 			}
 			&__docs{
 				@media only screen and (min-width: 1780px) {
@@ -140,7 +193,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				margin-bottom: 5px;
-				margin-left: 5px;
+				margin-right: 5px;
 				&:nth-child(4n+2){
 					margin-left: 0;
 				}
@@ -186,17 +239,19 @@
 			}
 		}
 		.last-year{
+			display: none;
 			width: 100%;
 			margin-bottom: 5%;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
 				background-color: $purple;
 				color: $white;
 				padding: 1.5em 1.2rem;
 			}
 			&__heading4{
-				font-family: 'Goodvibes';
+				font-family: 'Good_vibes';
 				width: 100%;
+				letter-spacing: 2px;
 				background-color: $grey;
 				color: $white;
 				padding: 1em 1.2rem;
@@ -227,13 +282,22 @@
 }
 @media only screen and (max-width: 750px) {
 	.about{
+		background-color: $white;
+		padding-bottom: 5rem;
 		.presentation{
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 1.2rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 1.2rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 80%;
 			}
 			&__content{
 				padding: 0 1.2rem 2em;
@@ -245,11 +309,18 @@
 		}
 		.historique{
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 1.2rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 1.2rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 80%;
 			}
 			&__content{
 				padding: 0 1.2rem 2em;
@@ -274,11 +345,18 @@
 		}
 		.organisateur{
 			// margin-bottom: 3em;
-			background-color: $extraLightGrey;
+			// background-color: $extraLightGrey;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 1.2rem;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 1.2rem;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 80%;
 			}
 			&__role{
 				padding: 0 1.2rem 2em;
@@ -309,10 +387,17 @@
 		.presse{
 			// margin-bottom: 3em;
 			&__heading3{
-				background-color: $purple;
-				color: $white;
-				padding: 1.5em 1.2rem;
-				margin-bottom: 5px;
+				// background-color: $purple;
+				// color: $white;
+				// padding: 1.5em 1.2rem;
+				// margin-bottom: 5px;
+				letter-spacing: 2px;
+				color: $black;
+				padding: 1em 3rem;
+				margin-bottom: 2em;
+				position: relative;
+				border-bottom: 10px solid $purple;
+				width: 80%;
 			}
 			&__heading4{
 				font-family: 'Raleway';
@@ -366,14 +451,15 @@
 			}
 		}
 		.last-year{
-			background-color: $extraLightGrey;
+			display: none;
+			// background-color: $extraLightGrey;
 			&__heading3{
 				background-color: $purple;
 				color: $white;
 				padding: 1.5em 1.2rem;
 			}
 			&__heading4{
-				font-family: 'Goodvibes';
+				font-family: 'Good_vibes';
 				width: 100%;
 				background-color: $grey;
 				color: $white;

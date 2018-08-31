@@ -5,15 +5,18 @@
 	position: relative;
     .global{
     	@media only screen and (min-width: 980px) {
-    		max-width: 2000px;
-    		margin: 0 auto;
+    		max-width: 1000px;
+    		@media only screen and (min-width: 1300px) {
+	    		margin: 0 auto 5rem;
+	    	}
+	    	margin: 0 10rem 5rem;
 			display: flex;
 			flex-wrap: wrap;
     	}
     	@media only screen and (min-width: 980px) {
 			.presentation{
-	    		width: 25%;
-	    		margin: 0 3rem 0 3rem;
+	    		width: 27%;
+	    		margin: 0 6% 0 0rem;
 	    		&__heading3{
 					letter-spacing: 2px;
 	    		}
@@ -31,16 +34,21 @@
     	}
     	@media only screen and (min-width: 980px) {
 	    	.infos{
-	    		width: 24%;
-	    		margin: 0 3rem;
+	    		width: 27%;
+	    		margin: 0 3%;
 				&__heading3{
 					letter-spacing: 2px;
+					margin: 0 auto;
+					width: 193px;
+					margin: 0 auto 2em;
 				}
 				&__content{
 					// padding: 0 3rem;
+					margin: 0 auto 2em;
+					width: 193px;
 					display: flex;
 					flex-direction: column;
-					margin-bottom: 2em;
+					// margin-bottom: 2em;
 					p{
 						margin-bottom: 1em;
 					}
@@ -54,17 +62,21 @@
 						&:focus{
 							color: $yellow;
 						}
-					}
+					}    
+				}
+				&__cta{
+					margin-left: 35px;
 				}
 	    	}	
     	}
     	@media only screen and (max-width: 979px) {
 			.infos{
-				width: 80%;
 				&__heading3{
+					text-align: center;
 					padding: 1em 1.2rem 0;
 				}
 				&__content{
+					text-align: center;
 					padding: 1.2rem;
 					display: flex;
 					flex-direction: column;
@@ -97,26 +109,26 @@
     	}
     	@media only screen and (min-width: 980px) {
     		.footer-nav{
-    			margin: 0 auto 0 3rem;
+    			// margin: 0 auto 0 3rem;
+    			width: 27%;
+				margin: 0 0 0 6%;
     			.last-nav{
-					width: 60%;
-					margin: 0 3rem;
+					
 					&__heading3{
 						letter-spacing: 2px;
 		    		}
+
 					&__list{
-						&--elt a {
+						&--link{
 							color: $white;
 							line-height: 2rem;
 							text-decoration: none;
 			                position: relative;
 			                transition: all 0.5s ease-in-out;
-			            }
-			            &--elt a:hover,
-			            &--elt a:focus{
-			                color: $yellow;
-			            }
-						&--elt a{
+				            &:hover,
+				            &:focus{
+				                color: $yellow;
+				            }
 			                &.active{
 			                    color: $yellow;
 			                    &::before{
@@ -141,6 +153,7 @@
     	}
     	@media only screen and (max-width: 979px) {
 			.footer-nav{
+				padding-bottom: 4rem;
 				.last-nav{
 					display: none;
 		    	}
@@ -148,7 +161,7 @@
     	}
     	.cta{
 			@media only screen and (min-width: 2001px){
-				max-width: 2000px;
+				max-width: 1800px;
 				margin: 0 auto;
 			}
 			@media only screen and (max-width: 2000px) and (min-width: 980px){
@@ -173,15 +186,18 @@
     		color: $black;
 			background-color: $white;
 			margin-top: 2rem;
-    		padding: 3rem;
+    		padding: 5rem 0;
 			&__heading3{
-				max-width: 2000px;
+				max-width: 1800px;
 				margin: 0 auto;
 				padding-top: 1em;
 			}
 			&__bloc{
-				max-width: 2000px;
-    			margin: 0 auto;
+				max-width: 1800px;
+				@media only screen and (min-width: 2001px) {
+					margin: 0 auto;
+				}
+    			margin: 0 10rem;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
@@ -193,9 +209,14 @@
 					}
 				}
 			}
-			.cta{
-				max-width: 2000px;
-				margin: 0 auto;
+			&__cta{
+				width: 50%;
+				@media only screen and (min-width: 2001px) {
+					margin: 0 auto;
+					width: 100%;
+				}
+				max-width: 1800px;
+				margin: 0 10rem;
 			}
     	}
 	}
@@ -203,7 +224,7 @@
 		.partenaire{
     		color: $black;
 			background-color: $white;
-			padding: 1.2rem;
+			padding: 1.2rem 0 4rem;
 			&__heading3{
 				padding: 1em 1.2rem;
 			}
@@ -218,6 +239,9 @@
 
 					}
 				}
+			}
+			&__cta{
+				width: 50%;
 			}
 			@media only screen and (min-width: 768px){
 				&__cta{
@@ -237,14 +261,10 @@
 		height: 6rem;
 		&__social{
 			@media only screen and (min-width: 2001px) {
-				max-width: 2000px;
-				margin: 0 auto;
-				position: absolute;
-				right: 0;
-				// display: flex;
-				// justify-content: space-between;
-				padding: 2em 1.2rem;
-				// text-align: center;
+			    max-width: 1800px;
+			    margin: 0 auto;
+			    text-align: right;
+			    padding: 2em 1.2rem;
     		}
     		@media only screen and (max-width: 2000px) {
 				max-width: 520px;
@@ -272,9 +292,13 @@
 	.cpr{
 		background-color: $black;
 		&__txt{
-			@media only screen and (min-width: 980px){
-				max-width: 2000px;
-				padding: 1rem 3rem;
+			@media only screen and (min-width: 2001px) {
+				max-width: 1800px;
+			    margin: 0 auto;
+			    padding: 1rem 0;
+			}
+			@media only screen and (min-width: 980px) and (max-width: 2000px){
+				padding: 1rem 10rem;
 			}
 			@media only screen and (max-width: 979px) {
 				padding: 1rem 1.2rem;

@@ -1,27 +1,32 @@
 .contact{
+	background-color: #fff;
     @media only screen and (min-width: 2001px) {
-		max-width: 2000px;
-		margin: 0 auto 3em;
+		max-width: 1800px;
+		margin: 0 auto;
+		padding: 5rem;
 		display: flex;
 		flex-wrap: wrap;
 	}
 	@media only screen and (max-width: 2000px) and (min-width: 1200px){
-		margin: 0 3rem 3em;
+		padding: 5rem 10rem 5em;
 		display: flex;
 		flex-wrap: wrap;
 	}
 	@media only screen and (max-width: 1199px) {
-		margin: 0 1.2rem 3em;
+		padding: 5rem 1.2rem 5em;
 	}
 	@media only screen and (min-width: 1200px) {
 		.introduction{
 			width: 45%;
-			margin-right: 10%;
+			margin-right: 5%;
 			&__content{
 				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
+			}
+			&__cta{
+				display: none;
 			}
 		}
 	}
@@ -35,17 +40,23 @@
 					line-height: 1.35em;
 				}
 			}
+			&__cta{
+				display: none;
+			}
 		}
 	}
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		.introduction{
-			margin: 5rem auto 8em;
+			margin: 0 auto 8em;
 			// max-width: 460px;
 			&__content{
 				p{
 					margin-bottom: 1em;
 					line-height: 1.35em;
 				}
+			}
+			&__cta{
+				display: none;
 			}
 		}
 	}
@@ -61,9 +72,19 @@
 			}
 		}
 	}
+	.note{
+		
+	}
+	.btn-send{
+		position: absolute;
+		bottom: -10px;
+		right: 0;
+
+	}
 	.formulaire{
+
 		@media only screen and (min-width: 1200px) {
-			width: 45%;
+			width: 50%;
 		}
 		@media only screen and (min-width: 768px) and (max-width: 1199px) {
 			width: 100%;
@@ -80,8 +101,17 @@
 			margin-bottom: 2em;
 		}
 		.wpcf7-form{
+			position: relative;
 			display: flex;
 			flex-wrap: wrap;
+		}
+		div .wpcf7-validation-errors{
+			color: red;
+			margin-top: 1rem;
+		}
+		div .wpcf7-mail-sent-ok{
+			color: green;
+			margin-top: 1rem;
 		}
 		.wpcf7-mail-sent-ok,
 		.screen-reader-response{
@@ -136,13 +166,16 @@
 				}
 			}
 			&--label{
-				width: 75px;
+				// text-align: center;
+				width: 100px;
 				position: absolute;
 				left: 0;
-				top: 3px;
+				top: 8px;
+				color: purple;
+				font-size: $subHeading4;
 				transition: all 0.5s ease-in-out;
 				padding-right: 10px;
-				border-right: 1px solid $black;
+				border-right: 2px solid $purple;
 			}
 			::-webkit-input-placeholder { /* Chrome */
 				color: $purple;
@@ -166,9 +199,11 @@
 				background-color: transparent;
 			    border: 0px solid;
 			    padding-bottom: 1em;
-			    text-indent: 85px;
+			    text-indent: 110px;
 			    border: 0;
-				border-bottom: 1px solid $purple;
+				border-bottom: 2px solid $purple;
+				font-size: $currentText;
+				transition: all 0.5s ease-in-out;
 			}
 			textarea{
 				resize: vertical;
@@ -193,6 +228,9 @@
 			&--input:focus ~ label{
 				font-weight: 600;
 				border-right: 2px solid $black;
+			}
+			&--input:focus{
+				border-bottom: 3px solid $purple;
 			}
 
 		}

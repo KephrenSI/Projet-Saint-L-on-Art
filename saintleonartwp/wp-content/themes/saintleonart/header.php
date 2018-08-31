@@ -38,7 +38,7 @@
                             <ul class="submenu__list">
                                 <?php foreach($item->children as $sub): ?>
                                 <li class="submenu__list--elt">
-                                    <a href="<?php echo $sub->link; ?>" title="Aller vers la page pages <?php echo $sub->label; ?>" class="submenu__list--link <?php echo $sub -> isCurrent ? ' active' : ''; ?>"><?php echo $sub->label; ?></a>
+                                    <a href="<?php echo $sub->link; ?>" title="Aller vers la page page <?php echo $sub->label; ?>" class="submenu__list--link <?php echo $sub -> isCurrent ? ' active' : ''; ?>"><?php echo $sub->label; ?></a>
                                 </li>
                                 <?php endforeach ?>
                             </ul>
